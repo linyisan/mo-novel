@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b360b197-9ca1-4a85-ada4-9d675dcdc84c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jsLinters/eslint.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-service/mo-novel-service.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-service/src/main/java/com/heng/test/ThreadAndRunnable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-service/src/main/java/com/heng/test/使用txt作为mysql数据源.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-web/src/components/DlgLogin.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-web/src/components/Header.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-web/src/components/commentCard.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-web/src/views/Bookdetail.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-web/src/views/Test.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-web/src/views/bookcase.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-web/src/views/booklist.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-web/src/views/booklists.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-web/src/views/bookstore.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-web/src/views/explore.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-web/src/views/notices.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-web/src/views/rank.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-web/src/views/search.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-web/src/views/topics.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-web/src/views/user.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mo-novel-admin/mo-novel-admin.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mo-novel-admin/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mo-novel-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mo-novel-web/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/mo-novel-web/.eslintrc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mo-novel-web/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/mo-novel-web/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mo-novel-web/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/mo-novel-web/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mo-novel-web/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/mo-novel-web/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mo-novel-web/src/components/HelloWorld.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mo-novel-web/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/mo-novel-web/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mo-novel-web/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/mo-novel-web/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mo-novel-web/src/views/About.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mo-novel-web/src/views/Home.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Vue Single File Component" />
+        <option value="HTML File" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="C:\Users\yisan\.m2\repository" />
+        <option name="userSettingsFile" value="C:\Users\yisan\.m2\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1qLSXEn6w74s5MimzQWMsRe2Kzc" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="extract.method.default.visibility" value="private" />
+    <property name="js.linters.configure.manually.selectedeslint" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../javalearn" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.selected.package.eslint" value="$PROJECT_DIR$/mo-novel-web/node_modules/eslint" />
+    <property name="node.js.selected.package.standard" value="" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RunManager" selected="Application.ThreadAndRunnable">
+    <configuration name="ThreadAndRunnable" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.heng.test.ThreadAndRunnable" />
+      <module name="mo-novel-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.heng.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="使用txt作为mysql数据源" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.heng.test.使用txt作为mysql数据源" />
+      <module name="mo-novel-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.heng.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="mo-novel-web" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/mo-novel-web/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="serve" />
+      </scripts>
+      <arguments value="--fix" />
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.ThreadAndRunnable" />
+        <item itemvalue="Application.使用txt作为mysql数据源" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b360b197-9ca1-4a85-ada4-9d675dcdc84c" name="Default Changelist" comment="" />
+      <created>1616857414982</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1616857414982</updated>
+      <workItem from="1616857419646" duration="1002000" />
+      <workItem from="1616858727448" duration="5551000" />
+      <workItem from="1616865044326" duration="337000" />
+      <workItem from="1616865513417" duration="3806000" />
+      <workItem from="1616924330149" duration="258000" />
+      <workItem from="1616984036374" duration="4805000" />
+      <workItem from="1617075615692" duration="7459000" />
+      <workItem from="1617110900854" duration="933000" />
+      <workItem from="1617508178504" duration="57000" />
+      <workItem from="1617508254101" duration="383000" />
+      <workItem from="1617510593580" duration="34000" />
+      <workItem from="1617526465587" duration="13455000" />
+      <workItem from="1617595404774" duration="5284000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="552" y="198" key="#ESLint" timestamp="1616866100738">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="552" y="198" key="#ESLint/0.0.1920.1080@0.0.1920.1080" timestamp="1616866100738" />
+    <state x="363" y="245" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1616865551838">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="363" y="245" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1616865551838" />
+    <state x="976" y="285" key="#com.intellij.featureStatistics.actions.ShowFeatureUsageStatisticsDialog" timestamp="1617538554068">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="976" y="285" key="#com.intellij.featureStatistics.actions.ShowFeatureUsageStatisticsDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1617538554068" />
+    <state x="689" y="295" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1616865549600">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="689" y="295" key="#com.intellij.ide.macro.MacrosDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1616865549600" />
+    <state x="1214" y="323" key="#com.intellij.ide.util.MemberChooser" timestamp="1617595679516">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1214" y="323" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1617595679516" />
+    <state x="690" y="286" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1616867822422">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="690" y="286" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1616867822422" />
+    <state x="1023" y="290" width="748" height="454" key="EditFileWatcherDialog" timestamp="1616865331638">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1023" y="290" width="748" height="454" key="EditFileWatcherDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1616865331638" />
+    <state x="1208" y="335" key="FileChooserDialogImpl" timestamp="1616924587072">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1208" y="335" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1616924587072" />
+    <state width="1340" height="290" key="GridCell.Tab.0.bottom" timestamp="1617624805660">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1340" height="290" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1617624805660" />
+    <state width="1340" height="290" key="GridCell.Tab.0.center" timestamp="1617624805660">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1340" height="290" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1617624805660" />
+    <state width="1340" height="290" key="GridCell.Tab.0.left" timestamp="1617624805660">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1340" height="290" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1617624805660" />
+    <state width="1340" height="290" key="GridCell.Tab.0.right" timestamp="1617624805660">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1340" height="290" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1617624805660" />
+    <state x="880" y="163" key="SettingsEditor" timestamp="1617508617373">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="880" y="163" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1617508617373" />
+    <state x="1035" y="415" key="com.intellij.ide.util.TipDialog" timestamp="1617526474319">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1035" y="415" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1617526474319" />
+    <state x="811" y="289" key="extract.method.dialog" timestamp="1617595816455">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="811" y="289" key="extract.method.dialog/0.0.1920.1080@0.0.1920.1080" timestamp="1617595816455" />
+    <state x="896" y="247" width="820" height="600" key="find.popup" timestamp="1617544792966">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="896" y="247" width="820" height="600" key="find.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1617544792966" />
+    <state x="669" y="356" key="new project wizard" timestamp="1616857555889">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="669" y="356" key="new project wizard/0.0.1920.1080@0.0.1920.1080" timestamp="1616857555889" />
+    <state x="1231" y="280" width="672" height="677" key="run.anything.popup" timestamp="1617610573856">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1231" y="280" width="672" height="677" key="run.anything.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1617610573856" />
+    <state x="989" y="176" key="scopes" timestamp="1616865205409">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="989" y="176" key="scopes/0.0.1920.1080@0.0.1920.1080" timestamp="1616865205409" />
+    <state x="969" y="246" width="672" height="678" key="search.everywhere.popup" timestamp="1617545189448">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="969" y="246" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1617545189448" />
+  </component>
+</project>
