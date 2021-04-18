@@ -1,31 +1,73 @@
-import Vue from 'vue';
-import VueRouter from 'vue-router';
-import Bookdetail from '../views/Bookdetail';
-import Test from '../views/Test';
+import Vue from 'vue'
+import VueRouter from 'vue-router'
 
-Vue.use(VueRouter);
+Vue.use(VueRouter)
+import Layout from '@/layout'
 
-const routes = [
+const constantRoutes = [
   {
     path: '/',
-    component: Bookdetail
+    component: Layout,
+    redirect: '/dashboard',
+    children: [{
+      path: 'dashboard',
+      name: 'Dashboard',
+      component: () => import('@/views/dashboard/index'),
+      meta: { title: 'Dashboard', icon: 'dashboard' }
+    }]
   },
+
+  {
+    path: '/book',
+    component: Layout,
+    children: [
+      {
+        path: 'index',
+        name: 'Book',
+        component: () => import('@/views/book/index'),
+        meta: { title: '小说管理', icon: 'form' }
+      }
+    ]
+  },
+
   {
     path: '/bookdetail',
-    name: 'BookDetail',
-    component: Bookdetail
+    component: Layout,
+    children: [
+      {
+        path: 'index',
+        name: 'BookDetail',
+        component: () => import('@/views/Bookdetail'),
+        meta: { title: '小说详情页', icon: 'form' }
+      }
+    ]
   },
   {
     path: '/test',
-    name: 'Test',
-    component: Test
+    component: Layout,
+    children: [
+      {
+        path: 'index',
+        name: 'Test',
+        component: () => import('@/views/Test'),
+        meta: { title: '测试页', icon: 'form' }
+      }
+    ]
   }
-];
+]
 
-const router = new VueRouter({
-  mode: 'history',
-  base: process.env.BASE_URL,
-  routes
-});
+const createRouter = () => new VueRouter({
+  // mode: 'history', // require service support
+  scrollBehavior: () => ({ y: 0 }),
+  routes: constantRoutes
+})
 
-export default router;
+const router = createRouter()
+
+// Detail see: https://github.com/vuejs/vue-router/issues/1234#issuecomment-357941465
+export function resetRouter() {
+  const newRouter = createRouter()
+  router.matcher = newRouter.matcher // reset router
+}
+
+export default router

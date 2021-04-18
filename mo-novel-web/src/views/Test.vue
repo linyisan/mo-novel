@@ -1,15 +1,11 @@
 <template>
-  <div>
-    <comment-card></comment-card>
-  </div>
+  <div />
 </template>
 
 <script>
-import CommentCard from '../components/commentCard';
 export default {
-  name: 'Test',
-  components: { CommentCard }
-};
+  name: 'Test'
+}
 </script>
 
 <style scoped>

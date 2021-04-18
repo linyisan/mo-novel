@@ -1,0 +1,28 @@
+server:
+  port:8082
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/m_novel?useUnicode=true&useSSL=false&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+    username: root
+    password:
+
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/**Mapper.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+#logging:
+#  level:
+#    com.heng.mapper: debug
+
+
+jwt:
+  # JWT存储的请求头
+  tokenHeader: Authorization
+  # JWT 加解密使用的密钥/盐
+  secret: yeb-secret
+  #JWT的超期限时间（60*60*24）
+  expiration: 604800
+  #JWT 负载中拿到开头
+  tokenHead: Bearer

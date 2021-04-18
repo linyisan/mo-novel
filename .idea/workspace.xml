@@ -2,44 +2,186 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b360b197-9ca1-4a85-ada4-9d675dcdc84c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jsLinters/eslint.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mo-novel-service/mo-novel-service.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mo-novel-service/src/main/java/com/heng/test/ThreadAndRunnable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mo-novel-service/src/main/java/com/heng/test/使用txt作为mysql数据源.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mo-novel-web/src/components/DlgLogin.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mo-novel-web/src/components/Header.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mo-novel-web/src/components/commentCard.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mo-novel-web/src/views/Bookdetail.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mo-novel-web/src/views/Test.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mo-novel-web/src/views/bookcase.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mo-novel-web/src/views/booklist.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mo-novel-web/src/views/booklists.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mo-novel-web/src/views/bookstore.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mo-novel-web/src/views/explore.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mo-novel-web/src/views/notices.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mo-novel-web/src/views/rank.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mo-novel-web/src/views/search.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mo-novel-web/src/views/topics.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mo-novel-web/src/views/user.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/gson_2_8_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-common/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-common/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-common/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-common/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-common/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-common/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-common/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/NovelAdminApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/aop/WebLogAspect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/common/ResponseDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/config/CorsConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/config/MybatisPlusConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/config/ShiroConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/controller/BookController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/controller/BookReviewController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/controller/BooklistBookController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/controller/BooklistController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/controller/BookshelfController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/controller/CategoryController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/controller/CommentReplyController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/controller/RoleController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/controller/TagController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/converter/DateConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/entity/Book.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/entity/BookReview.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/entity/Booklist.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/entity/BooklistBook.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/entity/Bookshelf.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/entity/Category.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/entity/CommentReply.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/entity/Role.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/entity/Tag.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/entity/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/filter/CorsFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/mapper/BookMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/mapper/BookReviewMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/mapper/BooklistBookMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/mapper/BooklistMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/mapper/BookshelfMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/mapper/CategoryMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/mapper/CommentReplyMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/mapper/RoleMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/mapper/TagMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/mapper/UserMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/mapper/xml/BookMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/mapper/xml/BookReviewMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/mapper/xml/BooklistBookMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/mapper/xml/BooklistMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/mapper/xml/BookshelfMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/mapper/xml/CategoryMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/mapper/xml/CommentReplyMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/mapper/xml/RoleMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/mapper/xml/TagMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/mapper/xml/UserMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/service/BookReviewService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/service/BookService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/service/BooklistBookService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/service/BooklistService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/service/BookshelfService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/service/CategoryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/service/CommentReplyService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/service/RoleService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/service/TagService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/service/impl/BookReviewServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/service/impl/BookServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/service/impl/BooklistBookServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/service/impl/BooklistServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/service/impl/BookshelfServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/service/impl/CategoryServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/service/impl/CommentReplyServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/service/impl/RoleServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/service/impl/TagServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/shiro/AccountRealm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/util/Constants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/util/JwtUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/vo/LoginVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/vo/UserInfoVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-common/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-common/src/test/java/com/heng/service/BookServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-common/src/test/java/com/heng/service/Calculator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-web/.env.development" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-web/.eslintignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-web/jsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-web/src/api/book.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-web/src/api/table.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-web/src/api/user.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-web/src/assets/404_images/404.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-web/src/assets/404_images/404_cloud.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-web/src/components/Breadcrumb/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-web/src/components/Hamburger/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-web/src/components/Pagination/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-web/src/components/SvgIcon/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-web/src/icons/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-web/src/icons/svg/dashboard.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-web/src/icons/svg/example.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-web/src/icons/svg/eye-open.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-web/src/icons/svg/eye.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-web/src/icons/svg/form.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-web/src/icons/svg/link.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-web/src/icons/svg/nested.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-web/src/icons/svg/password.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-web/src/icons/svg/table.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-web/src/icons/svg/tree.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-web/src/icons/svg/user.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-web/src/icons/svgo.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-web/src/layout/components/AppMain.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-web/src/layout/components/Navbar.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-web/src/layout/components/Sidebar/FixiOSBug.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-web/src/layout/components/Sidebar/Item.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-web/src/layout/components/Sidebar/Link.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-web/src/layout/components/Sidebar/Logo.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-web/src/layout/components/Sidebar/SidebarItem.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-web/src/layout/components/Sidebar/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-web/src/layout/components/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-web/src/layout/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-web/src/layout/mixin/ResizeHandler.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-web/src/settings.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-web/src/store/getters.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-web/src/store/modules/user.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-web/src/styles/element-ui.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-web/src/styles/index.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-web/src/styles/mixin.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-web/src/styles/sidebar.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-web/src/styles/transition.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-web/src/styles/variables.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-web/src/utils/auth.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-web/src/utils/clipboard.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-web/src/utils/error-log.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-web/src/utils/get-page-title.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-web/src/utils/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-web/src/utils/open-window.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-web/src/utils/permission.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-web/src/utils/request.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-web/src/utils/scroll-to.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-web/src/utils/validate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-web/src/views/book/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-web/src/views/dashboard/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-web/vue.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mo-novel-admin/mo-novel-admin.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mo-novel-admin/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mo-novel-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mo-novel-service/mo-novel-service.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mo-novel-service/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mo-novel-service/src/main/java/com/heng/test/ThreadAndRunnable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mo-novel-service/src/main/java/com/heng/test/使用txt作为mysql数据源.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mo-novel-service/target/classes/com/heng/test/MyThread.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mo-novel-service/target/classes/com/heng/test/MyThread2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mo-novel-service/target/classes/com/heng/test/ThreadAndRunnable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mo-novel-service/target/classes/com/heng/test/使用txt作为mysql数据源.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/mo-novel-web/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/mo-novel-web/.eslintrc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mo-novel-web/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/mo-novel-web/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mo-novel-web/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/mo-novel-web/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mo-novel-web/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/mo-novel-web/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mo-novel-web/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/mo-novel-web/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mo-novel-web/src/components/HelloWorld.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mo-novel-web/src/components/Header.vue" beforeDir="false" afterPath="$PROJECT_DIR$/mo-novel-web/src/components/Header.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mo-novel-web/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/mo-novel-web/src/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mo-novel-web/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/mo-novel-web/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mo-novel-web/src/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/mo-novel-web/src/store/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mo-novel-web/src/views/About.vue" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/mo-novel-web/src/views/Home.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mo-novel-web/src/views/Test.vue" beforeDir="false" afterPath="$PROJECT_DIR$/mo-novel-web/src/views/Test.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mo-novel-web/src/views/bookcase.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mo-novel-web/src/views/booklist.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mo-novel-web/src/views/booklists.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mo-novel-web/src/views/bookstore.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mo-novel-web/src/views/explore.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mo-novel-web/src/views/notices.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mo-novel-web/src/views/rank.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mo-novel-web/src/views/search.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mo-novel-web/src/views/topics.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mo-novel-web/src/views/user.vue" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -50,8 +192,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Vue Single File Component" />
         <option value="HTML File" />
+        <option value="JUnit5 Test Class" />
+        <option value="JavaScript File" />
+        <option value="Vue Single File Component" />
         <option value="Class" />
       </list>
     </option>
@@ -77,14 +221,22 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="extract.method.default.visibility" value="private" />
+    <property name="ignore_missing_gitignore" value="true" />
     <property name="js.linters.configure.manually.selectedeslint" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../javalearn" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/mo-novel-web/src/api" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -93,11 +245,78 @@
     <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="ts.external.directory.path" value="D:\Program Files\JetBrains\IntelliJ IDEA 2019.3.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
-  <component name="RunManager" selected="Application.ThreadAndRunnable">
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.heng.service" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\yisan\IdeaProjects\my\mo-novel\mo-novel-web\src" />
+      <recent name="C:\Users\yisan\IdeaProjects\my\mo-novel\mo-novel-admin\src\main\resources" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.heng" />
+      <recent name="com.heng.monoveladmin" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.heng.converter" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\yisan\IdeaProjects\my\mo-novel\mo-novel-web\src\api" />
+      <recent name="C:\Users\yisan\IdeaProjects\my\mo-novel\mo-novel-web" />
+      <recent name="C:\Users\yisan\IdeaProjects\my\mo-novel\mo-novel-web\src" />
+      <recent name="C:\Users\yisan\IdeaProjects\my\mo-novel\mo-novel-web\src\views" />
+      <recent name="C:\Users\yisan\IdeaProjects\my\mo-novel\mo-novel-web\src\components" />
+    </key>
+  </component>
+  <component name="RestServicesNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="Found 6 services " type="fcff1e1b:RestServiceStructure$RootNode" />
+        </path>
+        <path>
+          <item name="Found 6 services " type="fcff1e1b:RestServiceStructure$RootNode" />
+          <item name="mo-novel-common" type="c588b436:RestServiceStructure$ProjectNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="RunManager" selected="JUnit.JwtTest.createJwt">
+    <configuration name="AutoCodeGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.heng.AutoCodeGenerator" />
+      <module name="mo-novel-common" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.heng.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Calculator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.heng.service.Calculator" />
+      <module name="mo-novel-common" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.heng.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ThreadAndRunnable" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.heng.test.ThreadAndRunnable" />
       <module name="mo-novel-service" />
@@ -111,18 +330,62 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="使用txt作为mysql数据源" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.heng.test.使用txt作为mysql数据源" />
-      <module name="mo-novel-service" />
+    <configuration name="BookServiceTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mo-novel-common" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.heng.test.*" />
+          <option name="PATTERN" value="com.heng.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="com.heng.service" />
+      <option name="MAIN_CLASS_NAME" value="com.heng.service.BookServiceTest" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="JwtTest.createJwt" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mo-novel-common" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.heng.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.heng.util" />
+      <option name="MAIN_CLASS_NAME" value="com.heng.util.JwtTest" />
+      <option name="METHOD_NAME" value="createJwt" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MoNovelAdminApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="mo-novel-common" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.heng.monoveladmin.MoNovelAdminApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NovelAdminApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="mo-novel-common" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.heng.NovelAdminApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="fromt" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/mo-novel-front/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="serve" />
+      </scripts>
+      <arguments value="--fix" />
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
     </configuration>
     <configuration name="mo-novel-web" type="js.build_tools.npm">
       <package-json value="$PROJECT_DIR$/mo-novel-web/package.json" />
@@ -135,12 +398,29 @@
       <envs />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Application.AutoCodeGenerator" />
+      <item itemvalue="Application.ThreadAndRunnable" />
+      <item itemvalue="Application.Calculator" />
+      <item itemvalue="JUnit.BookServiceTest.test" />
+      <item itemvalue="JUnit.JwtTest.createJwt" />
+      <item itemvalue="npm.mo-novel-web" />
+      <item itemvalue="npm.fromt" />
+      <item itemvalue="Spring Boot.MoNovelAdminApplication" />
+      <item itemvalue="Spring Boot.NovelAdminApplication" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.JwtTest.createJwt" />
+        <item itemvalue="Application.Calculator" />
+        <item itemvalue="JUnit.BookServiceTest.test" />
+        <item itemvalue="Application.AutoCodeGenerator" />
         <item itemvalue="Application.ThreadAndRunnable" />
-        <item itemvalue="Application.使用txt作为mysql数据源" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="showServicesTree" value="false" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -165,92 +445,229 @@
       <workItem from="1617510593580" duration="34000" />
       <workItem from="1617526465587" duration="13455000" />
       <workItem from="1617595404774" duration="5284000" />
+      <workItem from="1617780406722" duration="576000" />
+      <workItem from="1617781382069" duration="30000" />
+      <workItem from="1617802293507" duration="3406000" />
+      <workItem from="1617807182220" duration="1983000" />
+      <workItem from="1617809261024" duration="2468000" />
+      <workItem from="1617811756030" duration="3213000" />
+      <workItem from="1617906581435" duration="16679000" />
+      <workItem from="1617971868081" duration="23580000" />
+      <workItem from="1617997598511" duration="4705000" />
+      <workItem from="1618005260731" duration="4017000" />
+      <workItem from="1618044689682" duration="2500000" />
+      <workItem from="1618047240802" duration="18383000" />
+      <workItem from="1618075183949" duration="2408000" />
+      <workItem from="1618156093226" duration="9000" />
+      <workItem from="1618480058226" duration="1983000" />
+      <workItem from="1618560383803" duration="750000" />
+      <workItem from="1618563395506" duration="308000" />
+      <workItem from="1618591051014" duration="6551000" />
+      <workItem from="1618757422373" duration="238000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="WindowStateProjectService">
-    <state x="552" y="198" key="#ESLint" timestamp="1616866100738">
+    <state x="552" y="198" key="#ESLint" timestamp="1617806435575">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="552" y="198" key="#ESLint/0.0.1920.1080@0.0.1920.1080" timestamp="1616866100738" />
-    <state x="363" y="245" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1616865551838">
+    <state x="552" y="198" key="#ESLint/0.0.1920.1080@0.0.1920.1080" timestamp="1617806435575" />
+    <state x="363" y="245" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1618007166864">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="363" y="245" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1616865551838" />
+    <state x="363" y="245" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1618007166864" />
     <state x="976" y="285" key="#com.intellij.featureStatistics.actions.ShowFeatureUsageStatisticsDialog" timestamp="1617538554068">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="976" y="285" key="#com.intellij.featureStatistics.actions.ShowFeatureUsageStatisticsDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1617538554068" />
+    <state x="1176" y="564" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1617803927375">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1176" y="564" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1617803927375" />
     <state x="689" y="295" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1616865549600">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="689" y="295" key="#com.intellij.ide.macro.MacrosDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1616865549600" />
-    <state x="1214" y="323" key="#com.intellij.ide.util.MemberChooser" timestamp="1617595679516">
+    <state x="689" y="343" key="#com.intellij.ide.util.MemberChooser" timestamp="1618480283253">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="1214" y="323" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1617595679516" />
-    <state x="690" y="286" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1616867822422">
+    <state x="689" y="343" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1618480283253" />
+    <state x="782" y="397" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1618054162546">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="690" y="286" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1616867822422" />
+    <state x="782" y="397" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1618054162546" />
+    <state x="765" y="465" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1617812071533">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="765" y="465" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1617812071533" />
+    <state x="737" y="419" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1617812074762">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="737" y="419" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1920.1080@0.0.1920.1080" timestamp="1617812074762" />
+    <state x="0" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1617977168766">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="0" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1617977168766" />
+    <state x="690" y="286" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1618667203425">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="690" y="286" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1618667203425" />
+    <state x="821" y="281" key="#mo-novel-web" timestamp="1617997731075">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="821" y="281" key="#mo-novel-web/0.0.1920.1080@0.0.1920.1080" timestamp="1617997731075" />
+    <state x="203" y="101" key="CommitChangelistDialog2" timestamp="1618757818278">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="203" y="101" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1618757818278" />
+    <state width="400" height="466" key="DebuggerActiveHint" timestamp="1618059552294">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="400" height="466" key="DebuggerActiveHint/0.0.1920.1080@0.0.1920.1080" timestamp="1618059552294" />
     <state x="1023" y="290" width="748" height="454" key="EditFileWatcherDialog" timestamp="1616865331638">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="1023" y="290" width="748" height="454" key="EditFileWatcherDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1616865331638" />
-    <state x="1208" y="335" key="FileChooserDialogImpl" timestamp="1616924587072">
+    <state x="870" y="349" key="FileChooserDialogImpl" timestamp="1617992750721">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="1208" y="335" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1616924587072" />
-    <state width="1340" height="290" key="GridCell.Tab.0.bottom" timestamp="1617624805660">
+    <state x="870" y="349" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1617992750721" />
+    <state width="1340" height="227" key="GridCell.Tab.0.bottom" timestamp="1618667204007">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1340" height="290" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1617624805660" />
-    <state width="1340" height="290" key="GridCell.Tab.0.center" timestamp="1617624805660">
+    <state width="1340" height="227" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1618667204007" />
+    <state width="1340" height="227" key="GridCell.Tab.0.center" timestamp="1618667204006">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1340" height="290" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1617624805660" />
-    <state width="1340" height="290" key="GridCell.Tab.0.left" timestamp="1617624805660">
+    <state width="1340" height="227" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1618667204006" />
+    <state width="1340" height="227" key="GridCell.Tab.0.left" timestamp="1618667204006">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1340" height="290" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1617624805660" />
-    <state width="1340" height="290" key="GridCell.Tab.0.right" timestamp="1617624805660">
+    <state width="1340" height="227" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1618667204006" />
+    <state width="1340" height="227" key="GridCell.Tab.0.right" timestamp="1618667204007">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1340" height="290" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1617624805660" />
-    <state x="880" y="163" key="SettingsEditor" timestamp="1617508617373">
+    <state width="1340" height="227" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1618667204007" />
+    <state width="1340" height="419" key="GridCell.Tab.1.bottom" timestamp="1618563704271">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="880" y="163" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1617508617373" />
-    <state x="1035" y="415" key="com.intellij.ide.util.TipDialog" timestamp="1617526474319">
+    <state width="1340" height="419" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1618563704271" />
+    <state width="1340" height="419" key="GridCell.Tab.1.center" timestamp="1618563704271">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="1035" y="415" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1617526474319" />
+    <state width="1340" height="419" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1618563704271" />
+    <state width="1340" height="419" key="GridCell.Tab.1.left" timestamp="1618563704271">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1340" height="419" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1618563704271" />
+    <state width="1340" height="419" key="GridCell.Tab.1.right" timestamp="1618563704271">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1340" height="419" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1618563704271" />
+    <state width="1340" height="419" key="GridCell.Tab.2.bottom" timestamp="1618563704271">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1340" height="419" key="GridCell.Tab.2.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1618563704271" />
+    <state width="1340" height="419" key="GridCell.Tab.2.center" timestamp="1618563704271">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1340" height="419" key="GridCell.Tab.2.center/0.0.1920.1080@0.0.1920.1080" timestamp="1618563704271" />
+    <state width="1340" height="419" key="GridCell.Tab.2.left" timestamp="1618563704271">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1340" height="419" key="GridCell.Tab.2.left/0.0.1920.1080@0.0.1920.1080" timestamp="1618563704271" />
+    <state width="1340" height="419" key="GridCell.Tab.2.right" timestamp="1618563704271">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1340" height="419" key="GridCell.Tab.2.right/0.0.1920.1080@0.0.1920.1080" timestamp="1618563704271" />
+    <state width="1340" height="286" key="GridCell.Tab.3.bottom" timestamp="1618005162203">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1340" height="286" key="GridCell.Tab.3.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1618005162203" />
+    <state width="1340" height="286" key="GridCell.Tab.3.center" timestamp="1618005162203">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1340" height="286" key="GridCell.Tab.3.center/0.0.1920.1080@0.0.1920.1080" timestamp="1618005162203" />
+    <state width="1340" height="286" key="GridCell.Tab.3.left" timestamp="1618005162203">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1340" height="286" key="GridCell.Tab.3.left/0.0.1920.1080@0.0.1920.1080" timestamp="1618005162203" />
+    <state width="1340" height="286" key="GridCell.Tab.3.right" timestamp="1618005162203">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1340" height="286" key="GridCell.Tab.3.right/0.0.1920.1080@0.0.1920.1080" timestamp="1618005162203" />
+    <state x="490" y="195" key="Maven.ArtifactSearchDialog" timestamp="1618045157294">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="490" y="195" key="Maven.ArtifactSearchDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1618045157294" />
+    <state x="931" y="323" key="NewModule_or_Project.wizard" timestamp="1617992773237">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="931" y="323" key="NewModule_or_Project.wizard/0.0.1920.1080@0.0.1920.1080" timestamp="1617992773237" />
+    <state x="100" y="254" key="SettingsEditor" timestamp="1618757609426">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="100" y="254" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1618757609426" />
+    <state width="498" height="477" key="SwitcherDM" timestamp="1617993155632">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="498" height="477" key="SwitcherDM/0.0.1920.1080@0.0.1920.1080" timestamp="1617993155632" />
+    <state x="1035" y="415" key="com.intellij.ide.util.TipDialog" timestamp="1618757429624">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1035" y="415" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1618757429624" />
+    <state x="1005" y="407" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1617982936619">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1005" y="407" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1617982936619" />
     <state x="811" y="289" key="extract.method.dialog" timestamp="1617595816455">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="811" y="289" key="extract.method.dialog/0.0.1920.1080@0.0.1920.1080" timestamp="1617595816455" />
-    <state x="896" y="247" width="820" height="600" key="find.popup" timestamp="1617544792966">
+    <state x="896" y="247" width="820" height="600" key="find.popup" timestamp="1617812272152">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="896" y="247" width="820" height="600" key="find.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1617544792966" />
-    <state x="669" y="356" key="new project wizard" timestamp="1616857555889">
+    <state x="896" y="247" width="820" height="600" key="find.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1617812272152" />
+    <state x="507" y="436" key="new project wizard" timestamp="1618054181312">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="669" y="356" key="new project wizard/0.0.1920.1080@0.0.1920.1080" timestamp="1616857555889" />
-    <state x="1231" y="280" width="672" height="677" key="run.anything.popup" timestamp="1617610573856">
+    <state x="507" y="436" key="new project wizard/0.0.1920.1080@0.0.1920.1080" timestamp="1618054181312" />
+    <state x="1231" y="280" width="672" height="677" key="run.anything.popup" timestamp="1618068097453">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="1231" y="280" width="672" height="677" key="run.anything.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1617610573856" />
+    <state x="1231" y="280" width="672" height="677" key="run.anything.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1618068097453" />
     <state x="989" y="176" key="scopes" timestamp="1616865205409">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="989" y="176" key="scopes/0.0.1920.1080@0.0.1920.1080" timestamp="1616865205409" />
-    <state x="969" y="246" width="672" height="678" key="search.everywhere.popup" timestamp="1617545189448">
+    <state x="969" y="246" width="672" height="678" key="search.everywhere.popup" timestamp="1618666974903">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="969" y="246" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1617545189448" />
+    <state x="969" y="246" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1618666974903" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/shiro/AccountRealm.java</url>
+          <line>51</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
