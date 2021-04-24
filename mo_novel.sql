@@ -70,6 +70,15 @@ CREATE TABLE `t_boolist_book`  (
   PRIMARY KEY (`id`)
 ) COMMENT = '书单小说关联表';
 
+CREATE TABLE `t_category`  (
+  `id` int UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '主键ID',
+  `create_time` timestamp NULL DEFAULT now() ON UPDATE CURRENT_TIMESTAMP COMMENT '创建时间',
+  `update_time` timestamp NULL DEFAULT now() ON UPDATE CURRENT_TIMESTAMP COMMENT '修改时间',
+  `name` varchar(255) NOT NULL COMMENT '小说分类',
+  PRIMARY KEY (`id`),
+  UNIQUE INDEX `unq_name`(`name`) USING BTREE
+) COMMENT = '小说分类表';
+
 CREATE TABLE `t_comment_reply`  (
   `id` int UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '主键ID',
   `create_time` timestamp NOT NULL DEFAULT now() ON UPDATE CURRENT_TIMESTAMP COMMENT '创建时间',
@@ -85,6 +94,18 @@ CREATE TABLE `t_comment_reply`  (
   PRIMARY KEY (`id`),
   INDEX `idx_type_resourceid_fromuserid`(`resource_type`, `resource_id`, `from_user_id`) USING BTREE
 ) COMMENT = '评价/回复表\r\nTODO:使用触发器维护用户头像，用户名字段';
+
+CREATE TABLE `t_like`  (
+  `id` int UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '主键ID',
+  `create_time` timestamp NULL DEFAULT now() ON UPDATE CURRENT_TIMESTAMP COMMENT '创建时间',
+  `update_time` timestamp NULL DEFAULT now() ON UPDATE CURRENT_TIMESTAMP COMMENT '修改时间',
+  `resouce_type` int UNSIGNED NOT NULL COMMENT '资源类型',
+  `resource_id` int UNSIGNED NOT NULL COMMENT '资源ID',
+  `user_id` int UNSIGNED NULL COMMENT '用户ID',
+  `like` tinyint UNSIGNED NOT NULL COMMENT '喜欢或踩',
+  PRIMARY KEY (`id`),
+  UNIQUE INDEX `unq_type_rid_uid`(`resouce_type`, `resource_id`, `user_id`) USING BTREE
+) COMMENT = '点赞踩表';
 
 CREATE TABLE `t_rating`  (
   `id` int UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '主键ID',
@@ -111,16 +132,17 @@ CREATE TABLE `t_user`  (
   `update_time` timestamp NULL DEFAULT now() ON UPDATE CURRENT_TIMESTAMP COMMENT '修改时间',
   `username` varchar(20) NOT NULL COMMENT '用户名',
   `password` varchar(30) NOT NULL COMMENT '密码',
-  `avater` varchar(255) NULL COMMENT '头像url',
+  `avatar` varchar(255) NULL COMMENT '头像url',
   `sex` tinyint UNSIGNED NULL DEFAULT 0 COMMENT '性别：0男，1女',
   `email` varchar(100) NULL COMMENT '邮件',
   `mobile` varchar(11) NULL COMMENT '手机号',
-  `status` tinyint UNSIGNED NOT NULL DEFAULT 1 COMMENT '状态：0禁用，1可用',
+  `status` tinyint UNSIGNED NULL DEFAULT 1 COMMENT '状态：0禁用，1可用',
   `role_id` int UNSIGNED NULL COMMENT '角色ID',
   PRIMARY KEY (`id`),
   UNIQUE INDEX `unq_username`(`username`) USING BTREE
 ) COMMENT = '用户表';
 
+ALTER TABLE `t_book` ADD CONSTRAINT `fk_book_category` FOREIGN KEY (`category_id`) REFERENCES `t_category` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
 ALTER TABLE `t_book_content` ADD CONSTRAINT `fk_content_book` FOREIGN KEY (`book_id`) REFERENCES `t_book` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 ALTER TABLE `t_booklist` ADD CONSTRAINT `fk_booklist_user` FOREIGN KEY (`user_id`) REFERENCES `t_user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 ALTER TABLE `t_bookshelf` ADD CONSTRAINT `fk_shelf_user` FOREIGN KEY (`user_id`) REFERENCES `t_user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
@@ -129,6 +151,8 @@ ALTER TABLE `t_boolist_book` ADD CONSTRAINT `fk_list_booklist` FOREIGN KEY (`boo
 ALTER TABLE `t_boolist_book` ADD CONSTRAINT `fk_list_book` FOREIGN KEY (`book_id`) REFERENCES `t_book` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 ALTER TABLE `t_comment_reply` ADD CONSTRAINT `fk_reply_fromuser` FOREIGN KEY (`from_user_id`) REFERENCES `t_user` (`id`) ON DELETE NO ACTION ON UPDATE CASCADE;
 ALTER TABLE `t_comment_reply` ADD CONSTRAINT `fk_reply_touser` FOREIGN KEY (`to_user_id`) REFERENCES `t_user` (`id`) ON DELETE NO ACTION ON UPDATE CASCADE;
+ALTER TABLE `t_like` ADD CONSTRAINT `fk_like_user` FOREIGN KEY (`user_id`) REFERENCES `t_user` (`id`) ON DELETE NO ACTION ON UPDATE CASCADE;
 ALTER TABLE `t_rating` ADD CONSTRAINT `fk_rating_user` FOREIGN KEY (`user_id`) REFERENCES `t_user` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
 ALTER TABLE `t_rating` ADD CONSTRAINT `fk_rating_book` FOREIGN KEY (`book_id`) REFERENCES `t_book` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE `t_user` ADD CONSTRAINT `fk_user_role` FOREIGN KEY (`role_id`) REFERENCES `t_role` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
 

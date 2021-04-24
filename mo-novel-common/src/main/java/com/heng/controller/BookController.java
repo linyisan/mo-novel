@@ -2,21 +2,18 @@ package com.heng.controller;
 
 
 import com.heng.common.ResponseDTO;
+import com.heng.entity.Book;
 import com.heng.service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * <p>
- * 小说信息 前端控制器
+ * 小说信息表 前端控制器
  * </p>
  *
  * @author LJohn
- * @since 2021-04-09
+ * @since 2021-04-25
  */
 @RestController
 @RequestMapping("/book")
@@ -29,6 +26,13 @@ public class BookController {
                             @RequestParam(defaultValue = "5") Integer pageSize)
     {
         return bookService.pageBook(pageNo, pageSize);
+    }
+
+    @PostMapping("add")
+    public ResponseDTO add(Book book)
+    {
+        bookService.save(book);
+        return ResponseDTO.succ("成功添加小说");
     }
 }
 

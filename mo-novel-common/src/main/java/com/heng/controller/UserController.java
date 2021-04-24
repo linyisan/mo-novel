@@ -2,24 +2,20 @@ package com.heng.controller;
 
 
 import com.heng.common.ResponseDTO;
+import com.heng.entity.User;
 import com.heng.service.UserService;
-import com.heng.util.JwtUtils;
 import com.heng.vo.LoginVo;
-import org.apache.shiro.SecurityUtils;
-import org.apache.shiro.authc.IncorrectCredentialsException;
-import org.apache.shiro.authc.UnknownAccountException;
-import org.apache.shiro.authc.UsernamePasswordToken;
-import org.apache.shiro.subject.Subject;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 /**
  * <p>
- * 用户信息 前端控制器
+ * 用户表 前端控制器
  * </p>
  *
  * @author LJohn
- * @since 2021-04-09
+ * @since 2021-04-25
  */
 @RestController
 @RequestMapping("/user")
@@ -27,7 +23,8 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @PostMapping("/login1")
+
+/*    @PostMapping("/login1")
     public ResponseDTO login1(@RequestParam("username") String username,
                               @RequestParam("password") String password)
     {
@@ -52,7 +49,7 @@ public class UserController {
             return ResponseDTO.fail("密码错误");
 
         }
-    }
+    }*/
 
     @PostMapping("/login")
     public ResponseDTO login(@RequestBody LoginVo loginVo)
@@ -67,10 +64,16 @@ public class UserController {
         return userService.info(token);
     }
 
+    @PostMapping("register")
+    public ResponseDTO register(@Validated User user)
+    {
+        return userService.register(user);
+    }
+
     @PostMapping("/logout")
     public ResponseDTO logout(@RequestHeader("X-Token") String token)
     {
-        SecurityUtils.getSubject().logout();
+//        SecurityUtils.getSubject().logout();
         return ResponseDTO.succ("成功退出登录", null);
     }
 

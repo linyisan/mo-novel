@@ -6,11 +6,11 @@ import com.baomidou.mybatisplus.extension.service.IService;
 
 /**
  * <p>
- * 小说信息 服务类
+ * 小说信息表 服务类
  * </p>
  *
  * @author LJohn
- * @since 2021-04-09
+ * @since 2021-04-25
  */
 public interface BookService extends IService<Book> {
     ResponseDTO addBook(Book book);

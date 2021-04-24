@@ -5,8 +5,9 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import java.time.LocalDateTime;
 import java.io.Serializable;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.experimental.Accessors;
 
 /**
  * <p>
@@ -14,79 +15,51 @@ import io.swagger.annotations.ApiModelProperty;
  * </p>
  *
  * @author LJohn
- * @since 2021-04-09
+ * @since 2021-04-25
  */
+@Data
+@EqualsAndHashCode(callSuper = false)
+@Accessors(chain = true)
 @TableName("t_bookshelf")
-@ApiModel(value="Bookshelf对象", description="用户书架")
 public class Bookshelf implements Serializable {
 
-    private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID=1L;
 
-    @ApiModelProperty(value = "主键")
-    @TableId(value = "id", type = IdType.AUTO)
+    /**
+     * 主键ID
+     */
+      @TableId(value = "id", type = IdType.AUTO)
     private Integer id;
 
-    @ApiModelProperty(value = "添加时间")
+    /**
+     * 创建时间
+     */
     private LocalDateTime createTime;
 
-    @ApiModelProperty(value = "修改时间")
+    /**
+     * 修改时间
+     */
     private LocalDateTime updateTime;
 
-    @ApiModelProperty(value = "用户ID")
+    /**
+     * 用户ID
+     */
     private Integer userId;
 
-    @ApiModelProperty(value = "小说ID")
+    /**
+     * 小说ID
+     */
     private Integer bookId;
 
+    /**
+     * 阅读进度：1正在追看，2养肥待看，3已经看过
+     */
+    private Integer readingProcess;
 
-    public Integer getId() {
-        return id;
-    }
+    /**
+     * 上次阅读章节ID
+     */
+    private Integer readingHistoryId;
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
 
-    public LocalDateTime getCreateTime() {
-        return createTime;
-    }
-
-    public void setCreateTime(LocalDateTime createTime) {
-        this.createTime = createTime;
-    }
-
-    public LocalDateTime getUpdateTime() {
-        return updateTime;
-    }
-
-    public void setUpdateTime(LocalDateTime updateTime) {
-        this.updateTime = updateTime;
-    }
-
-    public Integer getUserId() {
-        return userId;
-    }
-
-    public void setUserId(Integer userId) {
-        this.userId = userId;
-    }
-
-    public Integer getBookId() {
-        return bookId;
-    }
-
-    public void setBookId(Integer bookId) {
-        this.bookId = bookId;
-    }
-
-    @Override
-    public String toString() {
-        return "Bookshelf{" +
-        "id=" + id +
-        ", createTime=" + createTime +
-        ", updateTime=" + updateTime +
-        ", userId=" + userId +
-        ", bookId=" + bookId +
-        "}";
-    }
 }

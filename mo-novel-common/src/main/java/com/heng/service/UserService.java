@@ -7,14 +7,13 @@ import com.heng.vo.LoginVo;
 
 /**
  * <p>
- * 用户信息 服务类
+ * 用户表 服务类
  * </p>
  *
  * @author LJohn
- * @since 2021-04-09
+ * @since 2021-04-25
  */
 public interface UserService extends IService<User> {
-
     User getUserByUsername(String username);
 
     ResponseDTO login(LoginVo loginVo);
@@ -22,4 +21,6 @@ public interface UserService extends IService<User> {
     ResponseDTO info(String token);
 
     ResponseDTO page(Integer pageNo, Integer pageSize);
+
+    ResponseDTO register(User user);
 }

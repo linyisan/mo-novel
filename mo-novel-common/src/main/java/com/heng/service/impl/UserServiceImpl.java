@@ -3,7 +3,6 @@ package com.heng.service.impl;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.heng.common.ResponseDTO;
-import com.heng.entity.Book;
 import com.heng.entity.User;
 import com.heng.mapper.UserMapper;
 import com.heng.service.UserService;
@@ -12,28 +11,26 @@ import com.heng.util.JwtUtils;
 import com.heng.vo.LoginVo;
 import com.heng.vo.UserInfoVo;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Objects;
 
 /**
  * <p>
- * 用户信息 服务实现类
+ * 用户表 服务实现类
  * </p>
  *
  * @author LJohn
- * @since 2021-04-09
+ * @since 2021-04-25
  */
 @Service
-public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements UserService {
+public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements UserService  {
     @Autowired
     private UserMapper userMapper;
 
-    @Autowired
-    private PasswordEncoder passwordEncoder;
+/*    @Autowired
+    private PasswordEncoder passwordEncoder;*/
 
     @Override
     public User getUserByUsername(String username)
@@ -92,6 +89,18 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         HashMap<String, Object> map = new HashMap<>();
         map.put("items", page.getRecords());
         map.put("total", page.getTotal());
+//        map.put("item", userMapper.selectUserAndRole());
         return ResponseDTO.succ(map);
     }
+
+    @Override
+    public ResponseDTO register(User user)
+    {
+        if(null != getUserByUsername(user.getUsername()))
+            return ResponseDTO.fail("用户名已经存在!");
+        if(0 >= userMapper.insert(user))
+            return ResponseDTO.fail("注册失败");
+        return ResponseDTO.succ("注册成功");
+    }
+
 }
