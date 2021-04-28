@@ -1,7 +1,7 @@
 package com.heng.service;
 
-import com.heng.entity.Like;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.heng.entity.Like;
 
 /**
  * <p>
@@ -9,7 +9,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * </p>
  *
  * @author LJohn
- * @since 2021-04-25
+ * @since 2021-04-28
  */
 public interface LikeService extends IService<Like> {
 

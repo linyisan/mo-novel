@@ -13,7 +13,7 @@ import java.time.LocalDateTime;
 
 /**
  * <p>
- * 用户书架
+ * 小说目录表
  * </p>
  *
  * @author LJohn
@@ -21,9 +21,9 @@ import java.time.LocalDateTime;
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
-@TableName("t_bookshelf")
-@ApiModel(value="Bookshelf对象", description="用户书架")
-public class Bookshelf implements Serializable {
+@TableName("t_book_index")
+@ApiModel(value="BookIndex对象", description="小说目录表")
+public class BookIndex implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -37,17 +37,14 @@ public class Bookshelf implements Serializable {
     @ApiModelProperty(value = "修改时间")
     private LocalDateTime updateTime;
 
-    @ApiModelProperty(value = "用户ID")
-    private Long userId;
-
     @ApiModelProperty(value = "小说ID")
     private Long bookId;
 
-    @ApiModelProperty(value = "阅读进度：1正在追看，2养肥待看，3已经看过")
-    private Byte readingProcess;
+    @ApiModelProperty(value = "章节字数")
+    private Long wordCount;
 
-    @ApiModelProperty(value = "上次阅读章节ID")
-    private Long readingHistoryId;
+    @ApiModelProperty(value = "章节名")
+    private String title;
 
 
 }

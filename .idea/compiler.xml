@@ -7,8 +7,8 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="mo-novel-common" />
         <module name="mybatisplus" />
+        <module name="mo-novel-common" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

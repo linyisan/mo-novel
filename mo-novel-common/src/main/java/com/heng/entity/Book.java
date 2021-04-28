@@ -1,14 +1,16 @@
 package com.heng.entity;
 
-import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableName;
 import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
-import java.time.LocalDateTime;
-import java.io.Serializable;
+import com.baomidou.mybatisplus.annotation.TableName;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-import lombok.experimental.Accessors;
+
+import java.io.Serializable;
+import java.time.LocalDateTime;
 
 /**
  * <p>
@@ -16,77 +18,54 @@ import lombok.experimental.Accessors;
  * </p>
  *
  * @author LJohn
- * @since 2021-04-25
+ * @since 2021-04-28
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
-@Accessors(chain = true)
-@TableName(value = "t_book", resultMap = "BaseResultMap")
+@TableName("t_book")
+@ApiModel(value="Book对象", description="小说信息表")
 public class Book implements Serializable {
 
-    private static final long serialVersionUID=1L;
+    private static final long serialVersionUID = 1L;
 
-    /**
-     * 主键ID
-     */
-      @TableId(value = "id", type = IdType.AUTO)
-    private Integer id;
+    @ApiModelProperty(value = "主键ID")
+    @TableId(value = "id", type = IdType.AUTO)
+    private Long id;
 
-    /**
-     * 创建时间
-     */
+    @ApiModelProperty(value = "创建时间")
     private LocalDateTime createTime;
 
-    /**
-     * 修改时间
-     */
+    @ApiModelProperty(value = "修改时间")
     private LocalDateTime updateTime;
 
-    /**
-     * 小说名
-     */
+    @ApiModelProperty(value = "小说名")
     private String title;
 
-    /**
-     * 作者名
-     */
+    @ApiModelProperty(value = "作者名")
     private String authorName;
 
-    /**
-     * 频道：0男频，1女频
-     */
-    private Integer channel;
+    @ApiModelProperty(value = "频道：0男频，1女频")
+    private Byte channel;
 
-    /**
-     * 小说分类ID
-     */
-    private Integer categoryId;
+    @ApiModelProperty(value = "小说分类ID")
+    private Long categoryId;
 
-    /**
-     * 小说简介
-     */
+    @ApiModelProperty(value = "小说简介")
     private String introduction;
 
-    /**
-     * 小说封面
-     */
+    @ApiModelProperty(value = "小说封面")
     private String cover;
 
-    /**
-     * 状态：0下架，1连载中，2已完结
-     */
-    private Integer status;
+    @ApiModelProperty(value = "状态：0下架，1连载中，2已完结")
+    private Byte status;
 
-    /**
-     * 小说总字数
-     */
-    private Integer wordCount;
+    @ApiModelProperty(value = "小说总字数")
+    private Long wordCount;
 
-    /**
-     * 总点击量
-     */
-    private Integer visitCount;
+    @ApiModelProperty(value = "总点击量")
+    private Long visitCount;
 
     @TableField(exist = false)
     private Category category;
+
 }

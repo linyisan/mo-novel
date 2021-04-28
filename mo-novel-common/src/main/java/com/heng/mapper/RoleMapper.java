@@ -1,7 +1,7 @@
 package com.heng.mapper;
 
-import com.heng.entity.Role;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.heng.entity.Role;
 
 /**
  * <p>
@@ -9,7 +9,7 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * </p>
  *
  * @author LJohn
- * @since 2021-04-25
+ * @since 2021-04-28
  */
 public interface RoleMapper extends BaseMapper<Role> {
 

@@ -58,7 +58,7 @@ class BookServiceTest {
     @Test
     public void testJackson() throws JsonProcessingException
     {
-        User user = new User().setId(1)
+        User user = new User().setId(1L)
                 .setAvatar("https")
                 .setEmail("") // JsonInclude.Include.NON_EMPTY
                 .setCreateTime(LocalDateTime.now())
@@ -76,7 +76,7 @@ class BookServiceTest {
     @Test
     public void testHultool()
     {
-        User user = new User().setId(1)
+        User user = new User().setId(1L)
                 .setAvatar("https")
                 .setEmail("") // JsonInclude.Include.NON_EMPTY
                 .setCreateTime(LocalDateTime.now())
@@ -87,7 +87,7 @@ class BookServiceTest {
     @Test
     public void testMPStringUtils()
     {
-        User user = new User().setId(1)
+        User user = new User().setId(1L)
                 .setAvatar("https")
                 .setEmail("") // JsonInclude.Include.NON_EMPTY
                 .setCreateTime(LocalDateTime.now())

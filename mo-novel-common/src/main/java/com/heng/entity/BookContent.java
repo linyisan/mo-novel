@@ -1,69 +1,39 @@
 package com.heng.entity;
 
-import com.baomidou.mybatisplus.annotation.TableName;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
-import java.time.LocalDateTime;
-import java.io.Serializable;
+import com.baomidou.mybatisplus.annotation.TableName;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-import lombok.experimental.Accessors;
+
+import java.io.Serializable;
 
 /**
  * <p>
- * 小说内容表
+ * 小说章节内容表（mediumtext字段影响性能，从t_book_index表中分离）
  * </p>
  *
  * @author LJohn
- * @since 2021-04-25
+ * @since 2021-04-28
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
-@Accessors(chain = true)
 @TableName("t_book_content")
+@ApiModel(value="BookContent对象", description="小说章节内容表（mediumtext字段影响性能，从t_book_index表中分离）")
 public class BookContent implements Serializable {
 
-    private static final long serialVersionUID=1L;
+    private static final long serialVersionUID = 1L;
 
-    /**
-     * 主键ID
-     */
-      @TableId(value = "id", type = IdType.AUTO)
-    private Integer id;
+    @ApiModelProperty(value = "主键ID")
+    @TableId(value = "id", type = IdType.AUTO)
+    private Long id;
 
-    /**
-     * 创建时间
-     */
-    private LocalDateTime createTime;
+    @ApiModelProperty(value = "目录ID")
+    private Long indexId;
 
-    /**
-     * 修改时间
-     */
-    private LocalDateTime updateTime;
-
-    /**
-     * 小说ID
-     */
-    private Integer bookId;
-
-    /**
-     * 本章字数
-     */
-    private Integer wordCount;
-
-    /**
-     * 章节序号
-     */
-    private Integer indexNum;
-
-    /**
-     * 章节标题
-     */
-    private String indexTitle;
-
-    /**
-     * 本章节内容
-     */
+    @ApiModelProperty(value = "小说章节内容")
     private String content;
 
 
