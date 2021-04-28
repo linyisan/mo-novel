@@ -25,4 +25,31 @@
         id, create_time, update_time, title, author_name, channel, category_id, introduction, cover, status, word_count, visit_count
     </sql>
 
+    <!--<select id="searchByPage" parameterType="com.heng.vo.BookSpVo" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from t_book where word_count > 0
+        <if test="keyword != null and keyword != ''">
+            and (book_name like concat('%',#{keyword},'%') or author_name like concat('%',#{keyword},'%'))
+        </if>
+        <if test="channel != null">
+            and channel = #{channel}
+        </if>
+        <if test="categoryId != null">
+            and category_id = #{categoryId}
+        </if>
+        <if test="bookStatus != null">
+            and status = #{bookStatus}
+        </if>
+        <if test="wordCountMin != null">
+            and word_count >= #{wordCountMin}
+        </if>
+        <if test="wordCountMax != null">
+            and word_count <![CDATA[ < ]]> #{wordCountMax}
+        </if>
+        <if test="updateTimeMin != null">
+            and update_time >= #{updateTimeMin}
+        </if>
+
+    </select>-->
 </mapper>

@@ -3,6 +3,7 @@ package com.heng.service;
 import com.heng.common.ResponseDTO;
 import com.heng.entity.Book;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.heng.vo.BookSpVo;
 
 /**
  * <p>
@@ -15,7 +16,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
 public interface BookService extends IService<Book> {
     ResponseDTO addBook(Book book);
 
-    ResponseDTO pageBook(Integer pageNo, Integer pageSize);
+    ResponseDTO searchByPage(Integer pageNo, Integer pageSize, BookSpVo queryParams);
 
     ResponseDTO selectBookById(Integer bookId);
 

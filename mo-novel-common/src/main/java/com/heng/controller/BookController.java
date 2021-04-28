@@ -4,6 +4,7 @@ package com.heng.controller;
 import com.heng.common.ResponseDTO;
 import com.heng.entity.Book;
 import com.heng.service.BookService;
+import com.heng.vo.BookSpVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -21,11 +22,12 @@ public class BookController {
     @Autowired
     private BookService bookService;
 
-    @GetMapping("/list")
-    public ResponseDTO list(@RequestParam(defaultValue = "1") Integer pageNo,
-                            @RequestParam(defaultValue = "5") Integer pageSize)
+    @GetMapping("/searchByPage")
+    public ResponseDTO searchByPage(@RequestParam(defaultValue = "1") Integer pageNo,
+                            @RequestParam(defaultValue = "5") Integer pageSize,
+                            BookSpVo queryParams)
     {
-        return bookService.pageBook(pageNo, pageSize);
+        return bookService.searchByPage(pageNo, pageSize, queryParams);
     }
 
     @PostMapping("add")
@@ -34,5 +36,6 @@ public class BookController {
         bookService.save(book);
         return ResponseDTO.succ("成功添加小说");
     }
+
 }
 

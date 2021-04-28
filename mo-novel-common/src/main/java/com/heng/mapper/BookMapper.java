@@ -2,6 +2,9 @@ package com.heng.mapper;
 
 import com.heng.entity.Book;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.heng.vo.BookSpVo;
+
+import java.util.List;
 
 /**
  * <p>
@@ -12,5 +15,4 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * @since 2021-04-25
  */
 public interface BookMapper extends BaseMapper<Book> {
-
 }
