@@ -1,6 +1,7 @@
 package com.heng.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.heng.common.ResponseDTO;
 import com.heng.entity.BookContent;
 
 /**
@@ -12,5 +13,4 @@ import com.heng.entity.BookContent;
  * @since 2021-04-28
  */
 public interface BookContentService extends IService<BookContent> {
-
 }

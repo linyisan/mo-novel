@@ -11,6 +11,8 @@
         <result column="book_id" property="bookId" />
         <result column="reading_process" property="readingProcess" />
         <result column="reading_history_id" property="readingHistoryId" />
+        <association property="book" column="book_id"
+                     select="com.heng.mapper.BookMapper.selectById"/>
     </resultMap>
 
     <!-- 通用查询结果列 -->

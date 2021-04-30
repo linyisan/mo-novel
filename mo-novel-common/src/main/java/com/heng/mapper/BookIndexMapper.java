@@ -2,6 +2,7 @@ package com.heng.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.heng.entity.BookIndex;
+import org.springframework.stereotype.Repository;
 
 /**
  * <p>

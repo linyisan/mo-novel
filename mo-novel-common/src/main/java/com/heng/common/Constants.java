@@ -1,4 +1,4 @@
-package com.heng.util;
+package com.heng.common;
 
 public final class Constants {
     public final static int STATUS_OK = 20000;

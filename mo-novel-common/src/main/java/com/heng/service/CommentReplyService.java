@@ -12,5 +12,4 @@ import com.heng.entity.CommentReply;
  * @since 2021-04-28
  */
 public interface CommentReplyService extends IService<CommentReply> {
-
 }

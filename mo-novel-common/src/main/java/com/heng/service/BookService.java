@@ -3,6 +3,7 @@ package com.heng.service;
 import com.heng.common.ResponseDTO;
 import com.heng.entity.Book;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.heng.entity.CommentReply;
 import com.heng.vo.BookSpVo;
 
 /**
@@ -18,9 +19,15 @@ public interface BookService extends IService<Book> {
 
     ResponseDTO searchByPage(Integer pageNo, Integer pageSize, BookSpVo queryParams);
 
-    ResponseDTO selectBookById(Integer bookId);
+    ResponseDTO selectBookById(Long bookId);
 
     ResponseDTO selectBook(Book book);
 
     ResponseDTO updateBook(Book book);
+
+    boolean addVisitCount(Long bookId, Long visitCount);
+
+    ResponseDTO addBookCommentReply(CommentReply commentReply);
+
+    boolean existsBookComment(CommentReply commentReply);
 }

@@ -1,6 +1,5 @@
 package com.heng.common;
 
-import com.heng.util.Constants;
 import lombok.Data;
 
 @Data

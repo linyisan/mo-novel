@@ -1,6 +1,7 @@
 package com.heng.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import io.swagger.annotations.ApiModel;
@@ -8,6 +9,9 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
+import javax.validation.constraints.Digits;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
@@ -38,13 +42,19 @@ public class BookIndex implements Serializable {
     private LocalDateTime updateTime;
 
     @ApiModelProperty(value = "小说ID")
+    @NotNull( message = "小说ID不能为空")
     private Long bookId;
 
     @ApiModelProperty(value = "章节字数")
     private Long wordCount;
 
     @ApiModelProperty(value = "章节名")
+    @NotBlank(message = "章节名不能为空")
     private String title;
 
+    @ApiModelProperty(value = "章节内容")
+    @TableField(exist = false)
+    @NotBlank(message = "小说内容不能为空")
+    private String content;
 
 }
