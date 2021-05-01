@@ -4,11 +4,12 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.toolkit.StringUtils;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.heng.common.ResponseDTO;
+import com.heng.common.ResponseStatus;
 import com.heng.entity.Book;
-import com.heng.entity.CommentReply;
+import com.heng.entity.Comment;
 import com.heng.exception.BusinessException;
 import com.heng.mapper.BookMapper;
-import com.heng.mapper.CommentReplyMapper;
+import com.heng.mapper.CommentMapper;
 import com.heng.service.BookService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.heng.vo.BookSpVo;
@@ -16,7 +17,6 @@ import lombok.SneakyThrows;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 
@@ -35,7 +35,7 @@ public class BookServiceImpl extends ServiceImpl<BookMapper, Book> implements Bo
     private BookMapper bookMapper;
 
     @Autowired
-    private CommentReplyMapper commentReplyMapper;
+    private CommentMapper commentMapper;
 
     @Override
     public ResponseDTO addBook(Book book)
@@ -72,7 +72,7 @@ public class BookServiceImpl extends ServiceImpl<BookMapper, Book> implements Bo
     public ResponseDTO selectBookById(Long bookId)
     {
         Book book = bookMapper.selectById(bookId);
-        if (StringUtils.checkValNotNull(book)) throw new BusinessException("小说不存在");
+        if (StringUtils.checkValNull(book)) throw new BusinessException("小说不存在");
         return ResponseDTO.succ(book);
     }
 
@@ -99,23 +99,36 @@ public class BookServiceImpl extends ServiceImpl<BookMapper, Book> implements Bo
     }
 
     @Override
-    public ResponseDTO addBookCommentReply(CommentReply commentReply)
+    public ResponseDTO addBookComment(Comment comment)
     {
-        if(this.existsBookComment(commentReply)) throw new BusinessException("已评价过该书籍！");
-        commentReplyMapper.insert(commentReply);
+        Book book = bookMapper.selectById(comment.getResourceId());
+        if(StringUtils.checkValNull(book)) throw new BusinessException("小说不存在");
+
+        comment.setResourceType((byte) 1);
+        if(this.existsBookComment(comment)) throw new BusinessException("已评价过该书籍！");
+
+        commentMapper.insert(comment);
         return ResponseDTO.succ("评论成功");
     }
 
     @Override
-    public boolean existsBookComment(CommentReply commentReply)
+    public ResponseDTO updateBookComment(Long commentId, String content)
     {
-        // 评论: 资源类型=1 资源ID PID=0 + 唯一 from_user_id
+        Comment comment = commentMapper.selectById(commentId);
+        comment.setContent(content);
+        commentMapper.updateById(comment);
+
+        return ResponseDTO.succ(ResponseStatus.SUCCESS.getMsg());
+    }
+
+    @Override
+    public boolean existsBookComment(Comment comment)
+    {
         HashMap<String, Object> map = new HashMap<>();
-        map.put("resource_type", 1);
-        map.put("resource_id", commentReply.getResourceId());
-        map.put("pid", 0);
-        map.put("from_user_id", commentReply.getFromUserId());
-        List<CommentReply> bookComments = commentReplyMapper.selectByMap(map);
+        map.put("resource_type", comment.getResourceType());
+        map.put("resource_id", comment.getResourceId());
+        map.put("user_id", comment.getUserId());
+        List<Comment> bookComments = commentMapper.selectByMap(map);
         if (bookComments.isEmpty()) return false;
         else return true;
     }

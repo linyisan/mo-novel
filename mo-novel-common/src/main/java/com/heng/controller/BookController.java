@@ -2,12 +2,14 @@ package com.heng.controller;
 
 
 import com.heng.common.ResponseDTO;
+import com.heng.common.ResponseStatus;
 import com.heng.entity.Book;
-import com.heng.entity.CommentReply;
+import com.heng.entity.Comment;
 import com.heng.service.BookService;
-import com.heng.service.CommentReplyService;
+import com.heng.service.CommentService;
 import com.heng.vo.BookSpVo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
@@ -28,7 +30,7 @@ public class BookController {
     private BookService bookService;
 
     @Autowired
-    private CommentReplyService commentReplyService;
+    private CommentService commentService;
 
     @GetMapping("/searchByPage")
     public ResponseDTO searchByPage(@RequestParam(defaultValue = "1") Integer pageNo,
@@ -52,20 +54,32 @@ public class BookController {
         return bookService.selectBookById(bookId);
     }
 
-    @PostMapping("addBookCommentReply")
-    public ResponseDTO addBookCommentReply(CommentReply commentReply)
+    @PostMapping("addBookComment")
+    public ResponseDTO addBookComment(@Validated Comment comment)
     {
-        return bookService.addBookCommentReply(commentReply);
+        return bookService.addBookComment(comment);
     }
 
-    @GetMapping("pageBookCommentReply/{bookId}")
-    public ResponseDTO pageBookCommentReply(@PathVariable Long bookId)
+    @PostMapping("updateBookComment")
+    public ResponseDTO updateBookComment(Long commentId, String content)
+    {
+        return bookService.updateBookComment(commentId, content);
+    }
+
+    @GetMapping("deleteBookComment/{commentId}")
+    public ResponseDTO deleteBookComment(@PathVariable Long commentId)
+    {
+        commentService.removeById(commentId);
+        return ResponseDTO.succ(ResponseStatus.SUCCESS.getMsg());
+    }
+
+    @GetMapping("pageBookComment/{bookId}")
+    public ResponseDTO pageBookComment(@PathVariable Long bookId)
     {
         HashMap<String, Object> map = new HashMap<>();
         map.put("resource_type", 1);
         map.put("resource_id", bookId);
-        map.put("pid", 0);
-        List<CommentReply> bookComments = commentReplyService.listByMap(map);
+        List<Comment> bookComments = commentService.listByMap(map);
         return ResponseDTO.succ(bookComments);
     }
 }

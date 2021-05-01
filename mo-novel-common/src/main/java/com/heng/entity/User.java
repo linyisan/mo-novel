@@ -15,6 +15,7 @@ import javax.validation.constraints.Pattern;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Set;
 
 /**
  * <p>
@@ -72,5 +73,5 @@ public class User implements Serializable {
 
     @ApiModelProperty(value = "角色集合")
     @TableField(exist = false) // 非数据库字段
-    private List<Role> roles;
+    private Set<Role> roles;
 }

@@ -4,6 +4,8 @@ package com.heng.controller;
 import com.heng.common.ResponseDTO;
 import com.heng.entity.Category;
 import com.heng.service.CategoryService;
+import org.apache.shiro.authz.annotation.RequiresAuthentication;
+import org.apache.shiro.authz.annotation.RequiresRoles;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -35,6 +37,8 @@ public class CategoryController {
     }
 
     @GetMapping("list")
+//    @RequiresAuthentication
+//    @RequiresRoles(value = {"admin"})
     public ResponseDTO list()
     {
         HashMap<String, Object> map = new HashMap<>();
