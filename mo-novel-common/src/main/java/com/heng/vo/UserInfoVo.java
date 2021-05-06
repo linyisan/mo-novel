@@ -8,8 +8,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class UserInfoVo {
-    private String[] roles;
-    private String introduction;
-    private String avatar;
+    private Long id;
     private String name;
+    private String[] roles;
+    private String avatar;
 }

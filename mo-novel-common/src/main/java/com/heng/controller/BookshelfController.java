@@ -27,28 +27,28 @@ public class BookshelfController {
     private BookshelfService bookshelfService;
 
     @PostMapping("add")
-    public ResponseDTO add(@Validated Bookshelf bookshelf)
+    public ResponseDTO addBookshelf(@Validated @RequestBody Bookshelf bookshelf)
     {
         bookshelfService.saveOrUpdate(bookshelf);
         return ResponseDTO.succ("成功加入书架");
     }
 
     @GetMapping("delete/{bookshelfId}")
-    public ResponseDTO delete(@PathVariable Long bookshelfId)
+    public ResponseDTO deleteBookshelf(@PathVariable Long bookshelfId)
     {
         bookshelfService.removeById(bookshelfId);
         return ResponseDTO.succ("成功移除");
     }
 
-    @PostMapping("update")
-    public ResponseDTO update(@Validated Bookshelf bookshelf)
+    @PostMapping("edit")
+    public ResponseDTO editBookshelf(@Validated @RequestBody Bookshelf bookshelf)
     {
         bookshelfService.updateById(bookshelf);
         return ResponseDTO.succ(ResponseStatus.SUCCESS.getMsg());
     }
 
-    @GetMapping("list/{userId}")
-    public ResponseDTO listByUserId(@PathVariable Long userId)
+    @GetMapping("search")
+    public ResponseDTO searchBookshelf(@PathVariable Long userId)
     {
         HashMap<String, Object> map = new HashMap<>();
         map.put("user_id", userId);

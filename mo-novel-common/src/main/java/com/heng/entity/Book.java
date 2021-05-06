@@ -9,6 +9,7 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
+import javax.validation.constraints.NotBlank;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
@@ -39,9 +40,11 @@ public class Book implements Serializable {
     private LocalDateTime updateTime;
 
     @ApiModelProperty(value = "小说名")
+    @NotBlank(message = "小说名不能为空")
     private String title;
 
     @ApiModelProperty(value = "作者名")
+    @NotBlank(message = "作者名不能为空")
     private String authorName;
 
     @ApiModelProperty(value = "频道：0男频，1女频")
@@ -51,6 +54,7 @@ public class Book implements Serializable {
     private Long categoryId;
 
     @ApiModelProperty(value = "小说简介")
+    @NotBlank(message = "小说简介不能为空")
     private String introduction;
 
     @ApiModelProperty(value = "小说封面")

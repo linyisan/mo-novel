@@ -1,5 +1,6 @@
 package com.heng.vo;
 
+import com.heng.common.BaseQuery;
 import lombok.Data;
 import lombok.experimental.Accessors;
 
@@ -12,9 +13,15 @@ import java.util.Date;
  */
 @Data
 @Accessors(chain = true)
-public class BookSpVo {
+public class BookQueryVo extends BaseQuery {
     // 关键字: 书名，作者
     private String keyword;
+
+    // 书名
+    private String title;
+
+    // 作者
+    private String authorName;
 
     // 频道: 男女频
     private Byte channel;

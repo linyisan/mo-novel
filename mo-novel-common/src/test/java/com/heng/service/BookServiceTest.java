@@ -1,7 +1,5 @@
 package com.heng.service;
 
-import cn.hutool.core.util.ObjectUtil;
-import cn.hutool.core.util.StrUtil;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.toolkit.StringUtils;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -11,7 +9,7 @@ import com.fasterxml.jackson.databind.PropertyNamingStrategy;
 import com.heng.entity.Book;
 import com.heng.entity.User;
 import com.heng.mapper.BookMapper;
-import com.heng.vo.BookSpVo;
+import com.heng.vo.BookQueryVo;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -19,8 +17,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.Map;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
 class BookServiceTest {
@@ -44,7 +40,7 @@ class BookServiceTest {
     public void testWrapper()
     {
         QueryWrapper<Book> bookQueryWrapper = new QueryWrapper<>();
-        BookSpVo queryParams = new BookSpVo()
+        BookQueryVo queryParams = new BookQueryVo()
                 .setBookStatus((byte) 1)
                 .setCategoryId(3)
                 .setSort("update_time") // 配合下面orderByDesc

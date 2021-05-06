@@ -49,13 +49,6 @@ public class GlobalExceptionHandler {
         return ResponseDTO.fail(message);
     }
 
-    @ExceptionHandler(SQLException.class)
-    public ResponseDTO SQLExceptionHandler(SQLException e)
-    {
-        e.printStackTrace();
-        return ResponseDTO.fail("SQL操作失败");
-    }
-
     // 业务异常
     @ExceptionHandler(BusinessException.class)
     public ResponseDTO BusinessExceptionHandler(BusinessException e)
@@ -63,44 +56,6 @@ public class GlobalExceptionHandler {
         return ResponseDTO.fail(e.getMessage());
     }
 
-    // shiro相关 start
-    @ExceptionHandler(UnknownAccountException.class)
-    public ResponseDTO UnknownAccountExceptionHandler(UnknownAccountException e)
-    {
-        return ResponseDTO.fail("用户名不存在");
-    }
-
-    @ExceptionHandler(IncorrectCredentialsException.class)
-    public ResponseDTO IncorrectCredentialsExceptionHandler(IncorrectCredentialsException e)
-    {
-        return ResponseDTO.fail("密码错误");
-    }
-
-    @ExceptionHandler(LockedAccountException.class)
-    public ResponseDTO LockedAccountExceptionHandler(LockedAccountException e)
-    {
-        return ResponseDTO.fail("登录验证过多, 账户已锁定");
-    }
-
-    @ExceptionHandler(ExcessiveAttemptsException.class)
-    public ResponseDTO ExcessiveAttemptsExceptionHandler(ExcessiveAttemptsException e)
-    {
-        return ResponseDTO.fail("shiro登录认证次数过多, 请xx分钟后再试");
-    }
-
-    @ExceptionHandler(AuthenticationException.class)
-    public ResponseDTO AuthenticationExceptionHandler(AuthenticationException e)
-    {
-        return ResponseDTO.fail("shiro认证失败");
-    }
-
-    @ExceptionHandler(AuthorizationException.class)
-    public ResponseDTO AuthorizationExceptionHandler(AuthorizationException e)
-    {
-        return ResponseDTO.fail("没有相关授权");
-    }
-
-    // shiro相关 end
 
 //    @ExceptionHandler(RuntimeException.class)
     public ResponseDTO RuntimeExceptionHandler(RuntimeException e)

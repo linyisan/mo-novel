@@ -25,7 +25,7 @@
         id, create_time, update_time, title, author_name, channel, category_id, introduction, cover, status, word_count, visit_count
     </sql>
 
-    <!--<select id="searchByPage" parameterType="com.heng.vo.BookSpVo" resultMap="BaseResultMap">
+    <!--<select id="searchByPage" parameterType="com.heng.vo.BookQueryVo" resultMap="BaseResultMap">
         select
         <include refid="Base_Column_List" />
         from t_book where word_count > 0

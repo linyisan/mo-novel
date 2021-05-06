@@ -6,6 +6,7 @@ import com.heng.entity.BookIndex;
 import com.heng.mapper.BookIndexMapper;
 import com.heng.service.BookContentService;
 import com.heng.service.BookIndexService;
+import com.heng.vo.BookIndexQueryVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
@@ -19,41 +20,45 @@ import org.springframework.web.bind.annotation.*;
  * @since 2021-04-28
  */
 @RestController
-@RequestMapping("/book-index")
+@RequestMapping("/bookindex")
 public class BookIndexController {
-
-    @Autowired
-    private BookIndexMapper bookIndexMapper;
-
     @Autowired
     private BookIndexService bookIndexService;
 
-    @Autowired
-    private BookContentService bookContentService;
+    @GetMapping("search")
+    public ResponseDTO searchBookIndex(BookIndexQueryVo bookIndexQueryVo)
+    {
+        return bookIndexService.searchBookIndex(bookIndexQueryVo);
+    }
+
+    @GetMapping("get/{bookIndexId}")
+    public ResponseDTO getBookIndex(@PathVariable Long bookIndexId)
+    {
+        return bookIndexService.getBookIndex(bookIndexId);
+    }
 
     @PostMapping("add")
-    public ResponseDTO addBookContent(@Validated BookIndex bookIndex)
+    public ResponseDTO addBookIndex(@Validated @RequestBody BookIndex bookIndex)
     {
-        return bookIndexService.addBookContent(bookIndex);
+/*        bookIndex.setContent(
+                bookIndex.getContent()
+                .replaceAll("\\n", "<br>")
+                .replaceAll("\\s", "&nbsp;")
+        );*/
+        return bookIndexService.addBookIndex(bookIndex);
 //        bookContentService.saveOrUpdate()
     }
 
-    @PostMapping("update")
-    public ResponseDTO updateBookContent(@Validated BookIndex bookIndex)
+    @PostMapping("edit")
+    public ResponseDTO editBookIndex(@Validated @RequestBody BookIndex bookIndex)
     {
-        return bookIndexService.updateBookContent(bookIndex);
-    }
-
-    @GetMapping("{bookIndexId}")
-    public ResponseDTO getBookContent(@PathVariable Long bookIndexId)
-    {
-        return bookIndexService.getBookContent(bookIndexId);
+        return bookIndexService.editBookIndex(bookIndex);
     }
 
     @GetMapping("delete/{bookIndexId}")
-    public ResponseDTO deleteBookContent(@PathVariable Long bookIndexId)
+    public ResponseDTO deleteBookIndex(@PathVariable Long bookIndexId)
     {
-        return bookIndexService.deleteBookContent(bookIndexId);
+        return bookIndexService.deleteBookIndex(bookIndexId);
     }
 }
 

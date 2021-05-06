@@ -7,8 +7,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="mybatisplus" />
+        <module name="shiro" />
         <module name="mo-novel-common" />
+        <module name="mybatisplus" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -20,6 +21,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="mo-novel-common" options="-parameters" />
       <module name="mybatisplus" options="-parameters" />
+      <module name="shiro" options="-parameters" />
     </option>
   </component>
 </project>

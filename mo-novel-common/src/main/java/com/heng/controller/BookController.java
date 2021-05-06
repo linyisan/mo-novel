@@ -7,7 +7,7 @@ import com.heng.entity.Book;
 import com.heng.entity.Comment;
 import com.heng.service.BookService;
 import com.heng.service.CommentService;
-import com.heng.vo.BookSpVo;
+import com.heng.vo.BookQueryVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
@@ -32,27 +32,50 @@ public class BookController {
     @Autowired
     private CommentService commentService;
 
-    @GetMapping("/searchByPage")
-    public ResponseDTO searchByPage(@RequestParam(defaultValue = "1") Integer pageNo,
-                                    @RequestParam(defaultValue = "5") Integer pageSize,
-                                    BookSpVo queryParams)
+    @GetMapping("getAll")
+    public ResponseDTO getAllBook()
     {
-        return bookService.searchByPage(pageNo, pageSize, queryParams);
+        List<Book> books = bookService.list();
+        HashMap<String, Object> map = new HashMap<>();
+        map.put("total", books.size());
+        map.put("items", books);
+        return ResponseDTO.succ(map);
     }
 
-    @PostMapping("addBook")
-    public ResponseDTO addBook(Book book)
+    @GetMapping("/search")
+    public ResponseDTO searchBook(BookQueryVo queryParams)
+    {
+        return bookService.searchBook(queryParams);
+    }
+
+    @GetMapping("get/{bookId}")
+    public ResponseDTO get(@PathVariable("bookId")Long bookId)
+    {
+        bookService.addVisitCount(bookId, 1L);
+        return bookService.selectBookById(bookId);
+    }
+
+    @PostMapping("add")
+    public ResponseDTO addBook(@Validated @RequestBody Book book)
     {
         bookService.save(book);
         return ResponseDTO.succ("成功添加小说");
     }
 
-    @GetMapping("{bookId}")
-    public ResponseDTO bookDetail(@PathVariable("bookId")Long bookId)
+    @PostMapping("edit")
+    public ResponseDTO editBook(@Validated @RequestBody Book book)
     {
-        bookService.addVisitCount(bookId, 1L);
-        return bookService.selectBookById(bookId);
+        bookService.updateById(book);
+        return ResponseDTO.succ("成功修改小说");
     }
+
+    @GetMapping("delete/{bookId}")
+    public ResponseDTO deleteBook(@PathVariable("bookId") Long bookId)
+    {
+        bookService.removeById(bookId);
+        return ResponseDTO.succ("成功删除小说");
+    }
+
 
     @PostMapping("addBookComment")
     public ResponseDTO addBookComment(@Validated Comment comment)
@@ -60,10 +83,10 @@ public class BookController {
         return bookService.addBookComment(comment);
     }
 
-    @PostMapping("updateBookComment")
-    public ResponseDTO updateBookComment(Long commentId, String content)
+    @PostMapping("editBookComment")
+    public ResponseDTO editBookComment(Long commentId, String content)
     {
-        return bookService.updateBookComment(commentId, content);
+        return bookService.editBookComment(commentId, content);
     }
 
     @GetMapping("deleteBookComment/{commentId}")
@@ -73,8 +96,8 @@ public class BookController {
         return ResponseDTO.succ(ResponseStatus.SUCCESS.getMsg());
     }
 
-    @GetMapping("pageBookComment/{bookId}")
-    public ResponseDTO pageBookComment(@PathVariable Long bookId)
+    @GetMapping("getBookCommentByBookId/{bookId}")
+    public ResponseDTO getBookCommentByBookId(@PathVariable Long bookId)
     {
         HashMap<String, Object> map = new HashMap<>();
         map.put("resource_type", 1);

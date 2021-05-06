@@ -4,6 +4,8 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.heng.entity.User;
 import com.heng.exception.BusinessException;
 import com.heng.service.UserService;
+import com.heng.util.JwtUtil;
+import com.heng.vo.UserInfoVo;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.*;
@@ -26,6 +28,12 @@ import java.util.HashSet;
 public class AccountRealm extends AuthorizingRealm {
     @Autowired
     private UserService userService;
+
+    @Override
+    public boolean supports(AuthenticationToken token)
+    {
+        return super.supports(token);
+    }
 
     @Override
     protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principalCollection)
@@ -54,13 +62,15 @@ public class AccountRealm extends AuthorizingRealm {
         log.debug("执行了Real认证");
         log.debug("subject.login(token);");
         UsernamePasswordToken token = (UsernamePasswordToken) authenticationToken;
+        UserInfoVo userInfoVo = JwtUtil.getUserInfoFormToken((String) token.getPrincipal());
 
-        User user = userService.getUserByUsername(token.getUsername());
+//        User user = userService.getUserByUsername(token.getUsername());
+        User user = userService.getUserByUsername(userInfoVo.getName());
         if (null != user)
         {
             log.info("第一个参数principalCollection可以传给授权(subject)");
             // 密码校验
-            return new SimpleAuthenticationInfo(user, user.getPassword(), user.getUsername());
+            return new SimpleAuthenticationInfo(user, token.getPassword(), user.getUsername());
         }
 
         // 账号不存在

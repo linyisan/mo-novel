@@ -4,6 +4,7 @@ import com.heng.common.ResponseDTO;
 import com.heng.entity.User;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.heng.vo.LoginVo;
+import com.heng.vo.UserQueryVo;
 
 /**
  * <p>
@@ -20,7 +21,7 @@ public interface UserService extends IService<User> {
 
     ResponseDTO info(String token);
 
-    ResponseDTO page(Integer pageNo, Integer pageSize);
+    ResponseDTO searchUser(UserQueryVo userQueryVo);
 
     ResponseDTO register(User user);
 }

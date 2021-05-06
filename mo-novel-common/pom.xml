@@ -98,16 +98,16 @@
             <artifactId>shiro-redis-spring-boot-starter</artifactId>
             <version>3.2.1</version>
         </dependency>
-<!--        <dependency>
+        <dependency>
             <groupId>io.jsonwebtoken</groupId>
             <artifactId>jjwt</artifactId>
             <version>0.9.1</version>
-        </dependency>-->
-        <dependency>
+        </dependency>
+<!--        <dependency>
             <groupId>com.auth0</groupId>
             <artifactId>java-jwt</artifactId>
             <version>3.10.3</version>
-        </dependency>
+        </dependency>-->
 <!--        <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>

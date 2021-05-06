@@ -52,6 +52,10 @@ public class BookIndex implements Serializable {
     @NotBlank(message = "章节名不能为空")
     private String title;
 
+    @ApiModelProperty(value = "状态:0草稿，1发布")
+    @NotNull(message = "小说状态不能为空")
+    private Byte status;
+
     @ApiModelProperty(value = "章节内容")
     @TableField(exist = false)
     @NotBlank(message = "小说内容不能为空")

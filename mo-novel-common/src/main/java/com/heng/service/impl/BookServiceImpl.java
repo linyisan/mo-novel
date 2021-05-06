@@ -12,7 +12,7 @@ import com.heng.mapper.BookMapper;
 import com.heng.mapper.CommentMapper;
 import com.heng.service.BookService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.heng.vo.BookSpVo;
+import com.heng.vo.BookQueryVo;
 import lombok.SneakyThrows;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -37,15 +37,9 @@ public class BookServiceImpl extends ServiceImpl<BookMapper, Book> implements Bo
     @Autowired
     private CommentMapper commentMapper;
 
-    @Override
-    public ResponseDTO addBook(Book book)
-    {
-        return null;
-    }
-
     @SneakyThrows
     @Override
-    public ResponseDTO searchByPage(Integer pageNo, Integer pageSize, BookSpVo queryParams)
+    public ResponseDTO searchBook(BookQueryVo queryParams)
     {
         QueryWrapper<Book> bookQueryWrapper = new QueryWrapper<>();
         bookQueryWrapper.eq(StringUtils.checkValNotNull(queryParams.getChannel()), "channel", queryParams.getChannel())
@@ -54,13 +48,15 @@ public class BookServiceImpl extends ServiceImpl<BookMapper, Book> implements Bo
                 .ge(StringUtils.checkValNotNull(queryParams.getWordCountMin()), "word_count", queryParams.getWordCountMin())
                 .le(StringUtils.checkValNotNull(queryParams.getWordCountMax()), "word_count", queryParams.getWordCountMax())
                 .ge(StringUtils.checkValNotNull(queryParams.getUpdateTimeMin()), "update_time", queryParams.getUpdateTimeMin())
-                .orderByDesc(StringUtils.isNotBlank(queryParams.getSort()), StringUtils.camelToUnderline(queryParams.getSort()));
+                .orderByDesc(StringUtils.isNotBlank(queryParams.getSort()), StringUtils.camelToUnderline(queryParams.getSort()))
+                .like(StringUtils.isNotBlank(queryParams.getAuthorName()), "author_name", queryParams.getAuthorName())
+                .like(StringUtils.isNotBlank(queryParams.getTitle()), "title", queryParams.getTitle());
         bookQueryWrapper.and(StringUtils.checkValNotNull(queryParams.getKeyword()), qw -> qw
                 .like("title", queryParams.getKeyword())
                 .or().like("author_name", queryParams.getKeyword())
         );
 
-        Page<Book> bookPage = new Page<>(pageNo, pageSize);
+        Page<Book> bookPage = new Page<>(queryParams.getPage(), queryParams.getLimit());
         bookMapper.selectPage(bookPage, bookQueryWrapper);
         HashMap<String, Object> map = new HashMap<>();
         map.put("items", bookPage.getRecords());
@@ -74,18 +70,6 @@ public class BookServiceImpl extends ServiceImpl<BookMapper, Book> implements Bo
         Book book = bookMapper.selectById(bookId);
         if (StringUtils.checkValNull(book)) throw new BusinessException("小说不存在");
         return ResponseDTO.succ(book);
-    }
-
-    @Override
-    public ResponseDTO selectBook(Book book)
-    {
-        return null;
-    }
-
-    @Override
-    public ResponseDTO updateBook(Book book)
-    {
-        return null;
     }
 
     @Override
@@ -112,7 +96,7 @@ public class BookServiceImpl extends ServiceImpl<BookMapper, Book> implements Bo
     }
 
     @Override
-    public ResponseDTO updateBookComment(Long commentId, String content)
+    public ResponseDTO editBookComment(Long commentId, String content)
     {
         Comment comment = commentMapper.selectById(commentId);
         comment.setContent(content);

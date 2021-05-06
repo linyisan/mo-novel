@@ -1,6 +1,7 @@
 package com.heng.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.core.toolkit.StringUtils;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.heng.common.ResponseDTO;
 import com.heng.entity.User;
@@ -10,6 +11,7 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.heng.util.JwtUtils;
 import com.heng.vo.LoginVo;
 import com.heng.vo.UserInfoVo;
+import com.heng.vo.UserQueryVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -61,7 +63,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
             return ResponseDTO.fail("账户禁用，请联系管理员");
         }
 
-        String token = JwtUtils.sign(loginVo.getUsername(), "-1");
+        String token = "";//JwtUtils.sign(loginVo.getUsername(), "-1");
         HashMap<String, String> map = new HashMap<>();
         map.put("token", token);
         return ResponseDTO.succ(map);
@@ -70,22 +72,29 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
     @Override
     public ResponseDTO info(String token)
     {
-        UserInfoVo userInfoVo = new UserInfoVo(new String[]{"admin"},
-                "I am a super administrator",
-                "https://sf3-ttcdn-tos.pstatp.com/img/user-avatar/0919a7c21d4dc335c27136900555d696~300x300.image",
-                "zhangsan");
-//        String token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbk5hbWUiOiJhZG1pbiIsImV4cCI6MTYxODA2MDAzOSwidXNlcklkIjoiLTEifQ.E-MOPVBSIairTW3eIeV8GW1G4yo4tPPNJjCZIMN3VjM";
-        JwtUtils.verity(token);
+        UserInfoVo userInfoVo = new UserInfoVo(1L,
+                "zhangsan",
+                new String[]{"admin"},
+                "https://sf3-ttcdn-tos.pstatp.com/img/user-avatar/0919a7c21d4dc335c27136900555d696~300x300.image"
+                );
+//        JwtUtils.verity(token);
         HashMap<String, Object> map = new HashMap<>();
         map.put(token, userInfoVo);
         return ResponseDTO.succ(map);
     }
 
     @Override
-    public ResponseDTO page(Integer pageNo, Integer pageSize)
+    public ResponseDTO searchUser(UserQueryVo userQueryVo)
     {
-        Page<User> page = new Page<>(pageNo, pageSize);
-        userMapper.selectPage(page, null);
+        QueryWrapper<User> userQueryWrapper = new QueryWrapper<>();
+        userQueryWrapper.eq(StringUtils.checkValNotNull(userQueryVo.getSex()), "sex", userQueryVo.getSex())
+                .eq(StringUtils.checkValNotNull(userQueryVo.getRoleId()), "role_id", userQueryVo.getRoleId())
+                .like(StringUtils.isNotBlank(userQueryVo.getUsername()), "username", userQueryVo.getUsername())
+                .like(StringUtils.isNotBlank(userQueryVo.getEmail()), "email", userQueryVo.getEmail())
+                .like(StringUtils.isNotBlank(userQueryVo.getMobile()), "mobile", userQueryVo.getMobile());
+
+        Page<User> page = new Page<>(userQueryVo.getPage(), userQueryVo.getLimit());
+        userMapper.selectPage(page, userQueryWrapper);
         HashMap<String, Object> map = new HashMap<>();
         map.put("items", page.getRecords());
         map.put("total", page.getTotal());

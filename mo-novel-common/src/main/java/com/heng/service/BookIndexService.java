@@ -3,6 +3,7 @@ package com.heng.service;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.heng.common.ResponseDTO;
 import com.heng.entity.BookIndex;
+import com.heng.vo.BookIndexQueryVo;
 
 /**
  * <p>
@@ -13,11 +14,13 @@ import com.heng.entity.BookIndex;
  * @since 2021-04-28
  */
 public interface BookIndexService extends IService<BookIndex> {
-    ResponseDTO addBookContent(BookIndex bookIndex);
+    ResponseDTO addBookIndex(BookIndex bookIndex);
 
-    ResponseDTO getBookContent(Long bookIndexId);
+    ResponseDTO deleteBookIndex(Long bookIndexId);
 
-    ResponseDTO deleteBookContent(Long bookIndexId);
+    ResponseDTO editBookIndex(BookIndex bookIndex);
 
-    ResponseDTO updateBookContent(BookIndex bookIndex);
+    ResponseDTO searchBookIndex(BookIndexQueryVo bookIndexQueryVo);
+
+    ResponseDTO getBookIndex(Long bookIndexId);
 }

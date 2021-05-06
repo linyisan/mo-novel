@@ -2,6 +2,7 @@ package com.heng.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.toolkit.StringUtils;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.heng.common.ResponseDTO;
 import com.heng.entity.Book;
@@ -13,6 +14,7 @@ import com.heng.mapper.BookIndexMapper;
 import com.heng.mapper.BookMapper;
 import com.heng.service.BookIndexService;
 import com.heng.util.MStringUtil;
+import com.heng.vo.BookIndexQueryVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -40,7 +42,7 @@ public class BookIndexServiceImpl extends ServiceImpl<BookIndexMapper, BookIndex
 
     @Override
     @Transactional
-    public ResponseDTO addBookContent(BookIndex bookIndex)
+    public ResponseDTO addBookIndex(BookIndex bookIndex)
     {
         int wordCount = MStringUtil.getStrValidWordCount(bookIndex.getContent());
 
@@ -65,19 +67,8 @@ public class BookIndexServiceImpl extends ServiceImpl<BookIndexMapper, BookIndex
     }
 
     @Override
-    public ResponseDTO getBookContent(Long bookIndexId)
-    {
-        QueryWrapper<BookContent> bookContentQueryWrapper = new QueryWrapper<>();
-        bookContentQueryWrapper.eq("index_id", bookIndexId);
-        BookContent bookContent = bookContentMapper.selectOne(bookContentQueryWrapper);
-        if(StringUtils.checkValNull(bookContent)) throw new BusinessException("该小说章节不存在");
-
-        return ResponseDTO.succ(bookContent);
-    }
-
-    @Override
     @Transactional
-    public ResponseDTO deleteBookContent(Long bookIndexId)
+    public ResponseDTO deleteBookIndex(Long bookIndexId)
     {
         BookIndex bookIndex = bookIndexMapper.selectById(bookIndexId);
         if(StringUtils.checkValNull(bookIndex)) throw new BusinessException("小说章节不存在");
@@ -96,7 +87,7 @@ public class BookIndexServiceImpl extends ServiceImpl<BookIndexMapper, BookIndex
 
     @Override
     @Transactional
-    public ResponseDTO updateBookContent(BookIndex bookIndex)
+    public ResponseDTO editBookIndex(BookIndex bookIndex)
     {
         BookIndex oldBookIndex = bookIndexMapper.selectById(bookIndex.getId());
         if(StringUtils.checkValNull(oldBookIndex)) throw new BusinessException("小说章节不存在");
@@ -123,5 +114,35 @@ public class BookIndexServiceImpl extends ServiceImpl<BookIndexMapper, BookIndex
         bookContent.setContent(bookIndex.getContent());
         bookContentMapper.updateById(bookContent);
         return ResponseDTO.succ("成功更新小说章节");
+    }
+
+    @Override
+    public ResponseDTO searchBookIndex(BookIndexQueryVo bookIndexQueryVo)
+    {
+        QueryWrapper<BookIndex> bookIndexQueryWrapper = new QueryWrapper<>();
+        bookIndexQueryWrapper.eq(StringUtils.checkValNotNull(bookIndexQueryVo.getBookId()), "book_id", bookIndexQueryVo.getBookId())
+                .eq(StringUtils.checkValNotNull(bookIndexQueryVo.getStatus()), "status", bookIndexQueryVo.getStatus())
+                .like(StringUtils.isNotBlank(bookIndexQueryVo.getTitle()), "title", bookIndexQueryVo.getTitle());
+
+        Page<BookIndex> bookIndexPage = new Page<>(bookIndexQueryVo.getPage(), bookIndexQueryVo.getLimit());
+        bookIndexMapper.selectPage(bookIndexPage, bookIndexQueryWrapper);
+        HashMap<String, Object> map = new HashMap<>();
+        map.put("items", bookIndexPage.getRecords());
+        map.put("total", bookIndexPage.getTotal());
+        return ResponseDTO.succ(map);
+    }
+
+    @Override
+    public ResponseDTO getBookIndex(Long bookIndexId)
+    {
+        QueryWrapper<BookContent> bookContentQueryWrapper = new QueryWrapper<>();
+        bookContentQueryWrapper.eq("index_id", bookIndexId);
+        BookContent bookContent = bookContentMapper.selectOne(bookContentQueryWrapper);
+        if(StringUtils.checkValNull(bookContent)) throw new BusinessException("该小说章节不存在");
+
+        BookIndex bookIndex = bookIndexMapper.selectById(bookIndexId);
+        bookIndex.setContent(bookContent.getContent());
+
+        return ResponseDTO.succ(bookIndex);
     }
 }
