@@ -1,10 +1,12 @@
 package com.heng.controller;
 
 
+import com.heng.annotation.NeedAuth;
 import com.heng.common.ResponseDTO;
 import com.heng.common.ResponseStatus;
 import com.heng.entity.Bookshelf;
 import com.heng.service.BookshelfService;
+import com.heng.util.MoRequestTokenUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
@@ -26,9 +28,12 @@ public class BookshelfController {
     @Autowired
     private BookshelfService bookshelfService;
 
+    @NeedAuth
     @PostMapping("add")
     public ResponseDTO addBookshelf(@Validated @RequestBody Bookshelf bookshelf)
     {
+        Long userId = MoRequestTokenUtil.getRequestUser().getId();
+        bookshelf.setUserId(userId);
         bookshelfService.saveOrUpdate(bookshelf);
         return ResponseDTO.succ("成功加入书架");
     }
@@ -43,6 +48,8 @@ public class BookshelfController {
     @PostMapping("edit")
     public ResponseDTO editBookshelf(@Validated @RequestBody Bookshelf bookshelf)
     {
+        Long userId = MoRequestTokenUtil.getRequestUser().getId();
+        bookshelf.setUserId(userId);
         bookshelfService.updateById(bookshelf);
         return ResponseDTO.succ(ResponseStatus.SUCCESS.getMsg());
     }
@@ -50,6 +57,7 @@ public class BookshelfController {
     @GetMapping("search")
     public ResponseDTO searchBookshelf(@PathVariable Long userId)
     {
+        userId = MoRequestTokenUtil.getRequestUser().getId();
         HashMap<String, Object> map = new HashMap<>();
         map.put("user_id", userId);
         List<Bookshelf> bookshelves = bookshelfService.listByMap(map);

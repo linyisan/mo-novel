@@ -1,8 +1,6 @@
-package com.heng.config;
+package com.heng.shiro;
 
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.heng.entity.User;
-import com.heng.exception.BusinessException;
 import com.heng.service.UserService;
 import com.heng.util.JwtUtil;
 import com.heng.vo.UserInfoVo;
@@ -14,10 +12,7 @@ import org.apache.shiro.authz.SimpleAuthorizationInfo;
 import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
 import org.apache.shiro.subject.Subject;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 
 import java.util.HashSet;
 
@@ -32,7 +27,7 @@ public class AccountRealm extends AuthorizingRealm {
     @Override
     public boolean supports(AuthenticationToken token)
     {
-        return super.supports(token);
+        return token instanceof JWTToken;
     }
 
     @Override
@@ -61,16 +56,16 @@ public class AccountRealm extends AuthorizingRealm {
     {
         log.debug("执行了Real认证");
         log.debug("subject.login(token);");
-        UsernamePasswordToken token = (UsernamePasswordToken) authenticationToken;
-        UserInfoVo userInfoVo = JwtUtil.getUserInfoFormToken((String) token.getPrincipal());
+        String token = (String) authenticationToken.getCredentials();
+        String username = JwtUtil.getUsernameFromToken(token);
 
 //        User user = userService.getUserByUsername(token.getUsername());
-        User user = userService.getUserByUsername(userInfoVo.getName());
+        User user = userService.getUserByUsername(username);
         if (null != user)
         {
             log.info("第一个参数principalCollection可以传给授权(subject)");
             // 密码校验
-            return new SimpleAuthenticationInfo(user, token.getPassword(), user.getUsername());
+            return new SimpleAuthenticationInfo(user, token, user.getUsername());
         }
 
         // 账号不存在

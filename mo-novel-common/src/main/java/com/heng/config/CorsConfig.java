@@ -1,9 +1,12 @@
 package com.heng.config;
 
 import com.heng.converter.DateConverter;
+import com.heng.interceptor.AuthorizationInterceptor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.format.FormatterRegistry;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
+import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 /**
@@ -11,6 +14,9 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
  */
 @Configuration
 public class CorsConfig implements WebMvcConfigurer {
+
+    @Autowired
+    private AuthorizationInterceptor authorizationInterceptor;
 
     @Override
     public void addCorsMappings(CorsRegistry registry)
@@ -27,5 +33,16 @@ public class CorsConfig implements WebMvcConfigurer {
     public void addFormatters(FormatterRegistry registry)
     {
         registry.addConverter(new DateConverter());
+    }
+
+    /**
+     * 添加自己的拦截器
+     * @param registry
+     */
+    @Override
+    public void addInterceptors(InterceptorRegistry registry)
+    {
+        registry.addInterceptor(authorizationInterceptor)
+                .addPathPatterns("/**");
     }
 }

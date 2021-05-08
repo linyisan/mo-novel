@@ -33,7 +33,7 @@ public class AuthController {
         return userService.register(user);
     }
 
-    @PostMapping("/logout")
+    @GetMapping("/logout")
     public ResponseDTO logout(@RequestHeader("X-Token") String token)
     {
         SecurityUtils.getSubject().logout();

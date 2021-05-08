@@ -5,6 +5,7 @@ import com.heng.entity.User;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.heng.vo.LoginVo;
 import com.heng.vo.UserQueryVo;
+import org.springframework.stereotype.Service;
 
 /**
  * <p>
@@ -14,6 +15,7 @@ import com.heng.vo.UserQueryVo;
  * @author LJohn
  * @since 2021-04-25
  */
+@Service
 public interface UserService extends IService<User> {
     User getUserByUsername(String username);
 

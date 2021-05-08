@@ -1,7 +1,5 @@
 package com.heng.util;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.heng.vo.UserInfoVo;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
@@ -16,7 +14,10 @@ import java.util.HashMap;
  * @since 2021-05-06
  */
 public class JwtUtil {
-    public static final String CLAIM_USERINFO = "USERINFO";
+    public static final String CLAIMS_KEY_USERNAME = "mo_username";
+    public static final String CLAIMS_KEY_USERID = "mo_userid";
+
+
     /**
      * 过期时间为一天
      * TODO 正式上线更换为15分钟
@@ -30,25 +31,87 @@ public class JwtUtil {
 
     /**
      * 根据用户信息生成token
-     * @param userInfoVo
+     *
+     * @param username
      * @return
      */
-    @SneakyThrows
-    public static String generateToken(UserInfoVo userInfoVo)
+    public static String generateToken(String username)
+    {
+/*        HashMap<String, Object> clamins = new HashMap<>();
+        clamins.put(CLAIMS_MY, username);
+        clamins.put("CREATE_TIME", EXPIRE_TIME);*/
+
+        return Jwts.builder()
+                .setExpiration(new Date(System.currentTimeMillis() + EXPIRE_TIME))
+                .signWith(SignatureAlgorithm.HS256, TOKEN_SECRET)
+//                .setClaims(clamins)
+                .setSubject(username)
+                .compact();
+    }
+
+    /**
+     * 根据用户信息生成token
+     *
+     * @param username
+     * @return
+     */
+    public static String generateToken(String username, Long id)
     {
         HashMap<String, Object> clamins = new HashMap<>();
-        clamins.put(CLAIM_USERINFO, userInfoVo);
-        clamins.put("CREATE_TIME", EXPIRE_TIME);
+        clamins.put(CLAIMS_KEY_USERID, id);
 
         return Jwts.builder()
                 .setExpiration(new Date(System.currentTimeMillis() + EXPIRE_TIME))
                 .signWith(SignatureAlgorithm.HS256, TOKEN_SECRET)
                 .setClaims(clamins)
+                .setSubject(username)
                 .compact();
+    }
+
+
+    /**
+     * 从TOKEN从获取Clamins的username
+     *
+     * @param token
+     * @return 用户信息
+     */
+    public static String getUsernameFromToken(String token)
+    {
+        Claims claims = getClaimsFromToken(token);
+        return claims.getSubject();
+    }
+
+    /**
+     * 从JWT中获取Claim
+     *
+     * @param token
+     * @param claim_key
+     * @return
+     */
+    public static Object getClaim(String token, String claim_key)
+    {
+        return getClaimsFromToken(token).get(claim_key);
+    }
+
+
+    /**
+     * 从token中获取JWT中的负载
+     *
+     * @param token
+     * @return
+     */
+    @SneakyThrows
+    private static Claims getClaimsFromToken(String token)
+    {
+        return Jwts.parser()
+                .setSigningKey(TOKEN_SECRET)
+                .parseClaimsJws(token)
+                .getBody();
     }
 
     /**
      * 从请求头中获取TOKEN
+     *
      * @param request
      * @return
      */
@@ -58,41 +121,11 @@ public class JwtUtil {
         return token;
     }
 
-    /**
-     * 从TOKEN从获取Clamins
-     * @param token
-     * @return 用户信息
-     */
-    @SneakyThrows
-    public static UserInfoVo getUserInfoFormToken(String token)
-    {
-        Claims claims = getClaimsFromToken(token);
-        return new ObjectMapper().convertValue(claims.get(CLAIM_USERINFO), UserInfoVo.class);
-    }
-
-    /**
-     * 从token中获取JWT中的负载
-     * @param token
-     * @return
-     */
-    private static Claims getClaimsFromToken(String token)
-    {
-        return Jwts.parser()
-                .setSigningKey(TOKEN_SECRET)
-                .parseClaimsJws(token)
-                .getBody();
-    }
-
     public static void main(String[] args)
     {
-        UserInfoVo userInfoVo = new UserInfoVo(1L,
-                "zhangsan",
-                new String[]{"admin"},
-                "https://sf3-ttcdn-tos.pstatp.com/img/user-avatar/0919a7c21d4dc335c27136900555d696~300x300.image"
-        );
-        String token = generateToken(userInfoVo);
+        String token = generateToken("zhangsan");
         System.out.println("token = " + token);
-        UserInfoVo userInfoVo1 = getUserInfoFormToken(token);
-        System.out.println("userInfoVo1 = " + userInfoVo1);
+        String username = JwtUtil.getUsernameFromToken(token);
+        System.out.println("username = " + username);
     }
 }

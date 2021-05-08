@@ -4,19 +4,23 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.toolkit.StringUtils;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.heng.common.ResponseDTO;
+import com.heng.entity.Role;
 import com.heng.entity.User;
 import com.heng.mapper.UserMapper;
 import com.heng.service.UserService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.heng.util.JwtUtil;
 import com.heng.util.JwtUtils;
 import com.heng.vo.LoginVo;
 import com.heng.vo.UserInfoVo;
 import com.heng.vo.UserQueryVo;
+import io.jsonwebtoken.lang.Collections;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
 import java.util.Objects;
+import java.util.Set;
 
 /**
  * <p>
@@ -63,24 +67,26 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
             return ResponseDTO.fail("账户禁用，请联系管理员");
         }
 
-        String token = "";//JwtUtils.sign(loginVo.getUsername(), "-1");
+//        String token = "";//JwtUtils.sign(loginVo.getUsername(), "-1");
+        String jwt = JwtUtil.generateToken(user.getUsername(), user.getId());
         HashMap<String, String> map = new HashMap<>();
-        map.put("token", token);
+        map.put("token", jwt);
         return ResponseDTO.succ(map);
     }
 
     @Override
     public ResponseDTO info(String token)
     {
-        UserInfoVo userInfoVo = new UserInfoVo(1L,
-                "zhangsan",
-                new String[]{"admin"},
-                "https://sf3-ttcdn-tos.pstatp.com/img/user-avatar/0919a7c21d4dc335c27136900555d696~300x300.image"
-                );
-//        JwtUtils.verity(token);
-        HashMap<String, Object> map = new HashMap<>();
-        map.put(token, userInfoVo);
-        return ResponseDTO.succ(map);
+        Integer userId = (Integer) JwtUtil.getClaim(token, JwtUtil.CLAIMS_KEY_USERID);
+        User user = userMapper.selectById(userId);
+        if(null == user) return ResponseDTO.fail("没有此账户");
+        UserInfoVo userInfoVo = new UserInfoVo()
+                .setId(user.getId())
+                .setName(user.getUsername())
+                .setAvatar(user.getAvatar())
+                .setRoles(user.getRoles());
+
+        return ResponseDTO.succ(userInfoVo);
     }
 
     @Override
