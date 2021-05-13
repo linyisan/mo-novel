@@ -23,7 +23,7 @@ import java.time.LocalDateTime;
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
-@TableName("t_book")
+@TableName(value = "t_book", resultMap = "BaseResultMap")
 @ApiModel(value="Book对象", description="小说信息表")
 public class Book implements Serializable {
 
