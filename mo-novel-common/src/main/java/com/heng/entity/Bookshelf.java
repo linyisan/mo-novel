@@ -58,4 +58,7 @@ public class Bookshelf implements Serializable {
 
     @TableField(exist = false)
     private Book book;
+
+    @TableField(exist = false)
+    private BookIndex historyBookIndex;
 }

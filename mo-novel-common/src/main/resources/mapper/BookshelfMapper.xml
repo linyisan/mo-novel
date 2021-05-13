@@ -13,6 +13,8 @@
         <result column="reading_history_id" property="readingHistoryId" />
         <association property="book" column="book_id"
                      select="com.heng.mapper.BookMapper.selectById"/>
+        <association property="historyBookIndex" column="reading_history_id"
+                     select="com.heng.mapper.BookIndexMapper.selectById"/>
     </resultMap>
 
     <!-- 通用查询结果列 -->
