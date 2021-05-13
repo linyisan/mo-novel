@@ -5,9 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b360b197-9ca1-4a85-ada4-9d675dcdc84c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/dto/UserUpdatePwdDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/common/BaseQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/vo/BaseQuery.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/controller/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/controller/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/controller/CommentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/controller/RatingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/controller/RatingController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/entity/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/entity/Comment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/entity/Rating.java" beforeDir="false" afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/entity/Rating.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/service/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/service/BookService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/service/impl/BookServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/service/impl/BookServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/service/impl/CommentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/service/impl/CommentServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mo-novel-common/src/test/java/com/heng/mapper/UserMapperTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/mo-novel-common/src/test/java/com/heng/mapper/UserMapperTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/vo/BookIndexQueryVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/vo/BookIndexQueryVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/vo/BookQueryVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/vo/BookQueryVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/vo/BookshelfQueryVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/vo/BookshelfQueryVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/vo/CommentQueryVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/vo/CommentQueryVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/vo/RatingQueryVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/vo/RatingQueryVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/vo/UserQueryVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/vo/UserQueryVo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,8 +81,8 @@
         <option value="JavaScript File" />
         <option value="Vue Single File Component" />
         <option value="Enum" />
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -170,10 +188,10 @@
     <treeState>
       <expand>
         <path>
-          <item name="Found 38 services " type="fcff1e1b:RestServiceStructure$RootNode" />
+          <item name="Found 40 services " type="fcff1e1b:RestServiceStructure$RootNode" />
         </path>
         <path>
-          <item name="Found 38 services " type="fcff1e1b:RestServiceStructure$RootNode" />
+          <item name="Found 40 services " type="fcff1e1b:RestServiceStructure$RootNode" />
           <item name="mo-novel-common" type="c588b436:RestServiceStructure$ProjectNode" />
         </path>
       </expand>
@@ -411,7 +429,7 @@
       <workItem from="1620708052813" duration="17451000" />
       <workItem from="1620883641450" duration="3388000" />
       <workItem from="1620887090771" duration="5372000" />
-      <workItem from="1620907551064" duration="5549000" />
+      <workItem from="1620907551064" duration="17066000" />
     </task>
     <task id="LOCAL-00001" summary="权限校验要死">
       <created>1618757966477</created>
@@ -481,10 +499,10 @@
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
     <state x="1340" y="377" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1858.1080@0.0.1858.1080" timestamp="1619900465124" />
-    <state x="282" y="47" key="#com.intellij.ide.util.MemberChooser" timestamp="1620893447748">
+    <state x="282" y="47" key="#com.intellij.ide.util.MemberChooser" timestamp="1620940759834">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state x="282" y="47" key="#com.intellij.ide.util.MemberChooser/0.0.1858.1080@0.0.1858.1080" timestamp="1620893447748" />
+    <state x="282" y="47" key="#com.intellij.ide.util.MemberChooser/0.0.1858.1080@0.0.1858.1080" timestamp="1620940759834" />
     <state x="291" y="47" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1619806893200" />
     <state x="1390" y="440" width="468" height="292" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1620291049277">
       <screen x="0" y="0" width="1858" height="1080" />
@@ -517,65 +535,65 @@
     </state>
     <state x="1418" y="477" key="FileChooserDialogImpl/0.0.1858.1080@0.0.1858.1080" timestamp="1620296310800" />
     <state x="1480" y="477" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1619411540384" />
-    <state width="1671" height="451" key="GridCell.Tab.0.bottom" timestamp="1620925756606">
+    <state width="1671" height="260" key="GridCell.Tab.0.bottom" timestamp="1620942569332">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1671" height="451" key="GridCell.Tab.0.bottom/0.0.1858.1080@0.0.1858.1080" timestamp="1620925756606" />
+    <state width="1671" height="260" key="GridCell.Tab.0.bottom/0.0.1858.1080@0.0.1858.1080" timestamp="1620942569332" />
     <state width="1378" height="251" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1619817388950" />
-    <state width="1671" height="451" key="GridCell.Tab.0.center" timestamp="1620925756606">
+    <state width="1671" height="260" key="GridCell.Tab.0.center" timestamp="1620942569332">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1671" height="451" key="GridCell.Tab.0.center/0.0.1858.1080@0.0.1858.1080" timestamp="1620925756606" />
+    <state width="1671" height="260" key="GridCell.Tab.0.center/0.0.1858.1080@0.0.1858.1080" timestamp="1620942569332" />
     <state width="1378" height="251" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1619817388949" />
-    <state width="1671" height="451" key="GridCell.Tab.0.left" timestamp="1620925756606">
+    <state width="1671" height="260" key="GridCell.Tab.0.left" timestamp="1620942569332">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1671" height="451" key="GridCell.Tab.0.left/0.0.1858.1080@0.0.1858.1080" timestamp="1620925756606" />
+    <state width="1671" height="260" key="GridCell.Tab.0.left/0.0.1858.1080@0.0.1858.1080" timestamp="1620942569332" />
     <state width="1378" height="251" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1619817388949" />
-    <state width="1671" height="451" key="GridCell.Tab.0.right" timestamp="1620925756606">
+    <state width="1671" height="260" key="GridCell.Tab.0.right" timestamp="1620942569332">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1671" height="451" key="GridCell.Tab.0.right/0.0.1858.1080@0.0.1858.1080" timestamp="1620925756606" />
+    <state width="1671" height="260" key="GridCell.Tab.0.right/0.0.1858.1080@0.0.1858.1080" timestamp="1620942569332" />
     <state width="1378" height="251" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1619817388949" />
-    <state width="1671" height="451" key="GridCell.Tab.1.bottom" timestamp="1620925756487">
+    <state width="1671" height="260" key="GridCell.Tab.1.bottom" timestamp="1620942569332">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1671" height="451" key="GridCell.Tab.1.bottom/0.0.1858.1080@0.0.1858.1080" timestamp="1620925756487" />
+    <state width="1671" height="260" key="GridCell.Tab.1.bottom/0.0.1858.1080@0.0.1858.1080" timestamp="1620942569332" />
     <state width="1378" height="251" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1619817388950" />
-    <state width="1671" height="451" key="GridCell.Tab.1.center" timestamp="1620925756487">
+    <state width="1671" height="260" key="GridCell.Tab.1.center" timestamp="1620942569332">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1671" height="451" key="GridCell.Tab.1.center/0.0.1858.1080@0.0.1858.1080" timestamp="1620925756487" />
+    <state width="1671" height="260" key="GridCell.Tab.1.center/0.0.1858.1080@0.0.1858.1080" timestamp="1620942569332" />
     <state width="1378" height="251" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1619817388950" />
-    <state width="1671" height="451" key="GridCell.Tab.1.left" timestamp="1620925756487">
+    <state width="1671" height="260" key="GridCell.Tab.1.left" timestamp="1620942569332">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1671" height="451" key="GridCell.Tab.1.left/0.0.1858.1080@0.0.1858.1080" timestamp="1620925756487" />
+    <state width="1671" height="260" key="GridCell.Tab.1.left/0.0.1858.1080@0.0.1858.1080" timestamp="1620942569332" />
     <state width="1378" height="251" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1619817388950" />
-    <state width="1671" height="451" key="GridCell.Tab.1.right" timestamp="1620925756487">
+    <state width="1671" height="260" key="GridCell.Tab.1.right" timestamp="1620942569332">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1671" height="451" key="GridCell.Tab.1.right/0.0.1858.1080@0.0.1858.1080" timestamp="1620925756487" />
+    <state width="1671" height="260" key="GridCell.Tab.1.right/0.0.1858.1080@0.0.1858.1080" timestamp="1620942569332" />
     <state width="1378" height="251" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1619817388950" />
-    <state width="1671" height="451" key="GridCell.Tab.2.bottom" timestamp="1620925756487">
+    <state width="1857" height="322" key="GridCell.Tab.2.bottom" timestamp="1620942569303">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1671" height="451" key="GridCell.Tab.2.bottom/0.0.1858.1080@0.0.1858.1080" timestamp="1620925756487" />
+    <state width="1857" height="322" key="GridCell.Tab.2.bottom/0.0.1858.1080@0.0.1858.1080" timestamp="1620942569303" />
     <state width="1378" height="251" key="GridCell.Tab.2.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1619817388950" />
-    <state width="1671" height="451" key="GridCell.Tab.2.center" timestamp="1620925756487">
+    <state width="1857" height="322" key="GridCell.Tab.2.center" timestamp="1620942569303">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1671" height="451" key="GridCell.Tab.2.center/0.0.1858.1080@0.0.1858.1080" timestamp="1620925756487" />
+    <state width="1857" height="322" key="GridCell.Tab.2.center/0.0.1858.1080@0.0.1858.1080" timestamp="1620942569303" />
     <state width="1378" height="251" key="GridCell.Tab.2.center/0.0.1920.1080@0.0.1920.1080" timestamp="1619817388950" />
-    <state width="1671" height="451" key="GridCell.Tab.2.left" timestamp="1620925756487">
+    <state width="1857" height="322" key="GridCell.Tab.2.left" timestamp="1620942569303">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1671" height="451" key="GridCell.Tab.2.left/0.0.1858.1080@0.0.1858.1080" timestamp="1620925756487" />
+    <state width="1857" height="322" key="GridCell.Tab.2.left/0.0.1858.1080@0.0.1858.1080" timestamp="1620942569303" />
     <state width="1378" height="251" key="GridCell.Tab.2.left/0.0.1920.1080@0.0.1920.1080" timestamp="1619817388950" />
-    <state width="1671" height="451" key="GridCell.Tab.2.right" timestamp="1620925756487">
+    <state width="1857" height="322" key="GridCell.Tab.2.right" timestamp="1620942569303">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1671" height="451" key="GridCell.Tab.2.right/0.0.1858.1080@0.0.1858.1080" timestamp="1620925756487" />
+    <state width="1857" height="322" key="GridCell.Tab.2.right/0.0.1858.1080@0.0.1858.1080" timestamp="1620942569303" />
     <state width="1378" height="251" key="GridCell.Tab.2.right/0.0.1920.1080@0.0.1920.1080" timestamp="1619817388950" />
     <state width="1875" height="371" key="GridCell.Tab.3.bottom" timestamp="1619528584297">
       <screen x="0" y="0" width="1920" height="1080" />
@@ -638,19 +656,19 @@
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
     <state x="436" y="117" width="1063" height="973" key="dock-window-4/0.0.1858.1080@0.0.1858.1080" timestamp="1620723449643" />
-    <state x="501" y="267" width="820" height="600" key="find.popup" timestamp="1620911902497">
+    <state x="501" y="267" width="820" height="600" key="find.popup" timestamp="1620939041581">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state x="501" y="267" width="820" height="600" key="find.popup/0.0.1858.1080@0.0.1858.1080" timestamp="1620911902497" />
+    <state x="501" y="267" width="820" height="600" key="find.popup/0.0.1858.1080@0.0.1858.1080" timestamp="1620939041581" />
     <state x="518" y="267" width="820" height="600" key="find.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1619450402118" />
     <state x="607" y="463" key="new project wizard" timestamp="1620313359546">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
     <state x="607" y="463" key="new project wizard/0.0.1858.1080@0.0.1858.1080" timestamp="1620313359546" />
-    <state x="997" y="404" key="run.anything.popup" timestamp="1620925810028">
+    <state x="997" y="404" key="run.anything.popup" timestamp="1620941928183">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state x="997" y="404" key="run.anything.popup/0.0.1858.1080@0.0.1858.1080" timestamp="1620925810028" />
+    <state x="997" y="404" key="run.anything.popup/0.0.1858.1080@0.0.1858.1080" timestamp="1620941928183" />
     <state x="1030" y="404" key="run.anything.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1619806550367" />
     <state x="598" y="323" width="672" height="678" key="search.everywhere.popup" timestamp="1620887361414">
       <screen x="0" y="0" width="1858" height="1080" />
@@ -713,8 +731,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/controller/CommentController.java</url>
-          <line>37</line>
+          <line>38</line>
           <option name="timeStamp" value="50" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/controller/UserController.java</url>
+          <line>54</line>
+          <option name="timeStamp" value="53" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

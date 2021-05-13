@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+import com.heng.valid.AddGroup;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
@@ -49,7 +50,7 @@ public class User implements Serializable {
     private String username;
 
     @ApiModelProperty(value = "密码")
-    @NotBlank(message = "密码不能为空")
+    @NotBlank(message = "密码不能为空", groups = {AddGroup.class})
     private String password;
 
     @ApiModelProperty(value = "头像url")

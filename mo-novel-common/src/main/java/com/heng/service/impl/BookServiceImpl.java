@@ -96,10 +96,13 @@ public class BookServiceImpl extends ServiceImpl<BookMapper, Book> implements Bo
     }
 
     @Override
-    public ResponseDTO editBookComment(Long commentId, String content)
+    public ResponseDTO editBookComment(Comment comment)
     {
+/*
         Comment comment = commentMapper.selectById(commentId);
         comment.setContent(content);
+        commentMapper.updateById(comment);
+*/
         commentMapper.updateById(comment);
 
         return ResponseDTO.succ(ResponseStatus.SUCCESS.getMsg());

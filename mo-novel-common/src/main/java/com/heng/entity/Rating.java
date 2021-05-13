@@ -3,6 +3,7 @@ package com.heng.entity;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+import com.heng.valid.AddGroup;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
@@ -45,11 +46,11 @@ public class Rating implements Serializable {
     private Byte star;
 
     @ApiModelProperty(value = "用户ID")
-    @NotNull(message = "用户ID不能为空")
+    @NotNull(message = "用户ID不能为空", groups = {AddGroup.class})
     private Long userId;
 
     @ApiModelProperty(value = "小说ID")
-    @NotNull(message = "小说ID不能为空")
+    @NotNull(message = "小说ID不能为空", groups = {AddGroup.class})
     private Long bookId;
 
 

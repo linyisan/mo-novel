@@ -7,8 +7,10 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.toolkit.StringUtils;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.heng.common.ResponseDTO;
+import com.heng.dto.UserUpdatePwdDTO;
 import com.heng.entity.Role;
 import com.heng.entity.User;
+import com.heng.exception.BusinessException;
 import com.heng.mapper.UserMapper;
 import com.heng.service.UserService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
@@ -122,6 +124,19 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         if(0 >= userMapper.insert(user))
             return ResponseDTO.fail("注册失败");
         return ResponseDTO.succ("注册成功");
+    }
+
+    @Override
+    public ResponseDTO updatePwd(UserUpdatePwdDTO updatePwdDTO)
+    {
+        User user = userMapper.selectById(updatePwdDTO.getUserId());
+        if(null == user) throw new BusinessException("用户不存在");
+        if(!Objects.equals(SecureUtil.md5(updatePwdDTO.getOldPassword()), user.getPassword()))
+            throw new BusinessException("原密码错误");
+
+        user.setPassword(SecureUtil.md5(updatePwdDTO.getNewPassword()));
+        userMapper.updateById(user);
+        return ResponseDTO.succ("修改密码成功");
     }
 
 }

@@ -1,4 +1,4 @@
-package com.heng.common;
+package com.heng.vo;
 
 import lombok.*;
 

@@ -1,6 +1,7 @@
 package com.heng.service;
 
 import com.heng.common.ResponseDTO;
+import com.heng.dto.UserUpdatePwdDTO;
 import com.heng.entity.User;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.heng.vo.LoginVo;
@@ -26,4 +27,6 @@ public interface UserService extends IService<User> {
     ResponseDTO searchUser(UserQueryVo userQueryVo);
 
     ResponseDTO register(User user);
+
+    ResponseDTO updatePwd(UserUpdatePwdDTO updatePwdDTO);
 }

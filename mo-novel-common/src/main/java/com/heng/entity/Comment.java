@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+import com.heng.valid.AddGroup;
 import com.heng.vo.UserInfoVo;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -26,7 +27,7 @@ import java.time.LocalDateTime;
 @Data
 @EqualsAndHashCode(callSuper = false)
 @TableName(value = "t_comment", resultMap = "BaseResultMap")
-@ApiModel(value="Comment对象", description="评价表")
+@ApiModel(value = "Comment对象", description = "评价表")
 public class Comment implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -45,11 +46,11 @@ public class Comment implements Serializable {
     private Byte resourceType;
 
     @ApiModelProperty(value = "目标资源ID")
-    @NotNull(message = "评论目标ID不能为空")
+    @NotNull(message = "评论目标ID不能为空", groups = {AddGroup.class})
     private Long resourceId;
 
     @ApiModelProperty(value = "本评论发出者用户ID")
-    @NotNull(message = "评论者ID不能为空")
+    @NotNull(message = "评论者ID不能为空", groups = {AddGroup.class})
     private Long userId;
 
     @ApiModelProperty(value = "评论内容")
@@ -61,4 +62,10 @@ public class Comment implements Serializable {
 
     @TableField(exist = false)
     private Byte star;
+
+    @TableField(exist = false)
+    private Rating rating;
+
+    @TableField(exist = false)
+    private Book book;
 }

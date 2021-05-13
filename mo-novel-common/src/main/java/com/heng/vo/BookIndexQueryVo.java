@@ -1,9 +1,6 @@
 package com.heng.vo;
 
-import com.heng.common.BaseQuery;
 import lombok.Data;
-
-import javax.validation.constraints.NotNull;
 
 /**
  * @author LJohn

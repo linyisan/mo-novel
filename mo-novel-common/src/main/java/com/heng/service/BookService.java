@@ -23,7 +23,7 @@ public interface BookService extends IService<Book> {
 
     ResponseDTO addBookComment(Comment comment);
 
-    ResponseDTO editBookComment(Long commentId, String content);
+    ResponseDTO editBookComment(Comment comment);
 
     boolean existsBookComment(Comment comment);
 }

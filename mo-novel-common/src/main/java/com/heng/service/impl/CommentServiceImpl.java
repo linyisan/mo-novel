@@ -7,6 +7,7 @@ import com.heng.common.ResponseDTO;
 import com.heng.entity.BookIndex;
 import com.heng.entity.Comment;
 import com.heng.entity.Rating;
+import com.heng.mapper.BookMapper;
 import com.heng.mapper.CommentMapper;
 import com.heng.service.CommentService;
 import com.heng.service.RatingService;
@@ -34,6 +35,9 @@ public class CommentServiceImpl extends ServiceImpl<CommentMapper, Comment> impl
     private CommentMapper commentMapper;
 
     @Autowired
+    private BookMapper bookMapper;
+
+    @Autowired
     private RatingService ratingService;
 
     @Override
@@ -56,15 +60,19 @@ public class CommentServiceImpl extends ServiceImpl<CommentMapper, Comment> impl
     public ResponseDTO searchBookComment(CommentQueryVo commentQueryVo)
     {
         List<Comment> comments = this.searchComment(commentQueryVo);
+
+        // star
+        RatingQueryVo ratingQueryVo = new RatingQueryVo();
         comments.forEach(comment -> {
-            RatingQueryVo ratingQueryVo = new RatingQueryVo();
             ratingQueryVo.setBookId(commentQueryVo.getResourceId());
             ratingQueryVo.setUserId(commentQueryVo.getUserId());
+            comment.setBook(bookMapper.selectById(comment.getResourceId()));
 
             List<Rating> ratings = ratingService.searchRating(ratingQueryVo);
             if (!ratings.isEmpty())
             {
                 comment.setStar(ratings.get(0).getStar());
+                comment.setRating(ratings.get(0));
             }
         });
         HashMap<String, Object> map = new HashMap<>();

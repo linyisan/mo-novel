@@ -2,9 +2,11 @@ package com.heng.controller;
 
 import com.baomidou.mybatisplus.core.toolkit.StringUtils;
 import com.heng.common.ResponseDTO;
+import com.heng.dto.UserUpdatePwdDTO;
 import com.heng.entity.User;
 import com.heng.service.UserService;
 import com.heng.vo.LoginVo;
+import io.swagger.annotations.ApiOperation;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.LockedAccountException;
 import org.apache.shiro.authc.UsernamePasswordToken;
@@ -13,6 +15,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.HashMap;
 
 /**
@@ -86,4 +89,9 @@ public class AuthController {
         return userService.info(token);
     }
 
+    @ApiOperation(value = "修改密码", notes = "@author heng")
+    @PostMapping("updatePwd")
+    public ResponseDTO updatePwd(@Validated @RequestBody UserUpdatePwdDTO updatePwdDTO) {
+        return userService.updatePwd(updatePwdDTO);
+    }
 }

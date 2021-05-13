@@ -5,6 +5,7 @@ import com.heng.common.ResponseDTO;
 import com.heng.entity.Rating;
 import com.heng.entity.User;
 import com.heng.service.RatingService;
+import com.heng.valid.AddGroup;
 import com.heng.vo.RatingQueryVo;
 import com.heng.vo.UserQueryVo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,7 +40,7 @@ public class RatingController {
     }
 
     @PostMapping("add")
-    public ResponseDTO addRating(@Validated @RequestBody Rating rating)
+    public ResponseDTO addRating(@Validated(AddGroup.class) @RequestBody Rating rating)
     {
         ratingService.save(rating);
         return ResponseDTO.succ("评分成功");

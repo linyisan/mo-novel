@@ -8,6 +8,7 @@ import com.heng.entity.Rating;
 import com.heng.service.BookService;
 import com.heng.service.CommentService;
 import com.heng.service.RatingService;
+import com.heng.valid.AddGroup;
 import com.heng.vo.CommentQueryVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
@@ -33,15 +34,15 @@ public class CommentController {
     private CommentService commentService;
 
     @PostMapping("/bookcomment/add")
-    public ResponseDTO addBookComment(@Validated @RequestBody Comment comment)
+    public ResponseDTO addBookComment(@Validated({AddGroup.class}) @RequestBody Comment comment)
     {
         return bookService.addBookComment(comment);
     }
 
     @PostMapping("/bookcomment/edit")
-    public ResponseDTO editBookComment(Long commentId, String content)
+    public ResponseDTO editBookComment(@RequestBody Comment comment)
     {
-        return bookService.editBookComment(commentId, content);
+        return bookService.editBookComment(comment);
     }
 
     @GetMapping("/bookcomment/delete/{commentId}")
