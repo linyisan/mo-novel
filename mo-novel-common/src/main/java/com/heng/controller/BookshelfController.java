@@ -7,6 +7,7 @@ import com.heng.common.ResponseStatus;
 import com.heng.entity.Bookshelf;
 import com.heng.service.BookshelfService;
 import com.heng.util.MoRequestTokenUtil;
+import com.heng.vo.BookshelfQueryVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
@@ -34,7 +35,7 @@ public class BookshelfController {
     {
         Long userId = MoRequestTokenUtil.getRequestUser().getId();
         bookshelf.setUserId(userId);
-        bookshelfService.saveOrUpdate(bookshelf);
+        bookshelfService.save(bookshelf);
         return ResponseDTO.succ("成功加入书架");
     }
 
@@ -48,20 +49,17 @@ public class BookshelfController {
     @PostMapping("edit")
     public ResponseDTO editBookshelf(@Validated @RequestBody Bookshelf bookshelf)
     {
-        Long userId = MoRequestTokenUtil.getRequestUser().getId();
-        bookshelf.setUserId(userId);
         bookshelfService.updateById(bookshelf);
         return ResponseDTO.succ(ResponseStatus.SUCCESS.getMsg());
     }
 
     @GetMapping("search")
-    public ResponseDTO searchBookshelf(@PathVariable Long userId)
+    public ResponseDTO searchBookshelf(BookshelfQueryVo bookshelfQueryVo)
     {
-        userId = MoRequestTokenUtil.getRequestUser().getId();
+/*        userId = MoRequestTokenUtil.getRequestUser().getId();
         HashMap<String, Object> map = new HashMap<>();
-        map.put("user_id", userId);
-        List<Bookshelf> bookshelves = bookshelfService.listByMap(map);
-        return ResponseDTO.succ(bookshelves);
+        map.put("user_id", userId);*/
+        return bookshelfService.searchBookshelf(bookshelfQueryVo);
     }
 }
 

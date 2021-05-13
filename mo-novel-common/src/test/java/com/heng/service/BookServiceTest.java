@@ -25,6 +25,12 @@ class BookServiceTest {
     @Autowired
     private BookService bookService;
 
+    @Test
+    public void get()
+    {
+        Book book = bookService.getById(1L);
+        System.out.println("book = " + book);
+    }
 
     @Test
     public void test()

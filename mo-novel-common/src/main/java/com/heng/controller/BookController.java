@@ -29,9 +29,6 @@ public class BookController {
     @Autowired
     private BookService bookService;
 
-    @Autowired
-    private CommentService commentService;
-
     @GetMapping("getAll")
     public ResponseDTO getAllBook()
     {
@@ -76,34 +73,5 @@ public class BookController {
         return ResponseDTO.succ("成功删除小说");
     }
 
-
-    @PostMapping("addBookComment")
-    public ResponseDTO addBookComment(@Validated Comment comment)
-    {
-        return bookService.addBookComment(comment);
-    }
-
-    @PostMapping("editBookComment")
-    public ResponseDTO editBookComment(Long commentId, String content)
-    {
-        return bookService.editBookComment(commentId, content);
-    }
-
-    @GetMapping("deleteBookComment/{commentId}")
-    public ResponseDTO deleteBookComment(@PathVariable Long commentId)
-    {
-        commentService.removeById(commentId);
-        return ResponseDTO.succ(ResponseStatus.SUCCESS.getMsg());
-    }
-
-    @GetMapping("getBookCommentByBookId/{bookId}")
-    public ResponseDTO getBookCommentByBookId(@PathVariable Long bookId)
-    {
-        HashMap<String, Object> map = new HashMap<>();
-        map.put("resource_type", 1);
-        map.put("resource_id", bookId);
-        List<Comment> bookComments = commentService.listByMap(map);
-        return ResponseDTO.succ(bookComments);
-    }
 }
 

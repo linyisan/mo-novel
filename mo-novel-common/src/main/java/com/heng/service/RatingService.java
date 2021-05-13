@@ -1,7 +1,11 @@
 package com.heng.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.heng.common.ResponseDTO;
 import com.heng.entity.Rating;
+import com.heng.vo.RatingQueryVo;
+
+import java.util.List;
 
 /**
  * <p>
@@ -13,4 +17,5 @@ import com.heng.entity.Rating;
  */
 public interface RatingService extends IService<Rating> {
 
+    List<Rating> searchRating(RatingQueryVo ratingQueryVo);
 }

@@ -2,6 +2,9 @@ package com.heng.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.heng.entity.Comment;
+import com.heng.vo.CommentQueryVo;
+
+import java.util.Set;
 
 /**
  * <p>
@@ -12,5 +15,5 @@ import com.heng.entity.Comment;
  * @since 2021-05-01
  */
 public interface CommentMapper extends BaseMapper<Comment> {
-
+    Set<Comment> selectAllCommentJoinRating(CommentQueryVo commentQueryVo);
 }

@@ -4,13 +4,15 @@
 
     <!-- 通用查询映射结果 -->
     <resultMap id="BaseResultMap" type="com.heng.entity.Comment">
-        <id column="id" property="id" />
-        <result column="create_time" property="createTime" />
-        <result column="update_time" property="updateTime" />
-        <result column="resource_type" property="resourceType" />
-        <result column="resource_id" property="resourceId" />
-        <result column="user_id" property="userId" />
-        <result column="content" property="content" />
+        <id column="id" property="id"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_time" property="updateTime"/>
+        <result column="resource_type" property="resourceType"/>
+        <result column="resource_id" property="resourceId"/>
+        <result column="user_id" property="userId"/>
+        <result column="content" property="content"/>
+        <association property="userInfoVo" column="user_id"
+                     select="com.heng.mapper.UserMapper.selectUserInfoById"/>
     </resultMap>
 
     <!-- 通用查询结果列 -->
@@ -18,4 +20,27 @@
         id, create_time, update_time, resource_type, resource_id, user_id, content
     </sql>
 
+    <select id="selectAllCommentJoinRating" parameterType="com.heng.vo.CommentQueryVo"
+            resultType="com.heng.entity.Comment">
+SELECT
+	C.id,
+	C.create_time,
+	C.update_time,
+	C.resource_type,
+	C.resource_id,
+	C.user_id,
+	C.content,
+	`star`
+FROM
+	t_comment AS C
+	LEFT JOIN t_rating ON C.user_id = t_rating.user_id
+	AND C.resource_id = t_rating.book_id
+	<where>
+        <if test="resourceType != null">and C.resource_type=#{resourceType}</if>
+        <if test="resourceId != null">and C.resource_id=#{resourceId}</if>
+        <if test="userId != null">and C.user_id=#{userId}</if>
+        <if test="content != null and content != ''">and C.content LIKE concat('%',#{content},'%')</if>
+    </where>
+    LIMIT #{page}, #{limit}
+    </select>
 </mapper>

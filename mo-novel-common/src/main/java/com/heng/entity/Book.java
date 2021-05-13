@@ -72,4 +72,6 @@ public class Book implements Serializable {
     @TableField(exist = false)
     private Category category;
 
+    @TableField(exist = false)
+    private BookIndex lastBookIndex;
 }

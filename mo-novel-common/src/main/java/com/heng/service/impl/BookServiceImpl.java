@@ -10,6 +10,7 @@ import com.heng.entity.Comment;
 import com.heng.exception.BusinessException;
 import com.heng.mapper.BookMapper;
 import com.heng.mapper.CommentMapper;
+import com.heng.mapper.RatingMapper;
 import com.heng.service.BookService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.heng.vo.BookQueryVo;
@@ -37,7 +38,6 @@ public class BookServiceImpl extends ServiceImpl<BookMapper, Book> implements Bo
     @Autowired
     private CommentMapper commentMapper;
 
-    @SneakyThrows
     @Override
     public ResponseDTO searchBook(BookQueryVo queryParams)
     {

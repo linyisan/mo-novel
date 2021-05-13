@@ -10,12 +10,12 @@ import lombok.*;
 @AllArgsConstructor
 @Getter
 public class BaseQuery {
-    private Integer page = 1;
+    private Integer page = 0;
     private Integer limit = 10;
 
     public void setPage(Integer page)
     {
-        this.page = page < 0 ? 1 : page;
+        this.page = page <= 1 ? 0 : page-1;
     }
 
     public void setLimit(Integer limit)

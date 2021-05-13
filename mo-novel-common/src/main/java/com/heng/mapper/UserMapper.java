@@ -2,6 +2,7 @@ package com.heng.mapper;
 
 import com.heng.entity.User;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.heng.vo.UserInfoVo;
 import org.apache.ibatis.annotations.One;
 import org.apache.ibatis.annotations.Result;
 import org.apache.ibatis.annotations.Results;
@@ -26,4 +27,6 @@ public interface UserMapper extends BaseMapper<User> {
     })
     @Select("select * from `t_user`")
     List<User> selectUserAndRole();*/
+
+    UserInfoVo selectUserInfoById(Long id);
 }

@@ -19,9 +19,19 @@
                     select="com.heng.mapper.RoleMapper.selectById"/>
     </resultMap>
 
+    <resultMap id="UserInfoResultMap" type="com.heng.vo.UserInfoVo">
+        <id column="id" property="id"/>
+        <result column="username" property="name" />
+        <result column="avatar" property="avatar" />
+    </resultMap>
+
     <!-- 通用查询结果列 -->
     <sql id="Base_Column_List">
         id, create_time, update_time, username, password, avatar, sex, email, mobile, status, role_id
     </sql>
+
+    <select id="selectUserInfoById" resultMap="UserInfoResultMap">
+        SELECT id, username, avatar FROM `t_user` WHERE id=#{id}
+    </select>
 
 </mapper>

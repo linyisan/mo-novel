@@ -50,7 +50,7 @@ public class Bookshelf implements Serializable {
     private Long bookId;
 
     @ApiModelProperty(value = "阅读进度：1正在追看，2养肥待看，3已经看过")
-    @Range(min = 1, max = 3, message = "阅读进度错误")
+    @Range(min = 0, max = 3, message = "阅读进度错误")
     private Byte readingProcess;
 
     @ApiModelProperty(value = "上次阅读章节ID")

@@ -1,7 +1,11 @@
 package com.heng.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.heng.common.ResponseDTO;
 import com.heng.entity.Comment;
+import com.heng.vo.CommentQueryVo;
+
+import java.util.List;
 
 /**
  * <p>
@@ -12,5 +16,7 @@ import com.heng.entity.Comment;
  * @since 2021-05-01
  */
 public interface CommentService extends IService<Comment> {
+    List<Comment> searchComment(CommentQueryVo commentQueryVo);
 
+    ResponseDTO searchBookComment(CommentQueryVo commentQueryVo);
 }

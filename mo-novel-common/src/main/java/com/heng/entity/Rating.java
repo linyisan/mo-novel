@@ -7,7 +7,9 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import org.hibernate.validator.constraints.Range;
 
+import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
@@ -38,12 +40,16 @@ public class Rating implements Serializable {
     private LocalDateTime updateTime;
 
     @ApiModelProperty(value = "小说评分（五星制）")
-    private Byte start;
+    @NotNull(message = "评分不能为空")
+    @Range(min = 1, max = 5, message = "评分取值范围1-5")
+    private Byte star;
 
     @ApiModelProperty(value = "用户ID")
+    @NotNull(message = "用户ID不能为空")
     private Long userId;
 
     @ApiModelProperty(value = "小说ID")
+    @NotNull(message = "小说ID不能为空")
     private Long bookId;
 
 

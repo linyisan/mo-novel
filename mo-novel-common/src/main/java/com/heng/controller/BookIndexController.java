@@ -2,6 +2,7 @@ package com.heng.controller;
 
 
 import com.heng.common.ResponseDTO;
+import com.heng.entity.Book;
 import com.heng.entity.BookIndex;
 import com.heng.mapper.BookIndexMapper;
 import com.heng.service.BookContentService;
@@ -10,6 +11,9 @@ import com.heng.vo.BookIndexQueryVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.HashMap;
+import java.util.List;
 
 /**
  * <p>

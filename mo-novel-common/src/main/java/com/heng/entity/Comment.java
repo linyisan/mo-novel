@@ -1,8 +1,10 @@
 package com.heng.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+import com.heng.vo.UserInfoVo;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
@@ -23,7 +25,7 @@ import java.time.LocalDateTime;
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
-@TableName("t_comment")
+@TableName(value = "t_comment", resultMap = "BaseResultMap")
 @ApiModel(value="Comment对象", description="评价表")
 public class Comment implements Serializable {
 
@@ -54,5 +56,9 @@ public class Comment implements Serializable {
     @NotBlank(message = "评论内容不能为空")
     private String content;
 
+    @TableField(exist = false)
+    private UserInfoVo userInfoVo;
 
+    @TableField(exist = false)
+    private Byte star;
 }

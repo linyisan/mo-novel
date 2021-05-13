@@ -13,5 +13,5 @@ import org.springframework.stereotype.Repository;
  * @since 2021-04-28
  */
 public interface BookIndexMapper extends BaseMapper<BookIndex> {
-
+    BookIndex selectLastBookIndex(Long bookId);
 }
