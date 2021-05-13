@@ -1,5 +1,8 @@
 package com.heng.service.impl;
 
+import cn.hutool.crypto.SecureUtil;
+import cn.hutool.crypto.digest.DigestUtil;
+import cn.hutool.crypto.digest.MD5;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.toolkit.StringUtils;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
@@ -56,6 +59,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
             return ResponseDTO.fail("账户号码错误");
         }
 
+        loginVo.setPassword(SecureUtil.md5(loginVo.getPassword()));
         if (!Objects.equals(loginVo.getPassword(), user.getPassword()))
         {
             return ResponseDTO.fail("密码错误");
@@ -102,6 +106,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         Page<User> page = new Page<>(userQueryVo.getPage(), userQueryVo.getLimit());
         userMapper.selectPage(page, userQueryWrapper);
         HashMap<String, Object> map = new HashMap<>();
+
         map.put("items", page.getRecords());
         map.put("total", page.getTotal());
 //        map.put("item", userMapper.selectUserAndRole());
@@ -113,6 +118,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
     {
         if(null != getUserByUsername(user.getUsername()))
             return ResponseDTO.fail("用户名已经存在!");
+        user.setPassword(SecureUtil.md5(user.getPassword()));
         if(0 >= userMapper.insert(user))
             return ResponseDTO.fail("注册失败");
         return ResponseDTO.succ("注册成功");

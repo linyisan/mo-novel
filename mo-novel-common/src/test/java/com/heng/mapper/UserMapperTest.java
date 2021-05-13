@@ -1,5 +1,6 @@
 package com.heng.mapper;
 
+import cn.hutool.crypto.SecureUtil;
 import com.heng.entity.User;
 import com.heng.vo.UserInfoVo;
 import org.junit.jupiter.api.Test;
@@ -12,9 +13,9 @@ import static org.junit.jupiter.api.Assertions.*;
  * @author LJohn
  * @since 2021-05-11
  */
-@SpringBootTest
+//@SpringBootTest
 class UserMapperTest {
-    @Autowired
+//    @Autowired
     private UserMapper userMapper;
 
     @Test
@@ -29,5 +30,11 @@ class UserMapperTest {
     {
         User user = userMapper.selectById(5L);
         System.out.println("user = " + user);
+    }
+
+    @Test
+    public void md5EncodePassowrd()
+    {
+        System.out.println("SecureUtil.md5(\"123456\") = " + SecureUtil.md5("lisi"));
     }
 }
