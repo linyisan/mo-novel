@@ -27,7 +27,7 @@ import java.util.Set;
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
-@TableName("t_user")
+@TableName(value = "t_user", resultMap = "BaseResultMap")
 @Accessors(chain = true)
 @ApiModel(value="User对象", description="用户表")
 public class User implements Serializable {

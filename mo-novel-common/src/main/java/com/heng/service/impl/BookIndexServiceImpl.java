@@ -145,4 +145,28 @@ public class BookIndexServiceImpl extends ServiceImpl<BookIndexMapper, BookIndex
 
         return ResponseDTO.succ(bookIndex);
     }
+
+    @Override
+    public Long getPreBookIndexId(Long bookIndexId)
+    {
+        QueryWrapper<BookIndex> bookIndexQueryWrapper = new QueryWrapper<>();
+        bookIndexQueryWrapper.lt("id", bookIndexId)
+                .orderByDesc("id");
+        Page<BookIndex> bookIndexPage = new Page<>(0L, 1L);
+        bookIndexMapper.selectPage(bookIndexPage, bookIndexQueryWrapper);
+        if(bookIndexPage.getTotal()<1) return bookIndexId;
+        else return bookIndexPage.getRecords().get(0).getId();
+    }
+
+    @Override
+    public Long getNextBookIndexId(Long bookIndexId)
+    {
+        QueryWrapper<BookIndex> bookIndexQueryWrapper = new QueryWrapper<>();
+        bookIndexQueryWrapper.gt("id", bookIndexId)
+                .orderByAsc("id");
+        Page<BookIndex> bookIndexPage = new Page<>(0L, 1L);
+        bookIndexMapper.selectPage(bookIndexPage, bookIndexQueryWrapper);
+        if(bookIndexPage.getTotal()<1) return bookIndexId;
+        else return bookIndexPage.getRecords().get(0).getId();
+    }
 }

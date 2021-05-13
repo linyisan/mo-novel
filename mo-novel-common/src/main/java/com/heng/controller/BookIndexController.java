@@ -41,6 +41,19 @@ public class BookIndexController {
         return bookIndexService.getBookIndex(bookIndexId);
     }
 
+
+    @GetMapping("getPre/{bookIndexId}")
+    public ResponseDTO getPreBookIndex(@PathVariable Long bookIndexId)
+    {
+        return bookIndexService.getBookIndex(bookIndexService.getPreBookIndexId(bookIndexId));
+    }
+
+    @GetMapping("getNext/{bookIndexId}")
+    public ResponseDTO getNextBookIndex(@PathVariable Long bookIndexId)
+    {
+        return bookIndexService.getBookIndex(bookIndexService.getNextBookIndexId(bookIndexId));
+    }
+
     @PostMapping("add")
     public ResponseDTO addBookIndex(@Validated @RequestBody BookIndex bookIndex)
     {
