@@ -147,7 +147,7 @@ public class BookServiceImpl extends ServiceImpl<BookMapper, Book> implements Bo
     @Override
     public List<Book> listRank(Byte type, Integer limit)
     {
-        String[] arr_sortByDesc = {"create_time", "comment_count", "visit_count"};
+        String[] arr_sortByDesc = { "visit_count", "create_time", "comment_count"};
         QueryWrapper<Book> bookQueryWrapper = new QueryWrapper<>();
         // 越界处理
         if(type >= arr_sortByDesc.length) bookQueryWrapper.orderByDesc("update_time");

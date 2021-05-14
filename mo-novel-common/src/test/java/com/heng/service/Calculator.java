@@ -1,5 +1,6 @@
 package com.heng.service;
 
+import java.time.LocalDateTime;
 import java.util.Objects;
 import java.util.Scanner;
 
@@ -8,7 +9,8 @@ public class Calculator {
 
     public static void main(String[] args) throws Exception
     {
-        System.out.print("请输入第一个数:");
+        System.out.println(LocalDateTime.now());
+/*        System.out.print("请输入第一个数:");
         double num1 = inputNumber();
         System.out.print("请输入运算符:");
         String op = inputOperator();
@@ -16,7 +18,7 @@ public class Calculator {
         double num2 = inputNumber();
 
         double result = Calculator.twoNumberCalcuate(num1, num2, op);
-        System.out.println("【结果】" + num1 + op + num2 + "=" + result);
+        System.out.println("【结果】" + num1 + op + num2 + "=" + result);*/
     }
 
     /**

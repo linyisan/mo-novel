@@ -75,8 +75,8 @@ public class Book implements Serializable {
     @ApiModelProperty(value = "小说评分（取t_rating平均数）")
     private Float score;
 
-    @TableField(exist = false)
-    private Category category;
+/*    @TableField(exist = false)
+    private Category category;*/
 
     @TableField(exist = false)
     private BookIndex lastBookIndex;

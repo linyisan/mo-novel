@@ -73,5 +73,29 @@ public class BookController {
         return ResponseDTO.succ("成功删除小说");
     }
 
+    /**
+     * 查询首页点击榜单数据
+     * */
+    @GetMapping("listClickRank")
+    public ResponseDTO listClickRank(){
+        return ResponseDTO.succ(bookService.listRank((byte)0, 10));
+    }
+
+    /**
+     * 查询首页新书榜单数据
+     * */
+    @GetMapping("listNewRank")
+    public ResponseDTO listNewRank(){
+        return ResponseDTO.succ(bookService.listRank((byte)1, 10));
+    }
+
+    /**
+     * 查询首页更新榜单数据
+     * */
+    @GetMapping("listUpdateRank")
+    public ResponseDTO listUpdateRank(){
+        return ResponseDTO.succ(bookService.listRank((byte)9999, 10));
+    }
+
 }
 

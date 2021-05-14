@@ -19,6 +19,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -50,6 +51,7 @@ public class BookIndexServiceImpl extends ServiceImpl<BookIndexMapper, BookIndex
         Book book = bookMapper.selectById(bookIndex.getBookId());
         if(StringUtils.checkValNull(book)) throw new BusinessException("小说不存在");
         book.setWordCount(book.getWordCount() + wordCount);
+        book.setUpdateTime(LocalDateTime.now());
         bookMapper.updateById(book);
 
         // 更新小说目录表

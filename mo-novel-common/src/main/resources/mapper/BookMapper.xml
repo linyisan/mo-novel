@@ -18,8 +18,8 @@
         <result column="visit_count" property="visitCount" />
         <result column="comment_count" property="commentCount" />
         <result column="score" property="score" />
-        <association property="category" column="category_id"
-                     select="com.heng.mapper.CategoryMapper.selectById"/>
+<!--        <association property="category" column="category_id"
+                     select="com.heng.mapper.CategoryMapper.selectById"/>-->
         <association property="lastBookIndex" column="id"
                      select="com.heng.mapper.BookIndexMapper.selectLastBookIndex"/>
     </resultMap>
