@@ -17,6 +17,7 @@ import com.heng.vo.BookQueryVo;
 import lombok.SneakyThrows;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.HashMap;
 import java.util.List;
@@ -83,6 +84,18 @@ public class BookServiceImpl extends ServiceImpl<BookMapper, Book> implements Bo
     }
 
     @Override
+    public boolean changeCommentCount(Long bookId, Long increment)
+    {
+        Book book = bookMapper.selectById(bookId);
+        if (StringUtils.checkValNull(book)) throw new BusinessException("小说不存在");
+        book.setCommentCount(book.getCommentCount() + increment);
+        if(book.getCommentCount() < 0) book.setCommentCount(0L);
+        bookMapper.updateById(book);
+        return true;
+    }
+
+    @Transactional
+    @Override
     public ResponseDTO addBookComment(Comment comment)
     {
         Book book = bookMapper.selectById(comment.getResourceId());
@@ -92,6 +105,7 @@ public class BookServiceImpl extends ServiceImpl<BookMapper, Book> implements Bo
         if(this.existsBookComment(comment)) throw new BusinessException("已评价过该书籍！");
 
         commentMapper.insert(comment);
+        this.changeCommentCount(book.getId(), 1L);
         return ResponseDTO.succ("评论成功");
     }
 
@@ -108,6 +122,16 @@ public class BookServiceImpl extends ServiceImpl<BookMapper, Book> implements Bo
         return ResponseDTO.succ(ResponseStatus.SUCCESS.getMsg());
     }
 
+    @Transactional
+    @Override
+    public ResponseDTO deleteBookComment(Long commentId)
+    {
+        Comment comment = commentMapper.selectById(commentId);
+        commentMapper.deleteById(commentId);
+        this.changeCommentCount(comment.getResourceId(), -1L);
+        return ResponseDTO.succ(ResponseStatus.SUCCESS.getMsg());
+    }
+
     @Override
     public boolean existsBookComment(Comment comment)
     {
@@ -118,6 +142,20 @@ public class BookServiceImpl extends ServiceImpl<BookMapper, Book> implements Bo
         List<Comment> bookComments = commentMapper.selectByMap(map);
         if (bookComments.isEmpty()) return false;
         else return true;
+    }
+
+    @Override
+    public List<Book> listRank(Byte type, Integer limit)
+    {
+        String[] arr_sortByDesc = {"create_time", "comment_count", "visit_count"};
+        QueryWrapper<Book> bookQueryWrapper = new QueryWrapper<>();
+        // 越界处理
+        if(type >= arr_sortByDesc.length) bookQueryWrapper.orderByDesc("update_time");
+        else bookQueryWrapper.orderByDesc(arr_sortByDesc[type]);
+
+        Page<Book> bookPage = new Page<>(0, limit);
+        bookMapper.selectPage(bookPage, bookQueryWrapper);
+        return bookPage.getRecords();
     }
 
 }

@@ -69,6 +69,9 @@ public class Book implements Serializable {
     @ApiModelProperty(value = "总点击量")
     private Long visitCount;
 
+    @ApiModelProperty(value = "总书评数")
+    private Long commentCount;
+
     @TableField(exist = false)
     private Category category;
 

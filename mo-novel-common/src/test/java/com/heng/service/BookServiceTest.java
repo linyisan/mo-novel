@@ -100,4 +100,15 @@ class BookServiceTest {
         boolean checkValNotNull = StringUtils.checkValNotNull(user.getUpdateTime());
         System.out.println("checkValNotNull = " + checkValNotNull);
     }
+
+    @Test
+    void listRank()
+    {
+        System.out.println("****************************");
+        bookService.listRank((byte)0, 10).forEach(System.out::println);
+        System.out.println("****************************");
+        bookService.listRank((byte)1, 10).forEach(System.out::println);
+        System.out.println("*****************************");
+        bookService.listRank((byte)2, 10).forEach(System.out::println);
+    }
 }

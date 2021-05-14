@@ -5,27 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b360b197-9ca1-4a85-ada4-9d675dcdc84c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/dto/UserUpdatePwdDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/common/BaseQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/vo/BaseQuery.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/controller/AuthController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/controller/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/controller/CommentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/controller/RatingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/controller/RatingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/entity/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/entity/Comment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/entity/Rating.java" beforeDir="false" afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/entity/Rating.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/entity/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/entity/Book.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/service/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/service/BookService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/service/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/service/impl/BookServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/service/impl/BookServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/service/impl/CommentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/service/impl/CommentServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/vo/BookIndexQueryVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/vo/BookIndexQueryVo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/vo/BookQueryVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/vo/BookQueryVo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/vo/BookshelfQueryVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/vo/BookshelfQueryVo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/vo/CommentQueryVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/vo/CommentQueryVo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/vo/RatingQueryVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/vo/RatingQueryVo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/vo/UserQueryVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/vo/UserQueryVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mo-novel-common/src/main/resources/mapper/BookMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mo-novel-common/src/main/resources/mapper/BookMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mo-novel-common/src/test/java/com/heng/service/BookServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/mo-novel-common/src/test/java/com/heng/service/BookServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,8 +67,8 @@
         <option value="JavaScript File" />
         <option value="Vue Single File Component" />
         <option value="Enum" />
-        <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -154,22 +140,21 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.heng.service.impl" />
       <recent name="com.heng.mapper" />
       <recent name="com.heng.service" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\Desktop\heng\IdeaProjects\my\mo-novel\mo-novel-common\src\main\java\com\heng\aop" />
+      <recent name="C:\Users\yisan\IdeaProjects\my\mo-novel\mo-novel-web\src" />
+      <recent name="C:\Users\yisan\IdeaProjects\my\mo-novel\mo-novel-admin\src\main\resources" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.heng" />
       <recent name="com.heng.monoveladmin" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Git\mgit\mo-novel\mo-novel-common\src\main\java\com\heng\valid" />
-      <recent name="D:\Git\mgit\mo-novel\mo-novel-web" />
-      <recent name="D:\Git\mgit\mo-novel\mo-novel-common\src\main\java\com\heng" />
-      <recent name="D:\Git\mgit\mo-novel" />
-      <recent name="D:\Git\mgit\mo-novel\mo-novel-common\src\main\java\com\heng\controller" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.heng.annotation" />
@@ -178,10 +163,12 @@
       <recent name="com.heng.entity" />
       <recent name="com.heng.service.impl" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Administrator\Desktop\heng\IdeaProjects\my\mo-novel\mo-novel-common\src\main\java\com\heng\aop" />
-      <recent name="C:\Users\yisan\IdeaProjects\my\mo-novel\mo-novel-web\src" />
-      <recent name="C:\Users\yisan\IdeaProjects\my\mo-novel\mo-novel-admin\src\main\resources" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Git\mgit\mo-novel\mo-novel-common\src\main\java\com\heng\valid" />
+      <recent name="D:\Git\mgit\mo-novel\mo-novel-web" />
+      <recent name="D:\Git\mgit\mo-novel\mo-novel-common\src\main\java\com\heng" />
+      <recent name="D:\Git\mgit\mo-novel" />
+      <recent name="D:\Git\mgit\mo-novel\mo-novel-common\src\main\java\com\heng\controller" />
     </key>
   </component>
   <component name="RestServicesNavigator">
@@ -198,7 +185,7 @@
       <select />
     </treeState>
   </component>
-  <component name="RunManager" selected="Spring Boot.NovelAdminApplication">
+  <component name="RunManager" selected="JUnit.BookServiceTest.listRank">
     <configuration name="BookServiceTest.get" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="mo-novel-common" />
       <extension name="coverage">
@@ -215,7 +202,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BookServiceTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BookServiceTest.listRank" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="mo-novel-common" />
       <extension name="coverage">
         <pattern>
@@ -225,7 +212,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.heng.service" />
       <option name="MAIN_CLASS_NAME" value="com.heng.service.BookServiceTest" />
-      <option name="METHOD_NAME" value="test" />
+      <option name="METHOD_NAME" value="listRank" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -316,23 +303,23 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="JUnit.BookServiceTest.test" />
       <item itemvalue="JUnit.BookServiceTest.get" />
       <item itemvalue="JUnit.UserMapperTest.getUserRole" />
       <item itemvalue="JUnit.UserMapperTest.selectUserInfoById" />
+      <item itemvalue="JUnit.UserMapperTest.md5EncodePassowrd" />
       <item itemvalue="npm.mo-novel-web" />
       <item itemvalue="npm.fromt" />
       <item itemvalue="Spring Boot.NovelAdminApplication" />
       <item itemvalue="Spring Boot.DemoApplication" />
-      <item itemvalue="JUnit.UserMapperTest.md5EncodePassowrd" />
+      <item itemvalue="JUnit.BookServiceTest.listRank" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.BookServiceTest.listRank" />
         <item itemvalue="JUnit.UserMapperTest.md5EncodePassowrd" />
         <item itemvalue="JUnit.BookServiceTest.get" />
         <item itemvalue="JUnit.UserMapperTest.selectUserInfoById" />
         <item itemvalue="JUnit.UserMapperTest.getUserRole" />
-        <item itemvalue="JUnit.BookServiceTest.test" />
       </list>
     </recent_temporary>
   </component>
@@ -430,6 +417,7 @@
       <workItem from="1620883641450" duration="3388000" />
       <workItem from="1620887090771" duration="5372000" />
       <workItem from="1620907551064" duration="17066000" />
+      <workItem from="1620980860037" duration="5002000" />
     </task>
     <task id="LOCAL-00001" summary="权限校验要死">
       <created>1618757966477</created>
@@ -499,10 +487,10 @@
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
     <state x="1340" y="377" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1858.1080@0.0.1858.1080" timestamp="1619900465124" />
-    <state x="282" y="47" key="#com.intellij.ide.util.MemberChooser" timestamp="1620940759834">
+    <state x="282" y="47" key="#com.intellij.ide.util.MemberChooser" timestamp="1620983140410">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state x="282" y="47" key="#com.intellij.ide.util.MemberChooser/0.0.1858.1080@0.0.1858.1080" timestamp="1620940759834" />
+    <state x="282" y="47" key="#com.intellij.ide.util.MemberChooser/0.0.1858.1080@0.0.1858.1080" timestamp="1620983140410" />
     <state x="291" y="47" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1619806893200" />
     <state x="1390" y="440" width="468" height="292" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1620291049277">
       <screen x="0" y="0" width="1858" height="1080" />
@@ -535,65 +523,65 @@
     </state>
     <state x="1418" y="477" key="FileChooserDialogImpl/0.0.1858.1080@0.0.1858.1080" timestamp="1620296310800" />
     <state x="1480" y="477" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1619411540384" />
-    <state width="1671" height="260" key="GridCell.Tab.0.bottom" timestamp="1620942569332">
+    <state width="1857" height="524" key="GridCell.Tab.0.bottom" timestamp="1620984507594">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1671" height="260" key="GridCell.Tab.0.bottom/0.0.1858.1080@0.0.1858.1080" timestamp="1620942569332" />
+    <state width="1857" height="524" key="GridCell.Tab.0.bottom/0.0.1858.1080@0.0.1858.1080" timestamp="1620984507594" />
     <state width="1378" height="251" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1619817388950" />
-    <state width="1671" height="260" key="GridCell.Tab.0.center" timestamp="1620942569332">
+    <state width="1857" height="524" key="GridCell.Tab.0.center" timestamp="1620984507594">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1671" height="260" key="GridCell.Tab.0.center/0.0.1858.1080@0.0.1858.1080" timestamp="1620942569332" />
+    <state width="1857" height="524" key="GridCell.Tab.0.center/0.0.1858.1080@0.0.1858.1080" timestamp="1620984507594" />
     <state width="1378" height="251" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1619817388949" />
-    <state width="1671" height="260" key="GridCell.Tab.0.left" timestamp="1620942569332">
+    <state width="1857" height="524" key="GridCell.Tab.0.left" timestamp="1620984507594">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1671" height="260" key="GridCell.Tab.0.left/0.0.1858.1080@0.0.1858.1080" timestamp="1620942569332" />
+    <state width="1857" height="524" key="GridCell.Tab.0.left/0.0.1858.1080@0.0.1858.1080" timestamp="1620984507594" />
     <state width="1378" height="251" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1619817388949" />
-    <state width="1671" height="260" key="GridCell.Tab.0.right" timestamp="1620942569332">
+    <state width="1857" height="524" key="GridCell.Tab.0.right" timestamp="1620984507594">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1671" height="260" key="GridCell.Tab.0.right/0.0.1858.1080@0.0.1858.1080" timestamp="1620942569332" />
+    <state width="1857" height="524" key="GridCell.Tab.0.right/0.0.1858.1080@0.0.1858.1080" timestamp="1620984507594" />
     <state width="1378" height="251" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1619817388949" />
-    <state width="1671" height="260" key="GridCell.Tab.1.bottom" timestamp="1620942569332">
+    <state width="1857" height="524" key="GridCell.Tab.1.bottom" timestamp="1620984507451">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1671" height="260" key="GridCell.Tab.1.bottom/0.0.1858.1080@0.0.1858.1080" timestamp="1620942569332" />
+    <state width="1857" height="524" key="GridCell.Tab.1.bottom/0.0.1858.1080@0.0.1858.1080" timestamp="1620984507451" />
     <state width="1378" height="251" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1619817388950" />
-    <state width="1671" height="260" key="GridCell.Tab.1.center" timestamp="1620942569332">
+    <state width="1857" height="524" key="GridCell.Tab.1.center" timestamp="1620984507451">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1671" height="260" key="GridCell.Tab.1.center/0.0.1858.1080@0.0.1858.1080" timestamp="1620942569332" />
+    <state width="1857" height="524" key="GridCell.Tab.1.center/0.0.1858.1080@0.0.1858.1080" timestamp="1620984507451" />
     <state width="1378" height="251" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1619817388950" />
-    <state width="1671" height="260" key="GridCell.Tab.1.left" timestamp="1620942569332">
+    <state width="1857" height="524" key="GridCell.Tab.1.left" timestamp="1620984507451">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1671" height="260" key="GridCell.Tab.1.left/0.0.1858.1080@0.0.1858.1080" timestamp="1620942569332" />
+    <state width="1857" height="524" key="GridCell.Tab.1.left/0.0.1858.1080@0.0.1858.1080" timestamp="1620984507451" />
     <state width="1378" height="251" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1619817388950" />
-    <state width="1671" height="260" key="GridCell.Tab.1.right" timestamp="1620942569332">
+    <state width="1857" height="524" key="GridCell.Tab.1.right" timestamp="1620984507451">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1671" height="260" key="GridCell.Tab.1.right/0.0.1858.1080@0.0.1858.1080" timestamp="1620942569332" />
+    <state width="1857" height="524" key="GridCell.Tab.1.right/0.0.1858.1080@0.0.1858.1080" timestamp="1620984507451" />
     <state width="1378" height="251" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1619817388950" />
-    <state width="1857" height="322" key="GridCell.Tab.2.bottom" timestamp="1620942569303">
+    <state width="1857" height="214" key="GridCell.Tab.2.bottom" timestamp="1620984205332">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1857" height="322" key="GridCell.Tab.2.bottom/0.0.1858.1080@0.0.1858.1080" timestamp="1620942569303" />
+    <state width="1857" height="214" key="GridCell.Tab.2.bottom/0.0.1858.1080@0.0.1858.1080" timestamp="1620984205332" />
     <state width="1378" height="251" key="GridCell.Tab.2.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1619817388950" />
-    <state width="1857" height="322" key="GridCell.Tab.2.center" timestamp="1620942569303">
+    <state width="1857" height="214" key="GridCell.Tab.2.center" timestamp="1620984205332">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1857" height="322" key="GridCell.Tab.2.center/0.0.1858.1080@0.0.1858.1080" timestamp="1620942569303" />
+    <state width="1857" height="214" key="GridCell.Tab.2.center/0.0.1858.1080@0.0.1858.1080" timestamp="1620984205332" />
     <state width="1378" height="251" key="GridCell.Tab.2.center/0.0.1920.1080@0.0.1920.1080" timestamp="1619817388950" />
-    <state width="1857" height="322" key="GridCell.Tab.2.left" timestamp="1620942569303">
+    <state width="1857" height="214" key="GridCell.Tab.2.left" timestamp="1620984205332">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1857" height="322" key="GridCell.Tab.2.left/0.0.1858.1080@0.0.1858.1080" timestamp="1620942569303" />
+    <state width="1857" height="214" key="GridCell.Tab.2.left/0.0.1858.1080@0.0.1858.1080" timestamp="1620984205332" />
     <state width="1378" height="251" key="GridCell.Tab.2.left/0.0.1920.1080@0.0.1920.1080" timestamp="1619817388950" />
-    <state width="1857" height="322" key="GridCell.Tab.2.right" timestamp="1620942569303">
+    <state width="1857" height="214" key="GridCell.Tab.2.right" timestamp="1620984205332">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1857" height="322" key="GridCell.Tab.2.right/0.0.1858.1080@0.0.1858.1080" timestamp="1620942569303" />
+    <state width="1857" height="214" key="GridCell.Tab.2.right/0.0.1858.1080@0.0.1858.1080" timestamp="1620984205332" />
     <state width="1378" height="251" key="GridCell.Tab.2.right/0.0.1920.1080@0.0.1920.1080" timestamp="1619817388950" />
     <state width="1875" height="371" key="GridCell.Tab.3.bottom" timestamp="1619528584297">
       <screen x="0" y="0" width="1920" height="1080" />
@@ -634,19 +622,19 @@
     </state>
     <state x="0" y="728" key="com.intellij.ide.util.TipDialog/0.0.1858.1080@0.0.1858.1080" timestamp="1620907716550" />
     <state x="0" y="728" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1619794113185" />
-    <state x="700" y="258" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1620884261769">
+    <state x="700" y="258" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1620984100313">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state x="700" y="258" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1858.1080@0.0.1858.1080" timestamp="1620884261769" />
-    <state x="0" y="0" width="1305" height="1059" key="dock-window-1" timestamp="1620708586202">
+    <state x="700" y="258" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1858.1080@0.0.1858.1080" timestamp="1620984100313" />
+    <state x="38" y="112" width="1492" height="794" key="dock-window-1" timestamp="1620983304761">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state x="0" y="0" width="1305" height="1059" key="dock-window-1/0.0.1858.1080@0.0.1858.1080" timestamp="1620708586202" />
+    <state x="38" y="112" width="1492" height="794" key="dock-window-1/0.0.1858.1080@0.0.1858.1080" timestamp="1620983304761" />
     <state x="-12" y="36" width="913" height="834" key="dock-window-1/0.0.1920.1080@0.0.1920.1080" timestamp="1619802322043" />
-    <state x="127" y="216" width="1322" height="1055" key="dock-window-2" timestamp="1620722928559">
+    <state x="320" y="100" width="1492" height="790" key="dock-window-2" timestamp="1620985071335">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state x="127" y="216" width="1322" height="1055" key="dock-window-2/0.0.1858.1080@0.0.1858.1080" timestamp="1620722928559" />
+    <state x="320" y="100" width="1492" height="790" key="dock-window-2/0.0.1858.1080@0.0.1858.1080" timestamp="1620985071335" />
     <state x="0" y="0" width="973" height="886" key="dock-window-2/0.0.1920.1080@0.0.1920.1080" timestamp="1619456008474" />
     <state x="231" y="46" width="1322" height="1059" key="dock-window-3" timestamp="1620725344258">
       <screen x="0" y="0" width="1858" height="1080" />
@@ -665,10 +653,10 @@
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
     <state x="607" y="463" key="new project wizard/0.0.1858.1080@0.0.1858.1080" timestamp="1620313359546" />
-    <state x="997" y="404" key="run.anything.popup" timestamp="1620941928183">
+    <state x="997" y="404" key="run.anything.popup" timestamp="1620982866425">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state x="997" y="404" key="run.anything.popup/0.0.1858.1080@0.0.1858.1080" timestamp="1620941928183" />
+    <state x="997" y="404" key="run.anything.popup/0.0.1858.1080@0.0.1858.1080" timestamp="1620982866425" />
     <state x="1030" y="404" key="run.anything.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1619806550367" />
     <state x="598" y="323" width="672" height="678" key="search.everywhere.popup" timestamp="1620887361414">
       <screen x="0" y="0" width="1858" height="1080" />

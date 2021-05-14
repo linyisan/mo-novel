@@ -48,8 +48,9 @@ public class CommentController {
     @GetMapping("/bookcomment/delete/{commentId}")
     public ResponseDTO deleteBookComment(@PathVariable Long commentId)
     {
-        commentService.removeById(commentId);
-        return ResponseDTO.succ(ResponseStatus.SUCCESS.getMsg());
+/*        commentService.removeById(commentId);
+        return ResponseDTO.succ(ResponseStatus.SUCCESS.getMsg());*/
+        return bookService.deleteBookComment(commentId);
     }
 
     @GetMapping("/bookcomment/getAll/{bookId}")
