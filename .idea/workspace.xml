@@ -5,13 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b360b197-9ca1-4a85-ada4-9d675dcdc84c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/controller/BookSettingController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/dto/BookSettingQueryDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/entity/BookSetting.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/mapper/BookSettingMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/service/BookSettingService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/service/impl/BookSettingServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-common/src/main/resources/mapper/BookSettingMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/common/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/common/Constants.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/controller/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/controller/BookController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/entity/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/entity/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/service/impl/BookIndexServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/service/impl/BookIndexServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/mapper/BookMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/mapper/BookMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/service/impl/BookServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/service/impl/BookServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mo-novel-common/src/main/resources/mapper/BookMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mo-novel-common/src/main/resources/mapper/BookMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mo-novel-common/src/test/java/com/heng/service/Calculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/mo-novel-common/src/test/java/com/heng/service/Calculator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,9 +73,9 @@
         <option value="JavaScript File" />
         <option value="Vue Single File Component" />
         <option value="Enum" />
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
         <option value="@Aspect" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -120,7 +126,7 @@
     <property name="extract.method.default.visibility" value="private" />
     <property name="ignore_missing_gitignore" value="true" />
     <property name="js.linters.configure.manually.selectedeslint" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/valid" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/mo-novel-common/src/main/resources/mapper" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -148,28 +154,28 @@
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Administrator\Desktop\heng\IdeaProjects\my\mo-novel\mo-novel-common\src\main\java\com\heng\aop" />
-      <recent name="C:\Users\yisan\IdeaProjects\my\mo-novel\mo-novel-web\src" />
-      <recent name="C:\Users\yisan\IdeaProjects\my\mo-novel\mo-novel-admin\src\main\resources" />
-    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.heng" />
       <recent name="com.heng.monoveladmin" />
     </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.heng.annotation" />
-      <recent name="com.heng.interceptor" />
-      <recent name="com.heng.controller" />
-      <recent name="com.heng.entity" />
-      <recent name="com.heng.service.impl" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Git\mgit\mo-novel\mo-novel-common\src\main\resources\mapper" />
       <recent name="D:\Git\mgit\mo-novel\mo-novel-common\src\main\java\com\heng\valid" />
       <recent name="D:\Git\mgit\mo-novel\mo-novel-web" />
       <recent name="D:\Git\mgit\mo-novel\mo-novel-common\src\main\java\com\heng" />
       <recent name="D:\Git\mgit\mo-novel" />
-      <recent name="D:\Git\mgit\mo-novel\mo-novel-common\src\main\java\com\heng\controller" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.heng.service.impl" />
+      <recent name="com.heng.service" />
+      <recent name="com.heng.mapper" />
+      <recent name="com.heng.controller" />
+      <recent name="com.heng.entity" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\Desktop\heng\IdeaProjects\my\mo-novel\mo-novel-common\src\main\java\com\heng\aop" />
+      <recent name="C:\Users\yisan\IdeaProjects\my\mo-novel\mo-novel-web\src" />
+      <recent name="C:\Users\yisan\IdeaProjects\my\mo-novel\mo-novel-admin\src\main\resources" />
     </key>
   </component>
   <component name="RestServicesNavigator">
@@ -186,7 +192,7 @@
       <select />
     </treeState>
   </component>
-  <component name="RunManager" selected="Application.Calculator">
+  <component name="RunManager" selected="Spring Boot.NovelAdminApplication">
     <configuration name="Calculator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.heng.service.Calculator" />
       <module name="mo-novel-common" />
@@ -417,7 +423,7 @@
       <workItem from="1620907551064" duration="17066000" />
       <workItem from="1620980860037" duration="8426000" />
       <workItem from="1620990580517" duration="3000000" />
-      <workItem from="1621003564003" duration="2374000" />
+      <workItem from="1621003564003" duration="9187000" />
     </task>
     <task id="LOCAL-00001" summary="权限校验要死">
       <created>1618757966477</created>
@@ -487,10 +493,10 @@
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
     <state x="1340" y="377" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1858.1080@0.0.1858.1080" timestamp="1619900465124" />
-    <state x="282" y="47" key="#com.intellij.ide.util.MemberChooser" timestamp="1620990174713">
+    <state x="282" y="47" key="#com.intellij.ide.util.MemberChooser" timestamp="1621021668728">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state x="282" y="47" key="#com.intellij.ide.util.MemberChooser/0.0.1858.1080@0.0.1858.1080" timestamp="1620990174713" />
+    <state x="282" y="47" key="#com.intellij.ide.util.MemberChooser/0.0.1858.1080@0.0.1858.1080" timestamp="1621021668728" />
     <state x="291" y="47" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1619806893200" />
     <state x="1390" y="440" width="468" height="292" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1620291049277">
       <screen x="0" y="0" width="1858" height="1080" />
@@ -523,65 +529,65 @@
     </state>
     <state x="1418" y="477" key="FileChooserDialogImpl/0.0.1858.1080@0.0.1858.1080" timestamp="1620989571287" />
     <state x="1480" y="477" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1619411540384" />
-    <state width="1798" height="344" key="GridCell.Tab.0.bottom" timestamp="1621005114600">
+    <state width="1815" height="440" key="GridCell.Tab.0.bottom" timestamp="1621012503451">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1798" height="344" key="GridCell.Tab.0.bottom/0.0.1858.1080@0.0.1858.1080" timestamp="1621005114600" />
+    <state width="1815" height="440" key="GridCell.Tab.0.bottom/0.0.1858.1080@0.0.1858.1080" timestamp="1621012503451" />
     <state width="1378" height="251" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1619817388950" />
-    <state width="1798" height="344" key="GridCell.Tab.0.center" timestamp="1621005114600">
+    <state width="1815" height="440" key="GridCell.Tab.0.center" timestamp="1621012503451">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1798" height="344" key="GridCell.Tab.0.center/0.0.1858.1080@0.0.1858.1080" timestamp="1621005114600" />
+    <state width="1815" height="440" key="GridCell.Tab.0.center/0.0.1858.1080@0.0.1858.1080" timestamp="1621012503451" />
     <state width="1378" height="251" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1619817388949" />
-    <state width="1798" height="344" key="GridCell.Tab.0.left" timestamp="1621005114600">
+    <state width="1815" height="440" key="GridCell.Tab.0.left" timestamp="1621012503451">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1798" height="344" key="GridCell.Tab.0.left/0.0.1858.1080@0.0.1858.1080" timestamp="1621005114600" />
+    <state width="1815" height="440" key="GridCell.Tab.0.left/0.0.1858.1080@0.0.1858.1080" timestamp="1621012503451" />
     <state width="1378" height="251" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1619817388949" />
-    <state width="1798" height="344" key="GridCell.Tab.0.right" timestamp="1621005114600">
+    <state width="1815" height="440" key="GridCell.Tab.0.right" timestamp="1621012503451">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1798" height="344" key="GridCell.Tab.0.right/0.0.1858.1080@0.0.1858.1080" timestamp="1621005114600" />
+    <state width="1815" height="440" key="GridCell.Tab.0.right/0.0.1858.1080@0.0.1858.1080" timestamp="1621012503451" />
     <state width="1378" height="251" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1619817388949" />
-    <state width="1798" height="344" key="GridCell.Tab.1.bottom" timestamp="1621005114471">
+    <state width="1815" height="440" key="GridCell.Tab.1.bottom" timestamp="1621012503328">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1798" height="344" key="GridCell.Tab.1.bottom/0.0.1858.1080@0.0.1858.1080" timestamp="1621005114471" />
+    <state width="1815" height="440" key="GridCell.Tab.1.bottom/0.0.1858.1080@0.0.1858.1080" timestamp="1621012503328" />
     <state width="1378" height="251" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1619817388950" />
-    <state width="1798" height="344" key="GridCell.Tab.1.center" timestamp="1621005114471">
+    <state width="1815" height="440" key="GridCell.Tab.1.center" timestamp="1621012503328">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1798" height="344" key="GridCell.Tab.1.center/0.0.1858.1080@0.0.1858.1080" timestamp="1621005114471" />
+    <state width="1815" height="440" key="GridCell.Tab.1.center/0.0.1858.1080@0.0.1858.1080" timestamp="1621012503328" />
     <state width="1378" height="251" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1619817388950" />
-    <state width="1798" height="344" key="GridCell.Tab.1.left" timestamp="1621005114471">
+    <state width="1815" height="440" key="GridCell.Tab.1.left" timestamp="1621012503328">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1798" height="344" key="GridCell.Tab.1.left/0.0.1858.1080@0.0.1858.1080" timestamp="1621005114471" />
+    <state width="1815" height="440" key="GridCell.Tab.1.left/0.0.1858.1080@0.0.1858.1080" timestamp="1621012503328" />
     <state width="1378" height="251" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1619817388950" />
-    <state width="1798" height="344" key="GridCell.Tab.1.right" timestamp="1621005114471">
+    <state width="1815" height="440" key="GridCell.Tab.1.right" timestamp="1621012503328">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1798" height="344" key="GridCell.Tab.1.right/0.0.1858.1080@0.0.1858.1080" timestamp="1621005114471" />
+    <state width="1815" height="440" key="GridCell.Tab.1.right/0.0.1858.1080@0.0.1858.1080" timestamp="1621012503328" />
     <state width="1378" height="251" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1619817388950" />
-    <state width="1798" height="344" key="GridCell.Tab.2.bottom" timestamp="1621005114471">
+    <state width="1815" height="440" key="GridCell.Tab.2.bottom" timestamp="1621012503334">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1798" height="344" key="GridCell.Tab.2.bottom/0.0.1858.1080@0.0.1858.1080" timestamp="1621005114471" />
+    <state width="1815" height="440" key="GridCell.Tab.2.bottom/0.0.1858.1080@0.0.1858.1080" timestamp="1621012503334" />
     <state width="1378" height="251" key="GridCell.Tab.2.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1619817388950" />
-    <state width="1798" height="344" key="GridCell.Tab.2.center" timestamp="1621005114471">
+    <state width="1815" height="440" key="GridCell.Tab.2.center" timestamp="1621012503334">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1798" height="344" key="GridCell.Tab.2.center/0.0.1858.1080@0.0.1858.1080" timestamp="1621005114471" />
+    <state width="1815" height="440" key="GridCell.Tab.2.center/0.0.1858.1080@0.0.1858.1080" timestamp="1621012503334" />
     <state width="1378" height="251" key="GridCell.Tab.2.center/0.0.1920.1080@0.0.1920.1080" timestamp="1619817388950" />
-    <state width="1798" height="344" key="GridCell.Tab.2.left" timestamp="1621005114471">
+    <state width="1815" height="440" key="GridCell.Tab.2.left" timestamp="1621012503333">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1798" height="344" key="GridCell.Tab.2.left/0.0.1858.1080@0.0.1858.1080" timestamp="1621005114471" />
+    <state width="1815" height="440" key="GridCell.Tab.2.left/0.0.1858.1080@0.0.1858.1080" timestamp="1621012503333" />
     <state width="1378" height="251" key="GridCell.Tab.2.left/0.0.1920.1080@0.0.1920.1080" timestamp="1619817388950" />
-    <state width="1798" height="344" key="GridCell.Tab.2.right" timestamp="1621005114471">
+    <state width="1815" height="440" key="GridCell.Tab.2.right" timestamp="1621012503334">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1798" height="344" key="GridCell.Tab.2.right/0.0.1858.1080@0.0.1858.1080" timestamp="1621005114471" />
+    <state width="1815" height="440" key="GridCell.Tab.2.right/0.0.1858.1080@0.0.1858.1080" timestamp="1621012503334" />
     <state width="1378" height="251" key="GridCell.Tab.2.right/0.0.1920.1080@0.0.1920.1080" timestamp="1619817388950" />
     <state width="1875" height="371" key="GridCell.Tab.3.bottom" timestamp="1619528584297">
       <screen x="0" y="0" width="1920" height="1080" />
@@ -631,15 +637,15 @@
     </state>
     <state x="274" y="324" width="1235" height="745" key="dock-window-1/0.0.1858.1080@0.0.1858.1080" timestamp="1621011962306" />
     <state x="-12" y="36" width="913" height="834" key="dock-window-1/0.0.1920.1080@0.0.1920.1080" timestamp="1619802322043" />
-    <state x="320" y="100" width="1492" height="790" key="dock-window-2" timestamp="1620985071335">
+    <state x="0" y="0" width="1528" height="779" key="dock-window-2" timestamp="1621019556591">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state x="320" y="100" width="1492" height="790" key="dock-window-2/0.0.1858.1080@0.0.1858.1080" timestamp="1620985071335" />
+    <state x="0" y="0" width="1528" height="779" key="dock-window-2/0.0.1858.1080@0.0.1858.1080" timestamp="1621019556591" />
     <state x="0" y="0" width="973" height="886" key="dock-window-2/0.0.1920.1080@0.0.1920.1080" timestamp="1619456008474" />
-    <state x="0" y="0" width="1492" height="900" key="dock-window-3" timestamp="1620989481012">
+    <state x="-104" y="64" width="1528" height="779" key="dock-window-3" timestamp="1621021779276">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state x="0" y="0" width="1492" height="900" key="dock-window-3/0.0.1858.1080@0.0.1858.1080" timestamp="1620989481012" />
+    <state x="-104" y="64" width="1528" height="779" key="dock-window-3/0.0.1858.1080@0.0.1858.1080" timestamp="1621021779276" />
     <state x="288" y="78" width="1492" height="900" key="dock-window-4" timestamp="1620990450054">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
@@ -653,10 +659,10 @@
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
     <state x="607" y="463" key="new project wizard/0.0.1858.1080@0.0.1858.1080" timestamp="1620313359546" />
-    <state x="997" y="404" key="run.anything.popup" timestamp="1621011927211">
+    <state x="997" y="404" key="run.anything.popup" timestamp="1621016078805">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state x="997" y="404" key="run.anything.popup/0.0.1858.1080@0.0.1858.1080" timestamp="1621011927211" />
+    <state x="997" y="404" key="run.anything.popup/0.0.1858.1080@0.0.1858.1080" timestamp="1621016078805" />
     <state x="1030" y="404" key="run.anything.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1619806550367" />
     <state x="598" y="323" width="672" height="678" key="search.everywhere.popup" timestamp="1620887361414">
       <screen x="0" y="0" width="1858" height="1080" />

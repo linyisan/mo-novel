@@ -56,4 +56,12 @@
         </if>
 
     </select>-->
+
+    <select id="selectByScoreAndRandom" parameterType="int" resultMap="BaseResultMap">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM `t_book`
+        ORDER BY score, RAND()
+        LIMIT=#{limit}
+    </select>
 </mapper>

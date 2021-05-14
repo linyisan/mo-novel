@@ -94,7 +94,7 @@ public class BookController {
      * */
     @GetMapping("listUpdateRank")
     public ResponseDTO listUpdateRank(){
-        return ResponseDTO.succ(bookService.listRank((byte)9999, 10));
+        return ResponseDTO.succ(bookService.listRank((byte)9999, 23));
     }
 
 }

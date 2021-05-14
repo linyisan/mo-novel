@@ -6,6 +6,7 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.heng.common.ResponseDTO;
 import com.heng.common.ResponseStatus;
 import com.heng.entity.Book;
+import com.heng.entity.BookSetting;
 import com.heng.entity.Comment;
 import com.heng.exception.BusinessException;
 import com.heng.mapper.BookMapper;
