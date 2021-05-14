@@ -72,6 +72,9 @@ public class Book implements Serializable {
     @ApiModelProperty(value = "总书评数")
     private Long commentCount;
 
+    @ApiModelProperty(value = "小说评分（取t_rating平均数）")
+    private Float score;
+
     @TableField(exist = false)
     private Category category;
 

@@ -29,6 +29,7 @@ public class RatingController {
     @Autowired
     private RatingService ratingService;
 
+
     @GetMapping("/search")
     public ResponseDTO searchRating(RatingQueryVo ratingQueryVo)
     {
@@ -42,23 +43,19 @@ public class RatingController {
     @PostMapping("add")
     public ResponseDTO addRating(@Validated(AddGroup.class) @RequestBody Rating rating)
     {
-        ratingService.save(rating);
-        return ResponseDTO.succ("评分成功");
+        return ratingService.addRating(rating);
     }
 
     @PostMapping("edit")
     public ResponseDTO editRating(@Validated @RequestBody Rating rating)
     {
-        ratingService.updateById(rating);
-        return ResponseDTO.succ("改分成功");
+        return ratingService.editRating(rating);
     }
 
     @GetMapping("delete/{ratingId}")
     public ResponseDTO deleteRating(@PathVariable Long ratingId)
     {
-
-        ratingService.removeById(ratingId);
-        return ResponseDTO.succ(null);
+        return ratingService.deleteRating(ratingId);
     }
 }
 

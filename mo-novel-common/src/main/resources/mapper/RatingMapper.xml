@@ -17,4 +17,9 @@
         id, create_time, update_time, star, user_id, book_id
     </sql>
 
+    <select id="avgBookScore" parameterType="long" resultType="float">
+        SELECT round(AVG(`star`)*2, 1)
+        FROM `t_rating`
+        WHERE `book_id`=#{bookId}
+    </select>
 </mapper>

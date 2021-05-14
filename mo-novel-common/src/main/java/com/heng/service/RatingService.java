@@ -18,4 +18,13 @@ import java.util.List;
 public interface RatingService extends IService<Rating> {
 
     List<Rating> searchRating(RatingQueryVo ratingQueryVo);
+
+    Float avgBookScore(Long bookId);
+
+    ResponseDTO addRating(Rating rating);
+
+    ResponseDTO editRating(Rating rating);
+
+    ResponseDTO deleteRating(Long ratingId);
+
 }

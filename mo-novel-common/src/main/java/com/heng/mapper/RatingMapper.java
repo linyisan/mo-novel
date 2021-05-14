@@ -13,4 +13,5 @@ import com.heng.vo.RatingQueryVo;
  * @since 2021-04-28
  */
 public interface RatingMapper extends BaseMapper<Rating> {
+    Float avgBookScore(Long bookId);
 }

@@ -17,6 +17,7 @@
         <result column="word_count" property="wordCount" />
         <result column="visit_count" property="visitCount" />
         <result column="comment_count" property="commentCount" />
+        <result column="score" property="score" />
         <association property="category" column="category_id"
                      select="com.heng.mapper.CategoryMapper.selectById"/>
         <association property="lastBookIndex" column="id"
@@ -25,7 +26,7 @@
 
     <!-- 通用查询结果列 -->
     <sql id="Base_Column_List">
-        id, create_time, update_time, title, author_name, channel, category_id, introduction, cover, status, word_count, visit_count, comment_count
+        id, create_time, update_time, title, author_name, channel, category_id, introduction, cover, status, word_count, visit_count, comment_count, score
     </sql>
 
     <!--<select id="searchByPage" parameterType="com.heng.vo.BookQueryVo" resultMap="BaseResultMap">
