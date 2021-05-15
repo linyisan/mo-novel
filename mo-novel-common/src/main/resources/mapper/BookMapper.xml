@@ -61,7 +61,23 @@
         SELECT
         <include refid="Base_Column_List"/>
         FROM `t_book`
-        ORDER BY score, RAND()
-        LIMIT=#{limit}
+        ORDER BY score DESC, RAND()
+        LIMIT #{limit}
+    </select>
+    <select id="selectByVisitCountAndAndRandom" resultType="com.heng.entity.Book">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM `t_book`
+        <where>
+            status > 0
+            <if test="categoryIds!= null and categoryIds.size()>0">
+                AND category_id IN
+                <foreach collection="categoryIds" index="index" item="item" open="(" separator="," close=")">
+                    #{item}
+                </foreach>
+            </if>
+        </where>
+        ORDER BY visit_count DESC, RAND()
+        LIMIT #{limit}
     </select>
 </mapper>

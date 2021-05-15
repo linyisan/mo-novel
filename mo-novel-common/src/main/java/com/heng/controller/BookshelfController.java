@@ -61,5 +61,11 @@ public class BookshelfController {
         map.put("user_id", userId);*/
         return bookshelfService.searchBookshelf(bookshelfQueryVo);
     }
+
+    @GetMapping("recommandByCategoriesPercent/{userId}")
+    public ResponseDTO recommandByCategoriesPercent(@PathVariable("userId") Long userId)
+    {
+        return ResponseDTO.succ(bookshelfService.recommandByCategoriesPercent(userId, 30));
+    }
 }
 

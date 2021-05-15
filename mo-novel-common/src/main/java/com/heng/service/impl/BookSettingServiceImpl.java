@@ -14,6 +14,7 @@ import com.heng.mapper.BookSettingMapper;
 import com.heng.service.BookSettingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -41,6 +42,7 @@ public class BookSettingServiceImpl extends ServiceImpl<BookSettingMapper, BookS
      * 初始化首页小说设置
      * 当数据库没有数据时
      */
+    @Transactional
     private List<BookSetting> initIndexBookSetting()
     {
         List<Book> books = bookMapper.selectByScoreAndRandom(Constants.INDEX_BOOK_SETTING_NUM);

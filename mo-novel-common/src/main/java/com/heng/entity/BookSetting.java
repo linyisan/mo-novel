@@ -24,7 +24,7 @@ import java.time.LocalDateTime;
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
-@TableName("t_book_setting")
+@TableName(value = "t_book_setting", resultMap = "BaseResultMap")
 @ApiModel(value="BookSetting对象", description="首页小说设置表")
 public class BookSetting implements Serializable {
 

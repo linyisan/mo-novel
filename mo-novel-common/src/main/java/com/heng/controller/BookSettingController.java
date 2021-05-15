@@ -28,7 +28,7 @@ public class BookSettingController {
     @GetMapping("getAll")
     public ResponseDTO getAllBookSetting()
     {
-        return ResponseDTO.succ(bookSettingService);
+        return ResponseDTO.succ(bookSettingService.getAllBookSetting());
     }
 
     @GetMapping("get/{bookSettingId}")

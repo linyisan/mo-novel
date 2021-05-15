@@ -2,6 +2,7 @@ package com.heng.mapper;
 
 import com.heng.entity.Book;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -15,9 +16,19 @@ import java.util.List;
  */
 public interface BookMapper extends BaseMapper<Book> {
     /**
-     * 按评分随机查询小说集合
+     * 查询小说集合
+     * 按评分随机排序
      * @param limit 查询条数
      * @return 小说集合
      * */
     List<Book> selectByScoreAndRandom(Integer limit);
+
+    /**
+     * 通过小说分类查询
+     * 按访问量随机排序
+     * @param categoryIds
+     * @param limit
+     * @return
+     */
+    List<Book> selectByVisitCountAndAndRandom(@Param("categoryIds") List<Long> categoryIds, @Param("limit") Integer limit);
 }
