@@ -48,7 +48,7 @@ public class CommentServiceImpl extends ServiceImpl<CommentMapper, Comment> impl
                 .eq(null != commentQueryVo.getResourceType(), "resource_type", commentQueryVo.getResourceType())
                 .eq(null != commentQueryVo.getResourceId(), "resource_id", commentQueryVo.getResourceId())
                 .eq(null != commentQueryVo.getUserId(), "user_id", commentQueryVo.getUserId())
-                .eq(null != commentQueryVo.getContent(), "content", commentQueryVo.getContent());
+                .like(null != commentQueryVo.getContent(), "content", commentQueryVo.getContent());
 
         Page<Comment> commentPage = new Page<>(commentQueryVo.getPage(), commentQueryVo.getLimit());
         commentMapper.selectPage(commentPage, commentQueryWrapper);

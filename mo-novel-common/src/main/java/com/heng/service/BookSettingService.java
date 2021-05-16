@@ -2,7 +2,7 @@ package com.heng.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.heng.common.ResponseDTO;
-import com.heng.dto.BookSettingQueryDTO;
+import com.heng.dto.BookSettingQuery;
 import com.heng.entity.BookSetting;
 
 import java.util.List;
@@ -23,5 +23,5 @@ public interface BookSettingService extends IService<BookSetting> {
      * */
     Map<Byte, List<BookSetting>> getAllBookSetting();
 
-    ResponseDTO searchBookSetting(BookSettingQueryDTO queryDTO);
+    ResponseDTO searchBookSetting(BookSettingQuery query);
 }

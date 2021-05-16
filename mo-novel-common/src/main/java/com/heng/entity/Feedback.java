@@ -4,29 +4,30 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
-import com.heng.valid.AddGroup;
+import com.heng.vo.UserInfoVo;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
 /**
  * <p>
- * 首页小说设置表
+ * 用户反馈
  * </p>
  *
  * @author LJohn
- * @since 2021-05-15
+ * @since 2021-05-16
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
-@TableName(value = "t_book_setting", resultMap = "BaseResultMap")
-@ApiModel(value="BookSetting对象", description="首页小说设置表")
-public class BookSetting implements Serializable {
+@TableName(value = "t_feedback", resultMap = "BaseResultMap")
+@ApiModel(value="Feedback对象", description="用户反馈")
+public class Feedback implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -40,17 +41,18 @@ public class BookSetting implements Serializable {
     @ApiModelProperty(value = "修改时间")
     private LocalDateTime updateTime;
 
-    @ApiModelProperty(value = "小说ID")
-    @NotNull(message = "小说ID不能为空")
-    private Long bookId;
+    @ApiModelProperty(value = "用户ID")
+    @NotNull(message = "用户ID不能为空")
+    private Long userId;
 
-    @ApiModelProperty(value = "类型，1：轮播图，2：本周强推，3：热门推荐，4：精品推荐")
-    @NotNull(message = "类型不能为空")
-    private Byte type;
+    @ApiModelProperty(value = "消息体")
+    @NotBlank(message = "反馈内容不能为空")
+    private String content;
 
-    @ApiModelProperty(value = "排序号")
-    private Byte sort;
+    @ApiModelProperty(value = "是否已经处理：0未处理，1已处理")
+    private Byte done;
 
     @TableField(exist = false)
-    private Book book;
+    private UserInfoVo userInfoVo;
+
 }

@@ -2,9 +2,8 @@ package com.heng.controller;
 
 
 import com.heng.common.ResponseDTO;
-import com.heng.dto.BookSettingQueryDTO;
+import com.heng.dto.BookSettingQuery;
 import com.heng.entity.BookSetting;
-import com.heng.service.BookService;
 import com.heng.service.BookSettingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
@@ -37,10 +36,10 @@ public class BookSettingController {
         return ResponseDTO.succ(bookSettingService.getById(bookSettingId));
     }
 
-    @PostMapping("search")
-    public ResponseDTO searchBookSetting(BookSettingQueryDTO queryDTO)
+    @GetMapping("search")
+    public ResponseDTO searchBookSetting(BookSettingQuery query)
     {
-        return bookSettingService.searchBookSetting(queryDTO);
+        return bookSettingService.searchBookSetting(query);
     }
 
     @PostMapping("add")

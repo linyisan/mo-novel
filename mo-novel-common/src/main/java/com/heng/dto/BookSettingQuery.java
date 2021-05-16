@@ -11,7 +11,7 @@ import javax.validation.constraints.NotNull;
  * @since 2021-05-15
  */
 @Data
-public class BookSettingQueryDTO extends BaseQuery {
+public class BookSettingQuery extends BaseQuery {
     @ApiModelProperty(value = "类型，0：轮播图，1：顶部小说栏设置，2：本周强推，3：热门推荐，4：精品推荐")
     private Byte type;
 
