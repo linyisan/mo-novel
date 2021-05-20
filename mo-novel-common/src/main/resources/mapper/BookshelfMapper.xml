@@ -28,8 +28,9 @@ SELECT
 FROM
 	t_bookshelf
 	INNER JOIN t_book ON t_bookshelf.book_id = t_book.id
-WHERE
-	t_bookshelf.user_id = #{userId}
+    <where>
+        <if test="userId!=null">t_bookshelf.user_id = #{userId}</if>
+    </where>
 GROUP BY
 	category_id
 ORDER BY

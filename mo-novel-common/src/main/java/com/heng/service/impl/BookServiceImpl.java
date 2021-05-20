@@ -6,16 +6,13 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.heng.common.ResponseDTO;
 import com.heng.common.ResponseStatus;
 import com.heng.entity.Book;
-import com.heng.entity.BookSetting;
 import com.heng.entity.Comment;
 import com.heng.exception.BusinessException;
 import com.heng.mapper.BookMapper;
 import com.heng.mapper.CommentMapper;
-import com.heng.mapper.RatingMapper;
 import com.heng.service.BookService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.heng.vo.BookQueryVo;
-import lombok.SneakyThrows;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -50,7 +47,7 @@ public class BookServiceImpl extends ServiceImpl<BookMapper, Book> implements Bo
                 .ge(StringUtils.checkValNotNull(queryParams.getWordCountMin()), "word_count", queryParams.getWordCountMin())
                 .le(StringUtils.checkValNotNull(queryParams.getWordCountMax()), "word_count", queryParams.getWordCountMax())
                 .ge(StringUtils.checkValNotNull(queryParams.getUpdateTimeMin()), "update_time", queryParams.getUpdateTimeMin())
-                .orderByDesc(StringUtils.isNotBlank(queryParams.getSort()), StringUtils.camelToUnderline(queryParams.getSort()))
+                .orderByDesc(StringUtils.isNotBlank(queryParams.getOrderBy()), StringUtils.camelToUnderline(queryParams.getOrderBy()))
                 .like(StringUtils.isNotBlank(queryParams.getAuthorName()), "author_name", queryParams.getAuthorName())
                 .like(StringUtils.isNotBlank(queryParams.getTitle()), "title", queryParams.getTitle());
         bookQueryWrapper.and(StringUtils.checkValNotNull(queryParams.getKeyword()), qw -> qw

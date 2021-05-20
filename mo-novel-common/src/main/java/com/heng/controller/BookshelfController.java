@@ -4,6 +4,7 @@ package com.heng.controller;
 import com.heng.annotation.NeedAuth;
 import com.heng.common.ResponseDTO;
 import com.heng.common.ResponseStatus;
+import com.heng.entity.Book;
 import com.heng.entity.Bookshelf;
 import com.heng.service.BookshelfService;
 import com.heng.util.MoRequestTokenUtil;
@@ -65,7 +66,12 @@ public class BookshelfController {
     @GetMapping("recommandByCategoriesPercent/{userId}")
     public ResponseDTO recommandByCategoriesPercent(@PathVariable("userId") Long userId)
     {
-        return ResponseDTO.succ(bookshelfService.recommandByCategoriesPercent(userId, 30));
+
+        List<Book> recBooks = bookshelfService.recommandByCategoriesPercent(userId, 30);
+        HashMap<String, Object> map = new HashMap<>();
+        map.put("total", recBooks.size());
+        map.put("items", recBooks);
+        return ResponseDTO.succ(map);
     }
 }
 

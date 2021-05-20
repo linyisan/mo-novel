@@ -10,4 +10,5 @@ import lombok.Data;
 public class BookshelfQueryVo extends BaseQuery {
     private Long userId;
     private Long bookId;
+    private Long readingProcess;
 }

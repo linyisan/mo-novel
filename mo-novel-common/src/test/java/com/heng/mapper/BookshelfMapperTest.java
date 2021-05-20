@@ -17,6 +17,6 @@ class BookshelfMapperTest {
     void selectCategoryJoinBookByUserId()
     {
         System.out.println("****************************************////////////");
-        bookshelfMapper.selectCategoryJoinBookByUserId(5L).forEach(System.out::println);
+        bookshelfMapper.selectCategoryJoinBookByUserId(6L).forEach(System.out::println);
     }
 }

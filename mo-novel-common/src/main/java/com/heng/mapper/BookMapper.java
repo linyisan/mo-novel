@@ -1,5 +1,6 @@
 package com.heng.mapper;
 
+import com.heng.dto.CategoryCountDO;
 import com.heng.entity.Book;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Param;
@@ -31,4 +32,10 @@ public interface BookMapper extends BaseMapper<Book> {
      * @return
      */
     List<Book> selectByVisitCountAndAndRandom(@Param("categoryIds") List<Long> categoryIds, @Param("limit") Integer limit);
+
+    /**
+     * 按分类统计小说数量
+     * @return
+     */
+    List<CategoryCountDO> selectGroupByCategory();
 }

@@ -46,7 +46,7 @@ public class BookshelfServiceImpl extends ServiceImpl<BookshelfMapper, Bookshelf
         bookshelfQueryWrapper
                 .eq(StringUtils.checkValNotNull(bookshelfQueryVo.getUserId()), "user_id", bookshelfQueryVo.getUserId())
                 .eq(StringUtils.checkValNotNull(bookshelfQueryVo.getBookId()), "book_id", bookshelfQueryVo.getBookId())
-//                .eq(null != bookshelfQueryVo.getReadingProcess(), "reading_process", bookshelfQueryVo.getReadingProcess())
+                .eq(null != bookshelfQueryVo.getReadingProcess(), "reading_process", bookshelfQueryVo.getReadingProcess())
                 ;
 
         Page<Bookshelf> page = new Page<>(bookshelfQueryVo.getPage(), bookshelfQueryVo.getLimit());

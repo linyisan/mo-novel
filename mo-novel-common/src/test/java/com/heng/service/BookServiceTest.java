@@ -49,7 +49,7 @@ class BookServiceTest {
         BookQueryVo queryParams = new BookQueryVo()
                 .setBookStatus((byte) 1)
                 .setCategoryId(3)
-                .setSort("update_time") // 配合下面orderByDesc
+//                .set_sort("update_time") // 配合下面orderByDesc
                 .setKeyword("a");
 /*        bookQueryWrapper.orderByDesc(StringUtils.hasText(queryParams.getSort()), queryParams.getSort())
                 .eq("status", queryParams.getBookStatus());*/

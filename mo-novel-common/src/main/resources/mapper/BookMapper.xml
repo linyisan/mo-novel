@@ -80,4 +80,9 @@
         ORDER BY visit_count DESC, RAND()
         LIMIT #{limit}
     </select>
+    <select id="selectGroupByCategory" resultType="com.heng.dto.CategoryCountDO">
+        SELECT category_id, count(*) AS count
+        FROM `t_book`
+        GROUP BY category_id
+    </select>
 </mapper>

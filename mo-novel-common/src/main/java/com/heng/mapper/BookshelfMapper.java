@@ -17,9 +17,11 @@ import java.util.List;
  */
 public interface BookshelfMapper extends BaseMapper<Bookshelf> {
     /**
-     * 统计用户书架中的小说分类数量
+     * 把某用户书架的所有小说进行根据类别进行分组
+     * 若userID为空则统计所有用户书架
      * @param userId 用户ID
      * @return
      */
     List<CategoryCountDO> selectCategoryJoinBookByUserId(Long userId);
+
 }

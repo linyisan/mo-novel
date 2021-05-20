@@ -21,8 +21,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
 import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 /**
  * <p>
@@ -52,7 +50,7 @@ public class BookIndexServiceImpl extends ServiceImpl<BookIndexMapper, BookIndex
         if(StringUtils.checkValNull(book)) throw new BusinessException("小说不存在");
         book.setWordCount(book.getWordCount() + wordCount);
         book.setUpdateTime(LocalDateTime.now());
-        bookMapper.updateById(book);
+//        bookMapper.updateById(book);
 
         // 更新小说目录表
 //        System.out.println("插入前:" + bookIndex.getId());
@@ -124,7 +122,8 @@ public class BookIndexServiceImpl extends ServiceImpl<BookIndexMapper, BookIndex
         QueryWrapper<BookIndex> bookIndexQueryWrapper = new QueryWrapper<>();
         bookIndexQueryWrapper.eq(StringUtils.checkValNotNull(bookIndexQueryVo.getBookId()), "book_id", bookIndexQueryVo.getBookId())
                 .eq(StringUtils.checkValNotNull(bookIndexQueryVo.getStatus()), "status", bookIndexQueryVo.getStatus())
-                .like(StringUtils.isNotBlank(bookIndexQueryVo.getTitle()), "title", bookIndexQueryVo.getTitle());
+                .like(StringUtils.isNotBlank(bookIndexQueryVo.getTitle()), "title", bookIndexQueryVo.getTitle())
+                .orderBy(StringUtils.isNotBlank(bookIndexQueryVo.getOrderBy()), bookIndexQueryVo.getIsASC(), bookIndexQueryVo.getOrderBy());
 
         Page<BookIndex> bookIndexPage = new Page<>(bookIndexQueryVo.getPage(), bookIndexQueryVo.getLimit());
         bookIndexMapper.selectPage(bookIndexPage, bookIndexQueryWrapper);
