@@ -7,7 +7,6 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="security" />
         <module name="shiro" />
         <module name="mo-novel-common" />
         <module name="mybatisplus" />
@@ -16,14 +15,12 @@
     <bytecodeTargetLevel>
       <module name="jwt" target="1.8" />
       <module name="mo-novel-service" target="1.8" />
-      <module name="security" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="mo-novel-common" options="-parameters" />
       <module name="mybatisplus" options="-parameters" />
-      <module name="security" options="-parameters" />
       <module name="shiro" options="-parameters" />
     </option>
   </component>

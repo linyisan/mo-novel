@@ -6,7 +6,6 @@ import com.heng.common.ResponseDTO;
 import com.heng.entity.User;
 import com.heng.service.UserService;
 import com.heng.util.JwtUtils;
-import com.heng.valid.AddGroup;
 import com.heng.vo.LoginVo;
 import com.heng.vo.UserQueryVo;
 import lombok.extern.slf4j.Slf4j;
@@ -44,7 +43,7 @@ public class UserController {
     }
 
     @PostMapping("add")
-    public ResponseDTO addUser(@Validated({AddGroup.class}) @RequestBody User user)
+    public ResponseDTO addUser(@Validated @RequestBody User user)
     {
         return userService.register(user);
     }
@@ -54,14 +53,6 @@ public class UserController {
     {
         userService.updateById(user);
         return ResponseDTO.succ("成功修改用户");
-    }
-
-    @GetMapping("get/{userId}")
-    public ResponseDTO get(@PathVariable("userId")Long userId)
-    {
-        User user = userService.getById(userId);
-        user.setPassword(null);
-        return ResponseDTO.succ(user);
     }
 
     @GetMapping("delete/{userId}")

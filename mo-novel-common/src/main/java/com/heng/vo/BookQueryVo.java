@@ -1,5 +1,6 @@
 package com.heng.vo;
 
+import com.heng.common.BaseQuery;
 import lombok.Data;
 import lombok.experimental.Accessors;
 
@@ -44,7 +45,7 @@ public class BookQueryVo extends BaseQuery {
     private Long updatePeriod;
 
     // 排序方式：order by #{updateTime, visitCount, wordCount}
-//    private String sort;
+    private String sort;
 
     public Date getUpdateTimeMin()
     {

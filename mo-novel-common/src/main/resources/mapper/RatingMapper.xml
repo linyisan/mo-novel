@@ -7,19 +7,14 @@
         <id column="id" property="id" />
         <result column="create_time" property="createTime" />
         <result column="update_time" property="updateTime" />
-        <result column="star" property="star" />
+        <result column="start" property="start" />
         <result column="user_id" property="userId" />
         <result column="book_id" property="bookId" />
     </resultMap>
 
     <!-- 通用查询结果列 -->
     <sql id="Base_Column_List">
-        id, create_time, update_time, star, user_id, book_id
+        id, create_time, update_time, start, user_id, book_id
     </sql>
 
-    <select id="avgBookScore" parameterType="long" resultType="float">
-        SELECT round(AVG(`star`)*2, 1)
-        FROM `t_rating`
-        WHERE `book_id`=#{bookId}
-    </select>
 </mapper>

@@ -23,7 +23,7 @@ import java.time.LocalDateTime;
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
-@TableName(value = "t_book", resultMap = "BaseResultMap")
+@TableName("t_book")
 @ApiModel(value="Book对象", description="小说信息表")
 public class Book implements Serializable {
 
@@ -69,15 +69,7 @@ public class Book implements Serializable {
     @ApiModelProperty(value = "总点击量")
     private Long visitCount;
 
-    @ApiModelProperty(value = "总书评数")
-    private Long commentCount;
-
-    @ApiModelProperty(value = "小说评分（取t_rating平均数）")
-    private Float score;
-
-/*    @TableField(exist = false)
-    private Category category;*/
-
     @TableField(exist = false)
-    private BookIndex lastBookIndex;
+    private Category category;
+
 }

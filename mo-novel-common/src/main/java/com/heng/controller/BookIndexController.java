@@ -2,7 +2,6 @@ package com.heng.controller;
 
 
 import com.heng.common.ResponseDTO;
-import com.heng.entity.Book;
 import com.heng.entity.BookIndex;
 import com.heng.mapper.BookIndexMapper;
 import com.heng.service.BookContentService;
@@ -11,9 +10,6 @@ import com.heng.vo.BookIndexQueryVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.HashMap;
-import java.util.List;
 
 /**
  * <p>
@@ -39,19 +35,6 @@ public class BookIndexController {
     public ResponseDTO getBookIndex(@PathVariable Long bookIndexId)
     {
         return bookIndexService.getBookIndex(bookIndexId);
-    }
-
-
-    @GetMapping("getPre/{bookIndexId}")
-    public ResponseDTO getPreBookIndex(@PathVariable Long bookIndexId)
-    {
-        return bookIndexService.getBookIndex(bookIndexService.getPreBookIndexId(bookIndexId));
-    }
-
-    @GetMapping("getNext/{bookIndexId}")
-    public ResponseDTO getNextBookIndex(@PathVariable Long bookIndexId)
-    {
-        return bookIndexService.getBookIndex(bookIndexService.getNextBookIndexId(bookIndexId));
     }
 
     @PostMapping("add")

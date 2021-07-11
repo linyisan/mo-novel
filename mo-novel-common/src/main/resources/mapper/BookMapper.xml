@@ -16,17 +16,13 @@
         <result column="status" property="status" />
         <result column="word_count" property="wordCount" />
         <result column="visit_count" property="visitCount" />
-        <result column="comment_count" property="commentCount" />
-        <result column="score" property="score" />
-<!--        <association property="category" column="category_id"
-                     select="com.heng.mapper.CategoryMapper.selectById"/>-->
-        <association property="lastBookIndex" column="id"
-                     select="com.heng.mapper.BookIndexMapper.selectLastBookIndex"/>
+        <association property="category" column="category_id"
+                     select="com.heng.mapper.CategoryMapper.selectById"/>
     </resultMap>
 
     <!-- 通用查询结果列 -->
     <sql id="Base_Column_List">
-        id, create_time, update_time, title, author_name, channel, category_id, introduction, cover, status, word_count, visit_count, comment_count, score
+        id, create_time, update_time, title, author_name, channel, category_id, introduction, cover, status, word_count, visit_count
     </sql>
 
     <!--<select id="searchByPage" parameterType="com.heng.vo.BookQueryVo" resultMap="BaseResultMap">
@@ -56,33 +52,4 @@
         </if>
 
     </select>-->
-
-    <select id="selectByScoreAndRandom" parameterType="int" resultMap="BaseResultMap">
-        SELECT
-        <include refid="Base_Column_List"/>
-        FROM `t_book`
-        ORDER BY score DESC, RAND()
-        LIMIT #{limit}
-    </select>
-    <select id="selectByVisitCountAndAndRandom" resultType="com.heng.entity.Book">
-        SELECT
-        <include refid="Base_Column_List"/>
-        FROM `t_book`
-        <where>
-            status > 0
-            <if test="categoryIds!= null and categoryIds.size()>0">
-                AND category_id IN
-                <foreach collection="categoryIds" index="index" item="item" open="(" separator="," close=")">
-                    #{item}
-                </foreach>
-            </if>
-        </where>
-        ORDER BY visit_count DESC, RAND()
-        LIMIT #{limit}
-    </select>
-    <select id="selectGroupByCategory" resultType="com.heng.dto.CategoryCountDO">
-        SELECT category_id, count(*) AS count
-        FROM `t_book`
-        GROUP BY category_id
-    </select>
 </mapper>

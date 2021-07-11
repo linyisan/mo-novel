@@ -1,14 +1,12 @@
 package com.heng.vo;
 
-import lombok.Data;
+import com.heng.common.BaseQuery;
 
 /**
  * @author LJohn
  * @since 2021-05-06
  */
-@Data
 public class BookshelfQueryVo extends BaseQuery {
     private Long userId;
-    private Long bookId;
-    private Long readingProcess;
+    private Byte readingProcess;
 }

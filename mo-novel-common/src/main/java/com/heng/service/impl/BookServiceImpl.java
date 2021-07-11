@@ -13,9 +13,9 @@ import com.heng.mapper.CommentMapper;
 import com.heng.service.BookService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.heng.vo.BookQueryVo;
+import lombok.SneakyThrows;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.HashMap;
 import java.util.List;
@@ -37,6 +37,7 @@ public class BookServiceImpl extends ServiceImpl<BookMapper, Book> implements Bo
     @Autowired
     private CommentMapper commentMapper;
 
+    @SneakyThrows
     @Override
     public ResponseDTO searchBook(BookQueryVo queryParams)
     {
@@ -47,7 +48,7 @@ public class BookServiceImpl extends ServiceImpl<BookMapper, Book> implements Bo
                 .ge(StringUtils.checkValNotNull(queryParams.getWordCountMin()), "word_count", queryParams.getWordCountMin())
                 .le(StringUtils.checkValNotNull(queryParams.getWordCountMax()), "word_count", queryParams.getWordCountMax())
                 .ge(StringUtils.checkValNotNull(queryParams.getUpdateTimeMin()), "update_time", queryParams.getUpdateTimeMin())
-                .orderByDesc(StringUtils.isNotBlank(queryParams.getOrderBy()), StringUtils.camelToUnderline(queryParams.getOrderBy()))
+                .orderByDesc(StringUtils.isNotBlank(queryParams.getSort()), StringUtils.camelToUnderline(queryParams.getSort()))
                 .like(StringUtils.isNotBlank(queryParams.getAuthorName()), "author_name", queryParams.getAuthorName())
                 .like(StringUtils.isNotBlank(queryParams.getTitle()), "title", queryParams.getTitle());
         bookQueryWrapper.and(StringUtils.checkValNotNull(queryParams.getKeyword()), qw -> qw
@@ -82,18 +83,6 @@ public class BookServiceImpl extends ServiceImpl<BookMapper, Book> implements Bo
     }
 
     @Override
-    public boolean changeCommentCount(Long bookId, Long increment)
-    {
-        Book book = bookMapper.selectById(bookId);
-        if (StringUtils.checkValNull(book)) throw new BusinessException("小说不存在");
-        book.setCommentCount(book.getCommentCount() + increment);
-        if(book.getCommentCount() < 0) book.setCommentCount(0L);
-        bookMapper.updateById(book);
-        return true;
-    }
-
-    @Transactional
-    @Override
     public ResponseDTO addBookComment(Comment comment)
     {
         Book book = bookMapper.selectById(comment.getResourceId());
@@ -103,30 +92,16 @@ public class BookServiceImpl extends ServiceImpl<BookMapper, Book> implements Bo
         if(this.existsBookComment(comment)) throw new BusinessException("已评价过该书籍！");
 
         commentMapper.insert(comment);
-        this.changeCommentCount(book.getId(), 1L);
         return ResponseDTO.succ("评论成功");
     }
 
     @Override
-    public ResponseDTO editBookComment(Comment comment)
+    public ResponseDTO editBookComment(Long commentId, String content)
     {
-/*
         Comment comment = commentMapper.selectById(commentId);
         comment.setContent(content);
         commentMapper.updateById(comment);
-*/
-        commentMapper.updateById(comment);
 
-        return ResponseDTO.succ(ResponseStatus.SUCCESS.getMsg());
-    }
-
-    @Transactional
-    @Override
-    public ResponseDTO deleteBookComment(Long commentId)
-    {
-        Comment comment = commentMapper.selectById(commentId);
-        commentMapper.deleteById(commentId);
-        this.changeCommentCount(comment.getResourceId(), -1L);
         return ResponseDTO.succ(ResponseStatus.SUCCESS.getMsg());
     }
 
@@ -140,20 +115,6 @@ public class BookServiceImpl extends ServiceImpl<BookMapper, Book> implements Bo
         List<Comment> bookComments = commentMapper.selectByMap(map);
         if (bookComments.isEmpty()) return false;
         else return true;
-    }
-
-    @Override
-    public List<Book> listRank(Byte type, Integer limit)
-    {
-        String[] arr_sortByDesc = { "visit_count", "create_time", "comment_count"};
-        QueryWrapper<Book> bookQueryWrapper = new QueryWrapper<>();
-        // 越界处理
-        if(type >= arr_sortByDesc.length) bookQueryWrapper.orderByDesc("update_time");
-        else bookQueryWrapper.orderByDesc(arr_sortByDesc[type]);
-
-        Page<Book> bookPage = new Page<>(0, limit);
-        bookMapper.selectPage(bookPage, bookQueryWrapper);
-        return bookPage.getRecords();
     }
 
 }

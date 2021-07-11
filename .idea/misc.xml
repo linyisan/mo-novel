@@ -8,7 +8,6 @@
         <option value="$PROJECT_DIR$/mo-novel-admin/pom.xml" />
         <option value="$PROJECT_DIR$/mo-novel-common/pom.xml" />
         <option value="$PROJECT_DIR$/../shiro/pom.xml" />
-        <option value="$PROJECT_DIR$/security/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

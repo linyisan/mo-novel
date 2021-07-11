@@ -2,7 +2,6 @@ package com.heng.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.heng.entity.Rating;
-import com.heng.vo.RatingQueryVo;
 
 /**
  * <p>
@@ -13,5 +12,5 @@ import com.heng.vo.RatingQueryVo;
  * @since 2021-04-28
  */
 public interface RatingMapper extends BaseMapper<Rating> {
-    Float avgBookScore(Long bookId);
+
 }

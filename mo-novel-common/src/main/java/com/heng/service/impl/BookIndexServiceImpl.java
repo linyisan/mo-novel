@@ -19,8 +19,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.time.LocalDateTime;
 import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * <p>
@@ -49,8 +50,7 @@ public class BookIndexServiceImpl extends ServiceImpl<BookIndexMapper, BookIndex
         Book book = bookMapper.selectById(bookIndex.getBookId());
         if(StringUtils.checkValNull(book)) throw new BusinessException("小说不存在");
         book.setWordCount(book.getWordCount() + wordCount);
-        book.setUpdateTime(LocalDateTime.now());
-//        bookMapper.updateById(book);
+        bookMapper.updateById(book);
 
         // 更新小说目录表
 //        System.out.println("插入前:" + bookIndex.getId());
@@ -122,8 +122,7 @@ public class BookIndexServiceImpl extends ServiceImpl<BookIndexMapper, BookIndex
         QueryWrapper<BookIndex> bookIndexQueryWrapper = new QueryWrapper<>();
         bookIndexQueryWrapper.eq(StringUtils.checkValNotNull(bookIndexQueryVo.getBookId()), "book_id", bookIndexQueryVo.getBookId())
                 .eq(StringUtils.checkValNotNull(bookIndexQueryVo.getStatus()), "status", bookIndexQueryVo.getStatus())
-                .like(StringUtils.isNotBlank(bookIndexQueryVo.getTitle()), "title", bookIndexQueryVo.getTitle())
-                .orderBy(StringUtils.isNotBlank(bookIndexQueryVo.getOrderBy()), bookIndexQueryVo.getIsASC(), bookIndexQueryVo.getOrderBy());
+                .like(StringUtils.isNotBlank(bookIndexQueryVo.getTitle()), "title", bookIndexQueryVo.getTitle());
 
         Page<BookIndex> bookIndexPage = new Page<>(bookIndexQueryVo.getPage(), bookIndexQueryVo.getLimit());
         bookIndexMapper.selectPage(bookIndexPage, bookIndexQueryWrapper);
@@ -145,29 +144,5 @@ public class BookIndexServiceImpl extends ServiceImpl<BookIndexMapper, BookIndex
         bookIndex.setContent(bookContent.getContent());
 
         return ResponseDTO.succ(bookIndex);
-    }
-
-    @Override
-    public Long getPreBookIndexId(Long bookIndexId)
-    {
-        QueryWrapper<BookIndex> bookIndexQueryWrapper = new QueryWrapper<>();
-        bookIndexQueryWrapper.lt("id", bookIndexId)
-                .orderByDesc("id");
-        Page<BookIndex> bookIndexPage = new Page<>(0L, 1L);
-        bookIndexMapper.selectPage(bookIndexPage, bookIndexQueryWrapper);
-        if(bookIndexPage.getTotal()<1) return bookIndexId;
-        else return bookIndexPage.getRecords().get(0).getId();
-    }
-
-    @Override
-    public Long getNextBookIndexId(Long bookIndexId)
-    {
-        QueryWrapper<BookIndex> bookIndexQueryWrapper = new QueryWrapper<>();
-        bookIndexQueryWrapper.gt("id", bookIndexId)
-                .orderByAsc("id");
-        Page<BookIndex> bookIndexPage = new Page<>(0L, 1L);
-        bookIndexMapper.selectPage(bookIndexPage, bookIndexQueryWrapper);
-        if(bookIndexPage.getTotal()<1) return bookIndexId;
-        else return bookIndexPage.getRecords().get(0).getId();
     }
 }

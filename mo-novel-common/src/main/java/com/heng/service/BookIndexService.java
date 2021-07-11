@@ -23,8 +23,4 @@ public interface BookIndexService extends IService<BookIndex> {
     ResponseDTO searchBookIndex(BookIndexQueryVo bookIndexQueryVo);
 
     ResponseDTO getBookIndex(Long bookIndexId);
-
-    Long getPreBookIndexId(Long bookIndexId);
-
-    Long getNextBookIndexId(Long bookIndexId);
 }

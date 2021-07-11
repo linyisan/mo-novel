@@ -17,15 +17,5 @@
     <sql id="Base_Column_List">
         id, create_time, update_time, book_id, word_count, title, status
     </sql>
-    <select id="selectLastBookIndex" resultType="com.heng.entity.BookIndex">
-        SELECT
-        <include refid="Base_Column_List"/>
-        FROM `t_book_index`
-        <trim prefix="where" suffixOverrides="and">
-            status=1
-            <if test="bookId!= null">AND book_id=#{bookId}</if>
-        </trim>
-        ORDER BY create_time DESC LIMIT 1
-    </select>
 
 </mapper>

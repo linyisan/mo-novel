@@ -45,7 +45,9 @@ public class ShiroExceptionHandler {
     @ExceptionHandler(AuthenticationException.class)
     public ResponseDTO AuthenticationExceptionHandler(AuthenticationException e)
     {
-        return ResponseDTO.fail("shiro认证失败");
+        Throwable throwable = e.getCause() == null ? e : e.getCause();
+        log.error("shiro认证失败");
+        return ResponseDTO.fail(throwable.getMessage());
     }
 
     @ExceptionHandler(AuthorizationException.class)

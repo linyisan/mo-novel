@@ -25,12 +25,6 @@ class BookServiceTest {
     @Autowired
     private BookService bookService;
 
-    @Test
-    public void get()
-    {
-        Book book = bookService.getById(1L);
-        System.out.println("book = " + book);
-    }
 
     @Test
     public void test()
@@ -49,7 +43,7 @@ class BookServiceTest {
         BookQueryVo queryParams = new BookQueryVo()
                 .setBookStatus((byte) 1)
                 .setCategoryId(3)
-//                .set_sort("update_time") // 配合下面orderByDesc
+                .setSort("update_time") // 配合下面orderByDesc
                 .setKeyword("a");
 /*        bookQueryWrapper.orderByDesc(StringUtils.hasText(queryParams.getSort()), queryParams.getSort())
                 .eq("status", queryParams.getBookStatus());*/
@@ -99,16 +93,5 @@ class BookServiceTest {
 
         boolean checkValNotNull = StringUtils.checkValNotNull(user.getUpdateTime());
         System.out.println("checkValNotNull = " + checkValNotNull);
-    }
-
-    @Test
-    void listRank()
-    {
-        System.out.println("****************************");
-        bookService.listRank((byte)0, 10).forEach(System.out::println);
-        System.out.println("****************************");
-        bookService.listRank((byte)1, 10).forEach(System.out::println);
-        System.out.println("*****************************");
-        bookService.listRank((byte)2, 10).forEach(System.out::println);
     }
 }

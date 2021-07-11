@@ -1,14 +1,10 @@
 package com.heng.controller;
 
 
-import com.heng.annotation.NeedAuth;
 import com.heng.common.ResponseDTO;
 import com.heng.common.ResponseStatus;
-import com.heng.entity.Book;
 import com.heng.entity.Bookshelf;
 import com.heng.service.BookshelfService;
-import com.heng.util.MoRequestTokenUtil;
-import com.heng.vo.BookshelfQueryVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
@@ -30,13 +26,10 @@ public class BookshelfController {
     @Autowired
     private BookshelfService bookshelfService;
 
-    @NeedAuth
     @PostMapping("add")
     public ResponseDTO addBookshelf(@Validated @RequestBody Bookshelf bookshelf)
     {
-        Long userId = MoRequestTokenUtil.getRequestUser().getId();
-        bookshelf.setUserId(userId);
-        bookshelfService.save(bookshelf);
+        bookshelfService.saveOrUpdate(bookshelf);
         return ResponseDTO.succ("成功加入书架");
     }
 
@@ -55,23 +48,12 @@ public class BookshelfController {
     }
 
     @GetMapping("search")
-    public ResponseDTO searchBookshelf(BookshelfQueryVo bookshelfQueryVo)
+    public ResponseDTO searchBookshelf(@PathVariable Long userId)
     {
-/*        userId = MoRequestTokenUtil.getRequestUser().getId();
         HashMap<String, Object> map = new HashMap<>();
-        map.put("user_id", userId);*/
-        return bookshelfService.searchBookshelf(bookshelfQueryVo);
-    }
-
-    @GetMapping("recommandByCategoriesPercent/{userId}")
-    public ResponseDTO recommandByCategoriesPercent(@PathVariable("userId") Long userId)
-    {
-
-        List<Book> recBooks = bookshelfService.recommandByCategoriesPercent(userId, 30);
-        HashMap<String, Object> map = new HashMap<>();
-        map.put("total", recBooks.size());
-        map.put("items", recBooks);
-        return ResponseDTO.succ(map);
+        map.put("user_id", userId);
+        List<Bookshelf> bookshelves = bookshelfService.listByMap(map);
+        return ResponseDTO.succ(bookshelves);
     }
 }
 

@@ -4,37 +4,20 @@
 
     <!-- 通用查询映射结果 -->
     <resultMap id="BaseResultMap" type="com.heng.entity.Bookshelf">
-        <id column="id" property="id"/>
-        <result column="create_time" property="createTime"/>
-        <result column="update_time" property="updateTime"/>
-        <result column="user_id" property="userId"/>
-        <result column="book_id" property="bookId"/>
-        <result column="reading_process" property="readingProcess"/>
-        <result column="reading_history_id" property="readingHistoryId"/>
+        <id column="id" property="id" />
+        <result column="create_time" property="createTime" />
+        <result column="update_time" property="updateTime" />
+        <result column="user_id" property="userId" />
+        <result column="book_id" property="bookId" />
+        <result column="reading_process" property="readingProcess" />
+        <result column="reading_history_id" property="readingHistoryId" />
         <association property="book" column="book_id"
                      select="com.heng.mapper.BookMapper.selectById"/>
-        <association property="historyBookIndex" column="reading_history_id"
-                     select="com.heng.mapper.BookIndexMapper.selectById"/>
     </resultMap>
 
     <!-- 通用查询结果列 -->
     <sql id="Base_Column_List">
         id, create_time, update_time, user_id, book_id, reading_process, reading_history_id
     </sql>
-    <select id="selectCategoryJoinBookByUserId" resultType="com.heng.dto.CategoryCountDO">
-SELECT
-	category_id,
-	COUNT( * ) AS count
-FROM
-	t_bookshelf
-	INNER JOIN t_book ON t_bookshelf.book_id = t_book.id
-    <where>
-        <if test="userId!=null">t_bookshelf.user_id = #{userId}</if>
-    </where>
-GROUP BY
-	category_id
-ORDER BY
-	count DESC;
-    </select>
 
 </mapper>

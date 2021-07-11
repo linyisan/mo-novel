@@ -1,38 +1,25 @@
-package com.heng.shiro;
+package com.heng.config;
 
-import org.apache.shiro.mgt.DefaultSessionStorageEvaluator;
-import org.apache.shiro.mgt.DefaultSubjectDAO;
+import com.heng.shiro.AccountRealm;
 import org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor;
 import org.apache.shiro.spring.web.ShiroFilterFactoryBean;
 import org.apache.shiro.spring.web.config.DefaultShiroFilterChainDefinition;
 import org.apache.shiro.spring.web.config.ShiroFilterChainDefinition;
 import org.apache.shiro.web.mgt.DefaultWebSecurityManager;
 import org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnWebApplication;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 
-import javax.servlet.Filter;
-import java.util.LinkedHashMap;
-import java.util.Map;
+import java.util.HashMap;
 
-@Configuration
-public class ShiroConfig {
+//@Configuration
+public class ShiroConfig1 {
 
-    @Bean
-    public ShiroFilterFactoryBean shiroFilterFactoryBean(DefaultWebSecurityManager securityManager,
+    @Bean(name = "shiroFilterFactoryBean")
+    public ShiroFilterFactoryBean getShiroFilterFactoryBean(DefaultWebSecurityManager securityManager,
                                                             ShiroFilterChainDefinition shiroFilterChainDefinition)
     {
         ShiroFilterFactoryBean shiroFilterFactoryBean = new ShiroFilterFactoryBean();
         shiroFilterFactoryBean.setSecurityManager(securityManager);
-
-        // 添加自己的filter
-        Map<String, Filter> filterMap = new LinkedHashMap<>();
-        filterMap.put("jwt", new JWTFilter());
-//        shiroFilterFactoryBean.setFilters(filterMap);
-
-        // 经过filter的请求
-        System.out.println("shiroFilterChainDefinition.getFilterChainMap() = " + shiroFilterChainDefinition.getFilterChainMap());
         shiroFilterFactoryBean.setFilterChainDefinitionMap(shiroFilterChainDefinition.getFilterChainMap());
         // 登录跳转
 //        shiroFilterFactoryBean.setLoginUrl("/login");
@@ -45,39 +32,28 @@ public class ShiroConfig {
      * 全局拦截授权认证, 也可用注解局部拦截授权认证
      * @return
      */
-    @Bean
-    public ShiroFilterChainDefinition shiroFilterChainDefinition()
+    @Bean("shiroFilterChainDefinition")
+    public ShiroFilterChainDefinition getShiroFilterChainDefinition()
     {
         DefaultShiroFilterChainDefinition filterChainDefinition = new DefaultShiroFilterChainDefinition();
         // 权限设置
         // anon-匿名 authc-需要认证 perms[]-权限 roles[]-角色
-        Map<String, String> filterRuleMap = new LinkedHashMap<>();
+        HashMap<String, String> map = new HashMap<>();
 //        map.put("/main", "authc");
 //        map.put("/manage", "perms[manage]");
 //        map.put("/admin/*", "roles[admin]");
 //        map.put("/category/list", "authc");
 //        map.put("/category/list", "roles[admin]");
-        filterRuleMap.put("/**", "jwt"); // 启用jwt而非session
-//        filterRuleMap.put("/auth", "anon");
-//        map.put("/**", "anon");
-//        filterChainDefinition.addPathDefinitions(filterRuleMap);
+        map.put("/**", "anon");
+        filterChainDefinition.addPathDefinitions(map);
         return filterChainDefinition;
     }
 
-    @Bean
-    public DefaultWebSecurityManager defaultWebSecurityManager(AccountRealm accountRealm)
+    @Bean(name = "defaultWebSecurityManager")
+    public DefaultWebSecurityManager getDefaultWebSecurityManager(AccountRealm accountRealm)
     {
         DefaultWebSecurityManager securityManager = new DefaultWebSecurityManager();
         securityManager.setRealm(accountRealm);
-        /*
-         * 关闭shiro自带的session，详情见文档
-         * http://shiro.apache.org/session-management.html#SessionManagement-StatelessApplications%28Sessionless%29
-         */
-        DefaultSubjectDAO subjectDAO = new DefaultSubjectDAO();
-        DefaultSessionStorageEvaluator defaultSessionStorageEvaluator = new DefaultSessionStorageEvaluator();
-        defaultSessionStorageEvaluator.setSessionStorageEnabled(false);
-        subjectDAO.setSessionStorageEvaluator(defaultSessionStorageEvaluator);
-        securityManager.setSubjectDAO(subjectDAO);
         return securityManager;
     }
 
@@ -107,8 +83,8 @@ public class ShiroConfig {
         return authorizationAttributeSourceAdvisor;
     }
 
-    @Bean
-    public AccountRealm accountRealm()
+    @Bean(name = "accountRealm")
+    public AccountRealm getAccountRealm()
     {
         return new AccountRealm();
     }

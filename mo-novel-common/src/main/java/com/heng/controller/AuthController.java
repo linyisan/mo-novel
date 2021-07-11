@@ -2,11 +2,9 @@ package com.heng.controller;
 
 import com.baomidou.mybatisplus.core.toolkit.StringUtils;
 import com.heng.common.ResponseDTO;
-import com.heng.dto.UserUpdatePwdDTO;
 import com.heng.entity.User;
 import com.heng.service.UserService;
 import com.heng.vo.LoginVo;
-import io.swagger.annotations.ApiOperation;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.LockedAccountException;
 import org.apache.shiro.authc.UsernamePasswordToken;
@@ -15,7 +13,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
-import javax.validation.Valid;
 import java.util.HashMap;
 
 /**
@@ -36,46 +33,20 @@ public class AuthController {
         return userService.register(user);
     }
 
-    @GetMapping("/logout")
+    @PostMapping("/logout")
     public ResponseDTO logout(@RequestHeader("X-Token") String token)
     {
         SecurityUtils.getSubject().logout();
         return ResponseDTO.succ("成功退出登录");
     }
 
-    @PostMapping("/login1")
-    public ResponseDTO login1(LoginVo loginVo)
-    {
-        //获取当前用户
-        Subject subject = SecurityUtils.getSubject();
-        //没有认证过
-        //封装用户的登录数据,获得令牌
-        UsernamePasswordToken token = new UsernamePasswordToken(loginVo.getUsername(), loginVo.getPassword());
-        subject.login(token);
-        String str_token = "";//JwtUtils.sign(loginVo.getUsername(), "-1");
-        User user = (User) subject.getPrincipal();
-        if (StringUtils.checkValNotNull(user) && user.getStatus() == 0) throw new LockedAccountException();
-        HashMap<String, Object> map = new HashMap<>();
-        map.put("token", token);
-        return ResponseDTO.succ("登录成功", map);
-        //登录 及 异常处理
-/*        try
-        {
-            //用户登录
-            subject.login(token);
-            return ResponseDTO.succ("登录成功", token);
-        } catch (UnknownAccountException uae)
-        {
-            //如果用户名不存在
-            return ResponseDTO.fail("用户名不存在");
-        } catch (IncorrectCredentialsException ice)
-        {
-            //如果密码错误
-            return ResponseDTO.fail("密码错误");
 
-        }*/
-    }
-
+    /**
+     * jwt+shiro
+     * 一次认证 二次认证在Realm
+     * @param loginVo
+     * @return
+     */
     @PostMapping("/login")
     public ResponseDTO login(@RequestBody LoginVo loginVo)
     {
@@ -89,9 +60,4 @@ public class AuthController {
         return userService.info(token);
     }
 
-    @ApiOperation(value = "修改密码", notes = "@author heng")
-    @PostMapping("updatePwd")
-    public ResponseDTO updatePwd(@Validated @RequestBody UserUpdatePwdDTO updatePwdDTO) {
-        return userService.updatePwd(updatePwdDTO);
-    }
 }

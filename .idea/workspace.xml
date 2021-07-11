@@ -5,21 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b360b197-9ca1-4a85-ada4-9d675dcdc84c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/config/ShiroConfig1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/shiro/JwtFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/shiro/JwtToken.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/shiro/JwtUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/controller/BookshelfController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/controller/BookshelfController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/controller/StatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/controller/StatController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/mapper/BookMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/mapper/BookMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/mapper/BookshelfMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/mapper/BookshelfMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/service/impl/BookIndexServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/service/impl/BookIndexServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/service/impl/BookServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/service/impl/BookServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/service/impl/BookshelfServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/service/impl/BookshelfServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/vo/BaseQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/vo/BaseQuery.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/vo/BookQueryVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/vo/BookQueryVo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/vo/BookshelfQueryVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/vo/BookshelfQueryVo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mo-novel-common/src/main/resources/mapper/BookMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mo-novel-common/src/main/resources/mapper/BookMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mo-novel-common/src/main/resources/mapper/BookshelfMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mo-novel-common/src/main/resources/mapper/BookshelfMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mo-novel-common/src/test/java/com/heng/mapper/BookshelfMapperTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/mo-novel-common/src/test/java/com/heng/mapper/BookshelfMapperTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mo-novel-common/src/test/java/com/heng/service/BookServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/mo-novel-common/src/test/java/com/heng/service/BookServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/aop/ShiroExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/aop/ShiroExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/config/AccountRealm.java" beforeDir="false" afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/shiro/AccountRealm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/config/ShiroConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/config/ShiroConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/controller/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mo-novel-common/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mo-novel-common/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,12 +68,10 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="JUnit5 Test Class" />
         <option value="JavaScript File" />
         <option value="Vue Single File Component" />
         <option value="Enum" />
-        <option value="@Aspect" />
-        <option value="Interface" />
-        <option value="JUnit5 Test Class" />
         <option value="Class" />
       </list>
     </option>
@@ -129,7 +123,7 @@
     <property name="extract.method.default.visibility" value="private" />
     <property name="ignore_missing_gitignore" value="true" />
     <property name="js.linters.configure.manually.selectedeslint" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/mo-novel-common/src/main/resources/mapper" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/controller" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -144,15 +138,13 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.39817974" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="spring.boot" />
     <property name="ts.external.directory.path" value="D:\Program Files\JetBrains\IntelliJ IDEA 2019.3.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
       <recent name="com.heng.service" />
-      <recent name="com.heng.mapper" />
-      <recent name="com.heng.service.impl" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -167,41 +159,37 @@
       <recent name="com.heng.monoveladmin" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.heng.controller" />
+      <recent name="com.heng.entity" />
       <recent name="com.heng.service.impl" />
       <recent name="com.heng.service" />
       <recent name="com.heng.mapper" />
-      <recent name="com.heng.controller" />
-      <recent name="com.heng.entity" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Git\mgit\mo-novel\mo-novel-common\src\main\resources\mapper" />
+      <recent name="D:\Git\mgit\mo-novel\mo-novel-common\src\main\java\com\heng\controller" />
+      <recent name="D:\Git\mgit\mo-novel\mo-novel-common\src\main\java\com\heng\mapper" />
       <recent name="D:\Git\mgit\mo-novel\mo-novel-common\src\main\java\com\heng\service\impl" />
       <recent name="D:\Git\mgit\mo-novel\mo-novel-common\src\main\java\com\heng\service" />
-      <recent name="D:\Git\mgit\mo-novel\mo-novel-common\src\main\java\com\heng\mapper" />
-      <recent name="D:\Git\mgit\mo-novel\mo-novel-common\src\main\java\com\heng\entity" />
+      <recent name="D:\Git\mgit\mo-novel\mo-novel-common\src\main\resources\mapper" />
     </key>
   </component>
   <component name="RestServicesNavigator">
     <treeState>
       <expand>
         <path>
-          <item name="Found 63 services " type="fcff1e1b:RestServiceStructure$RootNode" />
-        </path>
-        <path>
-          <item name="Found 63 services " type="fcff1e1b:RestServiceStructure$RootNode" />
-          <item name="mo-novel-common" type="c588b436:RestServiceStructure$ProjectNode" />
+          <item name="Found 136 services " type="fcff1e1b:RestServiceStructure$RootNode" />
         </path>
       </expand>
       <select />
     </treeState>
   </component>
   <component name="RunManager" selected="Spring Boot.NovelAdminApplication">
-    <configuration name="Calculator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.heng.service.Calculator" />
+    <configuration name="JwtUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.heng.util.JwtUtil" />
       <module name="mo-novel-common" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.heng.service.*" />
+          <option name="PATTERN" value="com.heng.util.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -209,73 +197,60 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BookshelfMapperTest.selectByCategoryAndRandom" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MStringUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.heng.util.MStringUtil" />
       <module name="mo-novel-common" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.heng.mapper.*" />
+          <option name="PATTERN" value="com.heng.util.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.heng.mapper" />
-      <option name="MAIN_CLASS_NAME" value="com.heng.mapper.BookshelfMapperTest" />
-      <option name="METHOD_NAME" value="selectByCategoryAndRandom" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StringUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.heng.util.StringUtil" />
+      <module name="mo-novel-common" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.heng.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PermissionTest.testIsPermitted" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="shiro" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.heng.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.heng" />
+      <option name="MAIN_CLASS_NAME" value="com.heng.PermissionTest" />
+      <option name="METHOD_NAME" value="testIsPermitted" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BookshelfMapperTest.selectCategoryJoinBookByUserId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="mo-novel-common" />
+    <configuration name="PermissionTest.testWildCartPermitted" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="shiro" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.heng.mapper.*" />
+          <option name="PATTERN" value="com.heng.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.heng.mapper" />
-      <option name="MAIN_CLASS_NAME" value="com.heng.mapper.BookshelfMapperTest" />
-      <option name="METHOD_NAME" value="selectCategoryJoinBookByUserId" />
+      <option name="PACKAGE_NAME" value="com.heng" />
+      <option name="MAIN_CLASS_NAME" value="com.heng.PermissionTest" />
+      <option name="METHOD_NAME" value="testWildCartPermitted" />
       <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BookshelfServiceTest.recommandByCategoriesPercent" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="mo-novel-common" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.heng.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.heng.service" />
-      <option name="MAIN_CLASS_NAME" value="com.heng.service.BookshelfServiceTest" />
-      <option name="METHOD_NAME" value="recommandByCategoriesPercent" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RatingMapperTest.avgBookScore" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="mo-novel-common" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.heng.mapper.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.heng.mapper" />
-      <option name="MAIN_CLASS_NAME" value="com.heng.mapper.RatingMapperTest" />
-      <option name="METHOD_NAME" value="avgBookScore" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="security" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.heng.DemoApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -310,23 +285,22 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Application.Calculator" />
-      <item itemvalue="JUnit.RatingMapperTest.avgBookScore" />
-      <item itemvalue="JUnit.BookshelfMapperTest.selectByCategoryAndRandom" />
-      <item itemvalue="JUnit.BookshelfMapperTest.selectCategoryJoinBookByUserId" />
-      <item itemvalue="JUnit.BookshelfServiceTest.recommandByCategoriesPercent" />
+      <item itemvalue="Application.StringUtil" />
+      <item itemvalue="Application.MStringUtil" />
+      <item itemvalue="JUnit.PermissionTest.testIsPermitted" />
+      <item itemvalue="JUnit.PermissionTest.testWildCartPermitted" />
       <item itemvalue="npm.mo-novel-web" />
       <item itemvalue="npm.fromt" />
       <item itemvalue="Spring Boot.NovelAdminApplication" />
-      <item itemvalue="Spring Boot.DemoApplication" />
+      <item itemvalue="Application.JwtUtil" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.BookshelfMapperTest.selectCategoryJoinBookByUserId" />
-        <item itemvalue="JUnit.BookshelfServiceTest.recommandByCategoriesPercent" />
-        <item itemvalue="JUnit.BookshelfMapperTest.selectByCategoryAndRandom" />
-        <item itemvalue="Application.Calculator" />
-        <item itemvalue="JUnit.RatingMapperTest.avgBookScore" />
+        <item itemvalue="Application.JwtUtil" />
+        <item itemvalue="JUnit.PermissionTest.testWildCartPermitted" />
+        <item itemvalue="JUnit.PermissionTest.testIsPermitted" />
+        <item itemvalue="Application.MStringUtil" />
+        <item itemvalue="Application.StringUtil" />
       </list>
     </recent_temporary>
   </component>
@@ -412,27 +386,7 @@
       <workItem from="1620061743331" duration="7583000" />
       <workItem from="1620138990691" duration="14463000" />
       <workItem from="1620207767521" duration="9973000" />
-      <workItem from="1620237916052" duration="8469000" />
-      <workItem from="1620290199624" duration="15103000" />
-      <workItem from="1620321685588" duration="1047000" />
-      <workItem from="1620322811684" duration="867000" />
-      <workItem from="1620362065825" duration="6233000" />
-      <workItem from="1620484386803" duration="7433000" />
-      <workItem from="1620534064443" duration="11504000" />
-      <workItem from="1620658318713" duration="7578000" />
-      <workItem from="1620708052813" duration="17451000" />
-      <workItem from="1620883641450" duration="3388000" />
-      <workItem from="1620887090771" duration="5372000" />
-      <workItem from="1620907551064" duration="17066000" />
-      <workItem from="1620980860037" duration="8426000" />
-      <workItem from="1620990580517" duration="3000000" />
-      <workItem from="1621003564003" duration="9187000" />
-      <workItem from="1621049453155" duration="1254000" />
-      <workItem from="1621065851287" duration="18498000" />
-      <workItem from="1621139004576" duration="7495000" />
-      <workItem from="1621174285765" duration="10504000" />
-      <workItem from="1621244893407" duration="17948000" />
-      <workItem from="1621450177865" duration="623000" />
+      <workItem from="1620237916052" duration="17882000" />
     </task>
     <task id="LOCAL-00001" summary="权限校验要死">
       <created>1618757966477</created>
@@ -490,10 +444,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="权限校验要死" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="858" y="246" key="#SQL_Dialects" timestamp="1620724636460">
-      <screen x="0" y="0" width="1858" height="1080" />
-    </state>
-    <state x="858" y="246" key="#SQL_Dialects/0.0.1858.1080@0.0.1858.1080" timestamp="1620724636460" />
     <state x="414" y="195" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1619529758746">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -502,101 +452,87 @@
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
     <state x="1340" y="377" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1858.1080@0.0.1858.1080" timestamp="1619900465124" />
-    <state x="282" y="47" key="#com.intellij.ide.util.MemberChooser" timestamp="1621267470130">
+    <state x="282" y="47" key="#com.intellij.ide.util.MemberChooser" timestamp="1620286033800">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state x="282" y="47" key="#com.intellij.ide.util.MemberChooser/0.0.1858.1080@0.0.1858.1080" timestamp="1621267470130" />
+    <state x="282" y="47" key="#com.intellij.ide.util.MemberChooser/0.0.1858.1080@0.0.1858.1080" timestamp="1620286033800" />
     <state x="291" y="47" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1619806893200" />
-    <state x="1390" y="440" width="468" height="292" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1620291049277">
-      <screen x="0" y="0" width="1858" height="1080" />
+    <state x="479" y="254" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1619805159508">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="1390" y="440" width="468" height="292" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1858.1080@0.0.1858.1080" timestamp="1620291049277" />
-    <state x="326" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1620491720180">
-      <screen x="0" y="0" width="1858" height="1080" />
-    </state>
-    <state x="326" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1858.1080@0.0.1858.1080" timestamp="1620491720180" />
-    <state x="464" y="254" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1620317159287">
-      <screen x="0" y="0" width="1858" height="1080" />
-    </state>
-    <state x="464" y="254" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1858.1080@0.0.1858.1080" timestamp="1620317159287" />
     <state x="479" y="254" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1619805159508" />
-    <state x="677" y="251" key="#xdebugger.evaluate" timestamp="1620365041966">
-      <screen x="0" y="0" width="1858" height="1080" />
-    </state>
-    <state x="677" y="251" key="#xdebugger.evaluate/0.0.1858.1080@0.0.1858.1080" timestamp="1620365041966" />
     <state x="1367" y="405" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1619435517289">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="1367" y="405" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1920.1080@0.0.1920.1080" timestamp="1619435517289" />
-    <state width="447" height="466" key="DebuggerActiveHint" timestamp="1620364972544">
+    <state width="447" height="466" key="DebuggerActiveHint" timestamp="1619779531601">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="447" height="466" key="DebuggerActiveHint/0.0.1858.1080@0.0.1858.1080" timestamp="1620364972544" />
+    <state width="447" height="466" key="DebuggerActiveHint/0.0.1858.1080@0.0.1858.1080" timestamp="1619779531601" />
     <state width="410" height="466" key="DebuggerActiveHint/0.0.1920.1080@0.0.1920.1080" timestamp="1619596108521" />
-    <state x="1418" y="477" key="FileChooserDialogImpl" timestamp="1620989571287">
-      <screen x="0" y="0" width="1858" height="1080" />
+    <state x="1480" y="477" key="FileChooserDialogImpl" timestamp="1619411540384">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="1418" y="477" key="FileChooserDialogImpl/0.0.1858.1080@0.0.1858.1080" timestamp="1620989571287" />
     <state x="1480" y="477" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1619411540384" />
-    <state width="1798" height="216" key="GridCell.Tab.0.bottom" timestamp="1621450811419">
+    <state width="1781" height="148" key="GridCell.Tab.0.bottom" timestamp="1620288896191">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1798" height="216" key="GridCell.Tab.0.bottom/0.0.1858.1080@0.0.1858.1080" timestamp="1621450811419" />
+    <state width="1781" height="148" key="GridCell.Tab.0.bottom/0.0.1858.1080@0.0.1858.1080" timestamp="1620288896191" />
     <state width="1378" height="251" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1619817388950" />
-    <state width="1798" height="216" key="GridCell.Tab.0.center" timestamp="1621450811419">
+    <state width="1781" height="148" key="GridCell.Tab.0.center" timestamp="1620288896191">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1798" height="216" key="GridCell.Tab.0.center/0.0.1858.1080@0.0.1858.1080" timestamp="1621450811419" />
+    <state width="1781" height="148" key="GridCell.Tab.0.center/0.0.1858.1080@0.0.1858.1080" timestamp="1620288896191" />
     <state width="1378" height="251" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1619817388949" />
-    <state width="1798" height="216" key="GridCell.Tab.0.left" timestamp="1621450811419">
+    <state width="1781" height="148" key="GridCell.Tab.0.left" timestamp="1620288896191">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1798" height="216" key="GridCell.Tab.0.left/0.0.1858.1080@0.0.1858.1080" timestamp="1621450811419" />
+    <state width="1781" height="148" key="GridCell.Tab.0.left/0.0.1858.1080@0.0.1858.1080" timestamp="1620288896191" />
     <state width="1378" height="251" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1619817388949" />
-    <state width="1798" height="216" key="GridCell.Tab.0.right" timestamp="1621450811419">
+    <state width="1781" height="148" key="GridCell.Tab.0.right" timestamp="1620288896191">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1798" height="216" key="GridCell.Tab.0.right/0.0.1858.1080@0.0.1858.1080" timestamp="1621450811419" />
+    <state width="1781" height="148" key="GridCell.Tab.0.right/0.0.1858.1080@0.0.1858.1080" timestamp="1620288896191" />
     <state width="1378" height="251" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1619817388949" />
-    <state width="1798" height="216" key="GridCell.Tab.1.bottom" timestamp="1621450811420">
+    <state width="1781" height="148" key="GridCell.Tab.1.bottom" timestamp="1620288896191">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1798" height="216" key="GridCell.Tab.1.bottom/0.0.1858.1080@0.0.1858.1080" timestamp="1621450811420" />
+    <state width="1781" height="148" key="GridCell.Tab.1.bottom/0.0.1858.1080@0.0.1858.1080" timestamp="1620288896191" />
     <state width="1378" height="251" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1619817388950" />
-    <state width="1798" height="216" key="GridCell.Tab.1.center" timestamp="1621450811420">
+    <state width="1781" height="148" key="GridCell.Tab.1.center" timestamp="1620288896191">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1798" height="216" key="GridCell.Tab.1.center/0.0.1858.1080@0.0.1858.1080" timestamp="1621450811420" />
+    <state width="1781" height="148" key="GridCell.Tab.1.center/0.0.1858.1080@0.0.1858.1080" timestamp="1620288896191" />
     <state width="1378" height="251" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1619817388950" />
-    <state width="1798" height="216" key="GridCell.Tab.1.left" timestamp="1621450811420">
+    <state width="1781" height="148" key="GridCell.Tab.1.left" timestamp="1620288896191">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1798" height="216" key="GridCell.Tab.1.left/0.0.1858.1080@0.0.1858.1080" timestamp="1621450811420" />
+    <state width="1781" height="148" key="GridCell.Tab.1.left/0.0.1858.1080@0.0.1858.1080" timestamp="1620288896191" />
     <state width="1378" height="251" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1619817388950" />
-    <state width="1798" height="216" key="GridCell.Tab.1.right" timestamp="1621450811420">
+    <state width="1781" height="148" key="GridCell.Tab.1.right" timestamp="1620288896191">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1798" height="216" key="GridCell.Tab.1.right/0.0.1858.1080@0.0.1858.1080" timestamp="1621450811420" />
+    <state width="1781" height="148" key="GridCell.Tab.1.right/0.0.1858.1080@0.0.1858.1080" timestamp="1620288896191" />
     <state width="1378" height="251" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1619817388950" />
-    <state width="1798" height="216" key="GridCell.Tab.2.bottom" timestamp="1621450811420">
+    <state width="1781" height="419" key="GridCell.Tab.2.bottom" timestamp="1620288896172">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1798" height="216" key="GridCell.Tab.2.bottom/0.0.1858.1080@0.0.1858.1080" timestamp="1621450811420" />
+    <state width="1781" height="419" key="GridCell.Tab.2.bottom/0.0.1858.1080@0.0.1858.1080" timestamp="1620288896172" />
     <state width="1378" height="251" key="GridCell.Tab.2.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1619817388950" />
-    <state width="1798" height="216" key="GridCell.Tab.2.center" timestamp="1621450811420">
+    <state width="1781" height="419" key="GridCell.Tab.2.center" timestamp="1620288896172">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1798" height="216" key="GridCell.Tab.2.center/0.0.1858.1080@0.0.1858.1080" timestamp="1621450811420" />
+    <state width="1781" height="419" key="GridCell.Tab.2.center/0.0.1858.1080@0.0.1858.1080" timestamp="1620288896172" />
     <state width="1378" height="251" key="GridCell.Tab.2.center/0.0.1920.1080@0.0.1920.1080" timestamp="1619817388950" />
-    <state width="1798" height="216" key="GridCell.Tab.2.left" timestamp="1621450811420">
+    <state width="1781" height="419" key="GridCell.Tab.2.left" timestamp="1620288896172">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1798" height="216" key="GridCell.Tab.2.left/0.0.1858.1080@0.0.1858.1080" timestamp="1621450811420" />
+    <state width="1781" height="419" key="GridCell.Tab.2.left/0.0.1858.1080@0.0.1858.1080" timestamp="1620288896172" />
     <state width="1378" height="251" key="GridCell.Tab.2.left/0.0.1920.1080@0.0.1920.1080" timestamp="1619817388950" />
-    <state width="1798" height="216" key="GridCell.Tab.2.right" timestamp="1621450811420">
+    <state width="1781" height="419" key="GridCell.Tab.2.right" timestamp="1620288896172">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1798" height="216" key="GridCell.Tab.2.right/0.0.1858.1080@0.0.1858.1080" timestamp="1621450811420" />
+    <state width="1781" height="419" key="GridCell.Tab.2.right/0.0.1858.1080@0.0.1858.1080" timestamp="1620288896172" />
     <state width="1378" height="251" key="GridCell.Tab.2.right/0.0.1920.1080@0.0.1920.1080" timestamp="1619817388950" />
     <state width="1875" height="371" key="GridCell.Tab.3.bottom" timestamp="1619528584297">
       <screen x="0" y="0" width="1920" height="1080" />
@@ -618,65 +554,68 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="220" height="477" key="HiddenNamespacesPopup/0.0.1920.1080@0.0.1920.1080" timestamp="1619529774280" />
-    <state x="807" y="189" key="Maven.ArtifactSearchDialog" timestamp="1620290373662">
-      <screen x="0" y="0" width="1858" height="1080" />
+    <state x="1200" y="475" key="NewModule_or_Project.wizard" timestamp="1619411505841">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="807" y="189" key="Maven.ArtifactSearchDialog/0.0.1858.1080@0.0.1858.1080" timestamp="1620290373662" />
-    <state x="1138" y="475" key="NewModule_or_Project.wizard" timestamp="1620296314080">
-      <screen x="0" y="0" width="1858" height="1080" />
-    </state>
-    <state x="1138" y="475" key="NewModule_or_Project.wizard/0.0.1858.1080@0.0.1858.1080" timestamp="1620296314080" />
     <state x="1200" y="475" key="NewModule_or_Project.wizard/0.0.1920.1080@0.0.1920.1080" timestamp="1619411505841" />
-    <state x="806" y="180" key="SettingsEditor" timestamp="1619775860989">
+    <state x="806" y="180" key="SettingsEditor" timestamp="1620285648496">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state x="806" y="180" key="SettingsEditor/0.0.1858.1080@0.0.1858.1080" timestamp="1619775860989" />
+    <state x="806" y="180" key="SettingsEditor/0.0.1858.1080@0.0.1858.1080" timestamp="1620285648496" />
     <state x="833" y="180" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1619601246452" />
-    <state x="0" y="728" key="com.intellij.ide.util.TipDialog" timestamp="1621450187908">
+    <state x="0" y="728" key="com.intellij.ide.util.TipDialog" timestamp="1619936245044">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state x="0" y="728" key="com.intellij.ide.util.TipDialog/0.0.1858.1080@0.0.1858.1080" timestamp="1621450187908" />
+    <state x="0" y="728" key="com.intellij.ide.util.TipDialog/0.0.1858.1080@0.0.1858.1080" timestamp="1619936245044" />
     <state x="0" y="728" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1619794113185" />
-    <state x="700" y="258" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1621081915131">
+    <state x="0" y="0" width="1277" height="1059" key="dock-window-1" timestamp="1620239277653">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state x="700" y="258" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1858.1080@0.0.1858.1080" timestamp="1621081915131" />
-    <state x="0" y="20" width="1444" height="744" key="dock-window-1" timestamp="1621142946691">
-      <screen x="0" y="0" width="1858" height="1080" />
-    </state>
-    <state x="0" y="20" width="1444" height="744" key="dock-window-1/0.0.1858.1080@0.0.1858.1080" timestamp="1621142946691" />
+    <state x="0" y="0" width="1277" height="1059" key="dock-window-1/0.0.1858.1080@0.0.1858.1080" timestamp="1620239277653" />
     <state x="-12" y="36" width="913" height="834" key="dock-window-1/0.0.1920.1080@0.0.1920.1080" timestamp="1619802322043" />
-    <state x="394" y="307" width="1448" height="800" key="dock-window-2" timestamp="1621081973180">
+    <state x="23" y="59" width="1441" height="733" key="dock-window-2" timestamp="1620244594751">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state x="394" y="307" width="1448" height="800" key="dock-window-2/0.0.1858.1080@0.0.1858.1080" timestamp="1621081973180" />
+    <state x="23" y="59" width="1441" height="733" key="dock-window-2/0.0.1858.1080@0.0.1858.1080" timestamp="1620244594751" />
     <state x="0" y="0" width="973" height="886" key="dock-window-2/0.0.1920.1080@0.0.1920.1080" timestamp="1619456008474" />
-    <state x="-88" y="151" width="1448" height="965" key="dock-window-3" timestamp="1621111754483">
+    <state x="7" y="360" width="1441" height="733" key="dock-window-3" timestamp="1620244912087">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state x="-88" y="151" width="1448" height="965" key="dock-window-3/0.0.1858.1080@0.0.1858.1080" timestamp="1621111754483" />
-    <state x="0" y="108" width="1448" height="759" key="dock-window-4" timestamp="1621111897027">
+    <state x="7" y="360" width="1441" height="733" key="dock-window-3/0.0.1858.1080@0.0.1858.1080" timestamp="1620244912087" />
+    <state x="0" y="69" width="1441" height="902" key="dock-window-4" timestamp="1620286742752">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state x="0" y="108" width="1448" height="759" key="dock-window-4/0.0.1858.1080@0.0.1858.1080" timestamp="1621111897027" />
-    <state x="501" y="267" width="820" height="600" key="find.popup" timestamp="1621442636951">
+    <state x="0" y="69" width="1441" height="902" key="dock-window-4/0.0.1858.1080@0.0.1858.1080" timestamp="1620286742752" />
+    <state x="0" y="63" width="1441" height="715" key="dock-window-5" timestamp="1620286742752">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state x="501" y="267" width="820" height="600" key="find.popup/0.0.1858.1080@0.0.1858.1080" timestamp="1621442636951" />
+    <state x="0" y="63" width="1441" height="715" key="dock-window-5/0.0.1858.1080@0.0.1858.1080" timestamp="1620286742752" />
+    <state x="189" y="234" width="1441" height="715" key="dock-window-6" timestamp="1620286742752">
+      <screen x="0" y="0" width="1858" height="1080" />
+    </state>
+    <state x="189" y="234" width="1441" height="715" key="dock-window-6/0.0.1858.1080@0.0.1858.1080" timestamp="1620286742752" />
+    <state x="-68" y="826" width="1441" height="929" key="dock-window-7" timestamp="1620288374982">
+      <screen x="0" y="0" width="1858" height="1080" />
+    </state>
+    <state x="-68" y="826" width="1441" height="929" key="dock-window-7/0.0.1858.1080@0.0.1858.1080" timestamp="1620288374982" />
+    <state x="501" y="267" width="820" height="600" key="find.popup" timestamp="1619897601142">
+      <screen x="0" y="0" width="1858" height="1080" />
+    </state>
+    <state x="501" y="267" width="820" height="600" key="find.popup/0.0.1858.1080@0.0.1858.1080" timestamp="1619897601142" />
     <state x="518" y="267" width="820" height="600" key="find.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1619450402118" />
-    <state x="607" y="463" key="new project wizard" timestamp="1620313359546">
+    <state x="607" y="276" key="new project wizard" timestamp="1619900362209">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state x="607" y="463" key="new project wizard/0.0.1858.1080@0.0.1858.1080" timestamp="1620313359546" />
-    <state x="997" y="404" key="run.anything.popup" timestamp="1621442786094">
+    <state x="607" y="276" key="new project wizard/0.0.1858.1080@0.0.1858.1080" timestamp="1619900362209" />
+    <state x="997" y="404" key="run.anything.popup" timestamp="1620286624710">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state x="997" y="404" key="run.anything.popup/0.0.1858.1080@0.0.1858.1080" timestamp="1621442786094" />
+    <state x="997" y="404" key="run.anything.popup/0.0.1858.1080@0.0.1858.1080" timestamp="1620286624710" />
     <state x="1030" y="404" key="run.anything.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1619806550367" />
-    <state x="598" y="323" width="672" height="678" key="search.everywhere.popup" timestamp="1621322884864">
+    <state x="598" y="323" width="672" height="678" key="search.everywhere.popup" timestamp="1620284772401">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state x="598" y="323" width="672" height="678" key="search.everywhere.popup/0.0.1858.1080@0.0.1858.1080" timestamp="1621322884864" />
+    <state x="598" y="323" width="672" height="678" key="search.everywhere.popup/0.0.1858.1080@0.0.1858.1080" timestamp="1620284772401" />
     <state x="618" y="323" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1619797210413" />
   </component>
   <component name="XDebuggerManager">
@@ -688,47 +627,39 @@
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/controller/UserController.java</url>
+          <line>47</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/controller/BookController.java</url>
-          <line>57</line>
+          <line>60</line>
           <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/shiro/JWTFilter.java</url>
-          <line>58</line>
-          <option name="timeStamp" value="32" />
+          <url>file://$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/controller/BookController.java</url>
+          <line>67</line>
+          <option name="timeStamp" value="21" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/shiro/JWTFilter.java</url>
-          <line>40</line>
-          <option name="timeStamp" value="33" />
+          <url>file://$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/controller/BookIndexController.java</url>
+          <line>47</line>
+          <option name="timeStamp" value="24" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/shiro/AccountRealm.java</url>
-          <line>62</line>
-          <option name="timeStamp" value="35" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/shiro/AccountRealm.java</url>
-          <line>59</line>
-          <option name="timeStamp" value="36" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/shiro/JWTFilter.java</url>
-          <line>79</line>
-          <option name="timeStamp" value="39" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/controller/UserController.java</url>
+          <url>file://$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/controller/BookIndexController.java</url>
           <line>54</line>
-          <option name="timeStamp" value="53" />
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/mo-novel-common/src/main/java/com/heng/controller/BookIndexController.java</url>
+          <line>60</line>
+          <option name="timeStamp" value="26" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/mo_novel$NovelAdminApplication.ic" NAME="NovelAdminApplication Coverage Results" MODIFIED="1619601532052" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/mo_novel$BookshelfMapperTest_selectCategoryJoinBookByUserId.ic" NAME="BookshelfMapperTest.selectCategoryJoinBookByUserId Coverage Results" MODIFIED="1621441698083" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.heng.mapper.*</FILTER>
-    </SUITE>
   </component>
 </project>

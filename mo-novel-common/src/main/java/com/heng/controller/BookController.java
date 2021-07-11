@@ -29,6 +29,9 @@ public class BookController {
     @Autowired
     private BookService bookService;
 
+    @Autowired
+    private CommentService commentService;
+
     @GetMapping("getAll")
     public ResponseDTO getAllBook()
     {
@@ -73,29 +76,34 @@ public class BookController {
         return ResponseDTO.succ("成功删除小说");
     }
 
-    /**
-     * 查询首页点击榜单数据
-     * */
-    @GetMapping("listClickRank")
-    public ResponseDTO listClickRank(){
-        return ResponseDTO.succ(bookService.listRank((byte)0, 10));
+
+    @PostMapping("addBookComment")
+    public ResponseDTO addBookComment(@Validated Comment comment)
+    {
+        return bookService.addBookComment(comment);
     }
 
-    /**
-     * 查询首页新书榜单数据
-     * */
-    @GetMapping("listNewRank")
-    public ResponseDTO listNewRank(){
-        return ResponseDTO.succ(bookService.listRank((byte)1, 10));
+    @PostMapping("editBookComment")
+    public ResponseDTO editBookComment(Long commentId, String content)
+    {
+        return bookService.editBookComment(commentId, content);
     }
 
-    /**
-     * 查询首页更新榜单数据
-     * */
-    @GetMapping("listUpdateRank")
-    public ResponseDTO listUpdateRank(){
-        return ResponseDTO.succ(bookService.listRank((byte)9999, 23));
+    @GetMapping("deleteBookComment/{commentId}")
+    public ResponseDTO deleteBookComment(@PathVariable Long commentId)
+    {
+        commentService.removeById(commentId);
+        return ResponseDTO.succ(ResponseStatus.SUCCESS.getMsg());
     }
 
+    @GetMapping("getBookCommentByBookId/{bookId}")
+    public ResponseDTO getBookCommentByBookId(@PathVariable Long bookId)
+    {
+        HashMap<String, Object> map = new HashMap<>();
+        map.put("resource_type", 1);
+        map.put("resource_id", bookId);
+        List<Comment> bookComments = commentService.listByMap(map);
+        return ResponseDTO.succ(bookComments);
+    }
 }
 

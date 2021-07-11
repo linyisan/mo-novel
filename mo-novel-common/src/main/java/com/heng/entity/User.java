@@ -4,7 +4,6 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
-import com.heng.valid.AddGroup;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
@@ -28,7 +27,7 @@ import java.util.Set;
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
-@TableName(value = "t_user", resultMap = "BaseResultMap")
+@TableName("t_user")
 @Accessors(chain = true)
 @ApiModel(value="User对象", description="用户表")
 public class User implements Serializable {
@@ -50,7 +49,7 @@ public class User implements Serializable {
     private String username;
 
     @ApiModelProperty(value = "密码")
-    @NotBlank(message = "密码不能为空", groups = {AddGroup.class})
+    @NotBlank(message = "密码不能为空")
     private String password;
 
     @ApiModelProperty(value = "头像url")
