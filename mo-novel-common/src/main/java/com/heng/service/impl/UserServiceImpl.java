@@ -60,13 +60,16 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
             return ResponseDTO.fail("密码错误");
         }
 
-
+        // 检查账户是否被禁用
         if (user.getStatus() == 0)
         {
             return ResponseDTO.fail("账户禁用，请联系管理员");
         }
 
-        String jwt = jwtUtil.generateToken(user.getId());
+
+//        String token = "";//JwtUtils.sign(loginVo.getUsername(), "-1");
+        // 生成JWT
+        String jwt = JwtUtil.generateToken(user.getUsername(), user.getId());
 
         HashMap<String, String> map = new HashMap<>();
         map.put("token", jwt);
